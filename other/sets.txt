@@ -1,0 +1,4 @@
+cache,Caché
+caché,Caché
+intersystems caché,Caché
+intersystems cache,Caché
