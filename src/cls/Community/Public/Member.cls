@@ -1,9 +1,7 @@
 Include Community
 
-Class Community.Member Extends %Persistent
+Class Community.Public.Member Extends %Persistent
 {
-
-Parameter MANAGEDEXTENT = 0;
 
 Parameter DSTIME = "AUTO";
 
@@ -39,30 +37,40 @@ Relationship Comments As Community.Comment [ Cardinality = many, Inverse = Autho
 
 Relationship Votes As Community.Vote [ Cardinality = many, Inverse = Author ];
 
-ClassMethod Upsert(Uid, FirstName, LastName, Company, Position, Created, SubSuspended) As %Status
+ClassMethod Update() As %Status
 {
-	Set Hash = ##class(Community.Utils.Hash).Hash(Uid, FirstName, LastName, Company, Position, Created) 
- 	Return:(Hash=..HashGetStored(Uid)) $$$OK
+	&sql(SELECT MAX(ID) INTO :lastMember FROM Community_Public.Member)
 	
-	If ..%ExistsId(Uid) {
-		Set Member = ..%OpenId(Uid)
-	} Else {
-		Set Member = ..%New()
-		Set Member.Uid = Uid
+	if 'lastMember set lastMember = 0
+	
+	&sql(INSERT INTO Community_Public.Member (Uid, Added, Name, FirstName, LastName, Company, Position, Created, Link, SubSuspended, Hash)
+		 SELECT Uid, Added, Name, FirstName, LastName, Company, Position, Created, Link, SubSuspended, Hash
+		 FROM Community.Member cm
+		 WHERE cm.Uid > 0)
+		 
+	if '((SQLCODE = 0) || (SQLCODE = 100)) quit $$$ERROR($$$SQLError, SQLCODE, $get(%msg))
+	
+	&sql(DECLARE SQLCursor CURSOR FOR
+		 SELECT cm.Uid, cm.Added, cm.Name, cm.FirstName, cm.LastName, cm.Company, cm.Position, cm.Created, cm.Link, cm.SubSuspended, cm.Hash
+		 INTO :Uid, :Added, :Name, :FirstName, :LastName, :Company, :Position, :Created, :Link, :SubSuspended, :Hash
+		 FROM Community.Member cm
+		 	LEFT OUTER JOIN Community_Public.Member cpm ON cm.id = cpm.id
+		 WHERE cm.Id <= :lastMember AND cm.Hash != cpm.Hash)
+		 
+	if '((SQLCODE = 0) || (SQLCODE = 100)) quit $$$ERROR($$$SQLError, SQLCODE, $get(%msg))
+		 
+	&sql(OPEN SQLCursor)
+	&sql(FETCH SQLCursor)
+	while (SQLCODE = 0) {
+		&sql(UPDATE Community_Public.Member 
+			 SET Added = :Added, Name = :Name, FirstName = :FirstName, LastName = :LastName, Company = :Company, 
+			 	 Position = :Position, Created = :Created, Link = :Link, SubSuspended = :SubSuspended, Hash = :Hash
+			 WHERE Uid = :Uid)
+		
+		&sql(FETCH SQLCursor)
 	}
-
-	Set Member.Hash = Hash
-	Set Member.FirstName = FirstName
-	Set Member.LastName = LastName
-	Set Member.Company = Company
-	Set Member.Position = Position
 	
-	Set Member.Created = Created
-	Set Member.SubSuspended = SubSuspended
-	
-	Set st = Member.%Save()
-	
-	Return st
+	quit $$$OK
 }
 
 Storage Default
