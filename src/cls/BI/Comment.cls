@@ -35,14 +35,6 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
         <property name="Name" disabled="false" sourceProperty="Author.Name" hidden="false" isName="true" isDescription="false" isReference="false" useDisplayValue="false">
           <additionalDescription>undefined</additionalDescription>
         </property>
-        <property name="Email" disabled="false" sourceProperty="Author.Email" hidden="false" isName="false" isDescription="false" isReference="false" useDisplayValue="false">
-        </property>
-      </level>
-    </hierarchy>
-  </dimension>
-  <dimension name="ISCMember" disabled="false" hasAll="false" allCaption="All ISCMember" allDisplayName="ISCMember" type="data" hidden="false" showHierarchies="default">
-    <hierarchy name="H1" disabled="false" hidden="false">
-      <level name="ISCMember" disabled="false" sourceProperty="Author.ISCMember" list="false" nullReplacement="No" rangeExpression="1:&quot;InterSystems&quot;;0:&quot;Customers&quot;;" useDisplayValue="true" useAsFilter="true" hidden="false">
       </level>
     </hierarchy>
   </dimension>
@@ -56,18 +48,6 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
       <level name="WeekYear" disabled="false" timeFunction="WeekYear" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
       </level>
       <level name="DayMonthYear" disabled="false" timeFunction="DayMonthYear" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
-      </level>
-    </hierarchy>
-  </dimension>
-  <dimension name="Department" disabled="false" hasAll="false" allCaption="All Department" allDisplayName="Department" type="data" hidden="false" showHierarchies="default">
-    <hierarchy name="H1" disabled="false" hidden="false">
-      <level name="Department" disabled="false" sourceProperty="Author.Department" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
-      </level>
-    </hierarchy>
-  </dimension>
-  <dimension name="OfficeLocation" disabled="false" hasAll="false" allCaption="All OfficeLocation" allDisplayName="OfficeLocation" type="data" hidden="false" showHierarchies="default">
-    <hierarchy name="H1" disabled="false" hidden="false">
-      <level name="OfficeLocation" disabled="false" sourceProperty="Author.OfficeLocation" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
       </level>
     </hierarchy>
   </dimension>

@@ -17,14 +17,4 @@
       <valueRequired>false</valueRequired>
     </control>
   </widget>
-  <widget name="W2" type="pivot" subtype="pivot" subtypeClass="lineChart" title="Comments" dataSource="CommunityChanpionship/ByComments.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="0" homeColL="7" colSpanL="3" rowSpanL="9" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="#F0F0F0" opacity="1" theme="" dataColorList="">
-    <control name="" action="applyFilter" target="W1" targetProperty="[AuthorName].[H1].[AuthorName]" location="click" type="auto" controlClass="" label="AuthorName" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
-      <valueRequired>false</valueRequired>
-    </control>
-  </widget>
-  <widget name="W3" type="pivot" subtype="pivot" subtypeClass="lineChart" title="Posts and comments in author&apos;s posts" dataSource="CommunityChanpionship/ByPostsAndPostsComments.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="0" homeColL="3" colSpanL="4" rowSpanL="9" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="#F0F0F0" opacity="1" theme="" dataColorList="">
-    <control name="" action="applyFilter" target="W1" targetProperty="[AuthorName].[H1].[AuthorName]" location="click" type="auto" controlClass="" label="AuthorName" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
-      <valueRequired>false</valueRequired>
-    </control>
-  </widget>
 </dashboard>
