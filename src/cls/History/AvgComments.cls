@@ -1,4 +1,4 @@
-Class History.AvgComments Extends %Persistent
+Class History.AvgComments Extends %Persistent [ DependsOn = Community.Comment ]
 {
 
 Parameter DSTIME = "AUTO";

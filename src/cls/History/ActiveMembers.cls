@@ -1,4 +1,4 @@
-Class History.ActiveMembers Extends %Persistent
+Class History.ActiveMembers Extends %Persistent [ DependsOn = Community.Member ]
 {
 
 Parameter DSTIME = "AUTO";

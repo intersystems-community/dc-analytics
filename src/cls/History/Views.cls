@@ -1,4 +1,4 @@
-Class History.Views Extends %Persistent
+Class History.Views Extends %Persistent [ DependsOn = Community.Post ]
 {
 
 Parameter DSTIME = "AUTO";
