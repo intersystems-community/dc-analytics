@@ -1,5 +1,5 @@
 /// Immutable
-Class Community.Vote Extends %Persistent
+Class Community.Vote Extends %Persistent [ DependsOn = (Community.Member, Community.Post, Community.Comment) ]
 {
 
 Parameter DSTIME = "AUTO";

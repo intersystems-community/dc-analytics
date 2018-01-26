@@ -8,8 +8,6 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
 <cube xmlns="http://www.intersystems.com/deepsee" name="CommentCopy" displayName="CommentCopy" disabled="false" abstract="false" sourceClass="Community.Comment" countMeasureName="COMCOUNT" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false">
   <dimension name="AuthorName" disabled="false" sharesFrom="Post" hasAll="false" allCaption="All AuthorName" allDisplayName="AuthorName" type="data" hidden="false" showHierarchies="default">
   </dimension>
-  <dimension name="DateDimension" disabled="false" sharesFrom="Post" hasAll="false" allCaption="All DateDimension" allDisplayName="DateDimension" type="data" hidden="false" showHierarchies="default">
-  </dimension>
   <measure name="Comments" disabled="false" sourceProperty="Id" aggregate="COUNT" type="number" scale="0" hidden="false" searchable="false">
   </measure>
   <measure name="Comment points" disabled="false" sourceExpression="((%source.AvgVote)*(%source.VotesAmount))" aggregate="AVG" type="integer" hidden="false" searchable="false">

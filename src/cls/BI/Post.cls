@@ -63,10 +63,14 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
   </dimension>
   <dimension name="DateDimension" disabled="false" hasAll="false" allCaption="All Created1" allDisplayName="Created1" sourceProperty="Created" type="time" calendar="gregorian" iKnowType="entity" hidden="false" showHierarchies="default">
     <additionalDescription>undefined</additionalDescription>
+    <hierarchy name="H2" disabled="false" hidden="false">
+      <level name="MonthNum" displayName="Month" disabled="false" timeFunction="MonthNumber" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      </level>
+    </hierarchy>
     <hierarchy name="H1" disabled="false" hidden="false">
       <level name="Year" disabled="false" timeFunction="Year" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
       </level>
-      <level name="MonthYear" disabled="false" timeFunction="MonthYear" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      <level name="MonthYear" displayName="Month Year" disabled="false" timeFunction="MonthYear" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
       </level>
       <level name="WeekYear" disabled="false" timeFunction="WeekYear" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
       </level>
@@ -93,9 +97,31 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
       </level>
     </hierarchy>
   </dimension>
-  <dimension name="iKnow" disabled="true" hasAll="false" allCaption="All Text" allDisplayName="Text" type="data" calendar="gregorian" iKnowType="entity" hidden="false" showHierarchies="default">
+  <dimension name="iKnow" disabled="false" hasAll="false" allCaption="All Text" allDisplayName="Text" type="data" calendar="gregorian" iKnowType="entity" hidden="false" showHierarchies="default">
     <hierarchy name="H1" disabled="false" hidden="false">
       <level name="iKnowConcept" displayName="iKnowConcept" disabled="false" sourceExpression="##class(Community.iKnow.Post).GetFirstSetsAndConceptsByID(%source.%ID)" list="true" listDelimiter="," useDisplayValue="true" useAsFilter="true" hidden="false">
+      </level>
+    </hierarchy>
+  </dimension>
+  <dimension name="CorrectAnswer" displayName="Correct Answer" disabled="false" hasAll="false" allCaption="All HasCorrectAnswer" allDisplayName="HasCorrectAnswer" type="data" calendar="gregorian" iKnowType="entity" hidden="false" showHierarchies="default">
+    <hierarchy name="H1" disabled="false" hidden="false">
+      <level name="HasCorrectAnswer" disabled="false" sourceProperty="HasCorrectAnswer" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      </level>
+    </hierarchy>
+  </dimension>
+  <dimension name="Published" disabled="false" hasAll="false" allCaption="All Published" allDisplayName="Published" type="data" hidden="false" showHierarchies="default">
+    <hierarchy name="H1" disabled="false" hidden="false">
+      <level name="Published" disabled="false" sourceProperty="Published" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      </level>
+    </hierarchy>
+  </dimension>
+  <dimension name="AcceptedAnswerTS" disabled="false" hasAll="false" allCaption="All AcceptedAnswerTS" allDisplayName="AcceptedAnswerTS" sourceProperty="AcceptedAnswerTS" type="time" calendar="gregorian" hidden="false" showHierarchies="default">
+    <hierarchy name="H1" disabled="false" hidden="false">
+      <level name="AnswerYear" disabled="false" timeFunction="Year" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      </level>
+      <level name="AnswerMonthYear" disabled="false" timeFunction="MonthYear" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      </level>
+      <level name="AnswerDayMonthYear" disabled="false" timeFunction="DayMonthYear" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
       </level>
     </hierarchy>
   </dimension>
@@ -111,7 +137,7 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
   </measure>
   <measure name="SubsCount" displayName="Subscriptions" disabled="false" sourceProperty="SubsCount" aggregate="SUM" type="number" hidden="false" searchable="false" formatString="#">
   </measure>
-  <listing name="New_listing1" disabled="false" listingType="table" fieldList="Link,Name As Post,Created,Views,CommentsAmount As Comments,AvgVote as Votes,&apos;&lt;a href=&quot;&apos;||$Extract(Author-&gt;Link,7,Length(Author-&gt;Link))||&apos;&quot; target=&quot;_blank&quot; onclick=&quot;var e=event||window.event;e.stopPropagation();e.cancelBubble=true;&quot;&gt;&apos;||Author-&gt;Name||&apos;&lt;/a&gt;&apos; As Author,SubsCount as Favorites">
+  <listing name="New_listing1" disabled="false" listingType="table" fieldList="Link,Name As Post,Created,Views,CommentsAmount As Comments,AvgVote as Votes,SubsCount as Favorites,Author-&gt;Name as Author,Author-&gt;Email as &quot;Author Email&quot;">
   </listing>
 </cube>
 }
@@ -159,18 +185,6 @@ ClassMethod GetGroupName(postId, prop As %String) As %String
 		if result = "" {set result = rs.GroupProp}
 		else{set result = result_","_rs.GroupProp}
 	}
-	Quit result
-}
-
-ClassMethod GSContestOrAllDate(date As %Date, groupName As %String) As %String
-{
-	set date = $zdh(date,3)
-	set result = "NonGSContest"
-	if (date<=63977)&(date>=63963)&(groupName'="Developer Community Feedback") {set result = "GSContest"} //2016-02-15 - 2016-02-29
-	elseif (date<=63994)&(date>=63980)
-	&(groupName'="Developer Community Feedback")
-	&(groupName'="Announcements")
-	&(groupName'="Alerts") {set result = "GSContest-2"} //2016-03-03 - 2016-03-17
 	Quit result
 }
 

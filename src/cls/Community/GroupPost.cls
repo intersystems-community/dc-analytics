@@ -1,4 +1,4 @@
-Class Community.GroupPost Extends %Persistent
+Class Community.GroupPost Extends %Persistent [ DependsOn = (Community.Group, Community.Member) ]
 {
 
 Relationship GroupClass As Community.Group [ Cardinality = one, Inverse = Posts, OnDelete = cascade, Required ];

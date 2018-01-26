@@ -1,6 +1,6 @@
 Include Community
 
-Class Community.Group Extends %Persistent [ SqlTableName = GroupClass ]
+Class Community.Group Extends %Persistent [ DependsOn = Community.Utils.Hash, SqlTableName = GroupClass ]
 {
 
 Parameter DSTIME = "AUTO";

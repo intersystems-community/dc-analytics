@@ -1,6 +1,6 @@
 Include Community
 
-Class Community.Member Extends %Persistent
+Class Community.Member Extends %Persistent [ DependsOn = Community.Utils.Hash ]
 {
 
 Parameter MANAGEDEXTENT = 0;
@@ -19,17 +19,11 @@ Property FirstName As %String(MAXLEN = 255);
 
 Property LastName As %String(MAXLEN = 255);
 
-Property Company As %String(MAXLEN = 255);
-
-Property Position As %String(MAXLEN = 255);
-
 Property Created As %TimeStamp;
 
 Property Link As %String(MAXLEN = 150) [ SqlComputeCode = {set {*} = $$$Server _ "user/" _ {Uid}}, SqlComputed, SqlComputeOnChange = %%INSERT ];
 
 Index Link On Link [ Unique ];
-
-Property SubSuspended As %Numeric;
 
 Property Hash As %String;
 
@@ -54,11 +48,8 @@ ClassMethod Upsert(Uid, FirstName, LastName, Company, Position, Created, SubSusp
 	Set Member.Hash = Hash
 	Set Member.FirstName = FirstName
 	Set Member.LastName = LastName
-	Set Member.Company = Company
-	Set Member.Position = Position
 	
 	Set Member.Created = Created
-	Set Member.SubSuspended = SubSuspended
 	
 	Set st = Member.%Save()
 	

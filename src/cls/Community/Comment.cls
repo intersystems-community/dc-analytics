@@ -1,6 +1,6 @@
 Include Community
 
-Class Community.Comment Extends %Persistent
+Class Community.Comment Extends %Persistent [ DependsOn = (Community.Member, Community.Post, Community.Utils.Hash) ]
 {
 
 Parameter DSTIME = "AUTO";
@@ -38,12 +38,18 @@ Property Correct As %Boolean;
 /// Hash of input row, used to build this object
 Property Hash As %String;
 
+Property TextHash As %String;
+
+Index TextHashIndex On TextHash;
+
 Relationship Votes As Community.Vote [ Cardinality = many, Inverse = Comment ];
+
+Property AcceptedAnswerTS As %TimeStamp;
 
 ClassMethod Upsert(Id, Type, Nid, Created, Uid, AvgVote, VotesAmount, Text, Correct) As %Status
 {
 	Set Id1 = Type _ "||" _ Id
- 	Set Hash = ##class(Community.Utils.Hash).Hash(Id, Type, Nid, Created, Uid, AvgVote, VotesAmount, Text, Correct) 
+ 	Set Hash = ##class(Community.Utils.Hash).Hash(Id, Type, Nid, Created, Uid, AvgVote, VotesAmount, Text, Correct)
  	Return:(Hash=..HashGetStored(Id1)) $$$OK
  	
  	If ..%ExistsId(Id1) {
@@ -62,22 +68,40 @@ ClassMethod Upsert(Id, Type, Nid, Created, Uid, AvgVote, VotesAmount, Text, Corr
 	Set Comment.VotesAmount = VotesAmount
 	Set Comment.Correct = Correct
 	
-	set Text = $replace(Text,"</p>"," ")
-	set reg = ##class(%Regex.Matcher).%New("<(([^>]|\n)*)>")
-	set reg.Text = Text
-	set Text = reg.ReplaceAll("")
+	Set modify = 0
+	If (Correct = 1) & (Comment.AcceptedAnswerTS = "") {
+		Set Comment.AcceptedAnswerTS = $zdt($now(300),3)
+		Set modify = 1
+	} ElseIf (Correct = 0) & (Comment.AcceptedAnswerTS '= "") {
+		Set Comment.AcceptedAnswerTS = ""
+		Set modify = 1
+	}
 	
-	set Text = $replace(Text,"&nbsp;"," ")
-	set Text = $replace(Text,"&gt;",">")
-	set Text = $replace(Text,"&lt;","<")
-	set Text = $replace(Text,"&amp;","&")
-	set Text = $replace(Text,"&quot;","""")
-	set Text = $replace(Text,"$#39;","'")
-	Set Comment.Text = Text
+	if modify = 1 {
+		Set Comment.Post.AcceptedAnswerTS = Comment.AcceptedAnswerTS
+		Set st = Comment.Post.%Save()
+	}
 	
-	Set st = Comment.%Save()
+	Set TextHash = ##class(Community.Utils.Hash).Hash(Text)
 	
-	Return st
+	If TextHash '= Comment.TextHash {
+		Set Text = $replace(Text,"</p>"," ")
+		Set reg = ##class(%Regex.Matcher).%New("<(([^>]|\n)*)>")
+		Set reg.Text = Text
+		Set Text = reg.ReplaceAll("")
+		Set Text = $replace(Text,"&nbsp;"," ")
+		Set Text = $replace(Text,"&gt;",">")
+		Set Text = $replace(Text,"&lt;","<")
+		Set Text = $replace(Text,"&amp;","&")
+		Set Text = $replace(Text,"&quot;","""")
+		Set Text = $replace(Text,"$#39;","'")
+		Set Comment.Text = Text
+		Set Comment.TextHash = TextHash
+	}
+	
+	set st = Comment.%Save()
+	
+	return st
 }
 
 Storage Default
@@ -115,6 +139,15 @@ Storage Default
 </Value>
 <Value name="11">
 <Value>Correct</Value>
+</Value>
+<Value name="12">
+<Value>TextHash</Value>
+</Value>
+<Value name="13">
+<Value>AsseptedAnswerTS</Value>
+</Value>
+<Value name="14">
+<Value>AcceptedAnswerTS</Value>
 </Value>
 </Data>
 <DataLocation>^Community.CommentD</DataLocation>

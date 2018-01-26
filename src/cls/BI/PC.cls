@@ -1,5 +1,5 @@
 /// 
-Class BI.PC Extends %DeepSee.SubjectArea [ DependsOn = (BI.Post, BI.CommentCopy), ProcedureBlock ]
+Class BI.PC Extends %DeepSee.SubjectArea [ DependsOn = (BI.Post, BI.CommentCopy, BI.ViewsHistoryCopy), ProcedureBlock ]
 {
 
 /// SubjectArea definition from Architect.

@@ -17,17 +17,11 @@ Property FirstName As %String(MAXLEN = 255);
 
 Property LastName As %String(MAXLEN = 255);
 
-Property Company As %String(MAXLEN = 255);
-
-Property Position As %String(MAXLEN = 255);
-
 Property Created As %TimeStamp;
 
 Property Link As %String(MAXLEN = 150) [ SqlComputeCode = {set {*} = $$$Server _ "user/" _ {Uid}}, SqlComputed, SqlComputeOnChange = %%INSERT ];
 
 Index Link On Link [ Unique ];
-
-Property SubSuspended As %Numeric;
 
 Property Hash As %String;
 
@@ -43,16 +37,16 @@ ClassMethod Update() As %Status
 	
 	if 'lastMember set lastMember = 0
 	
-	&sql(INSERT INTO Community_Public.Member (Uid, Added, Name, FirstName, LastName, Company, Position, Created, Link, SubSuspended, Hash)
-		 SELECT Uid, Added, Name, FirstName, LastName, Company, Position, Created, Link, SubSuspended, Hash
+	&sql(INSERT INTO Community_Public.Member (Uid, Added, Name, FirstName, LastName, Created, Link, Hash)
+		 SELECT Uid, Added, Name, FirstName, LastName, Created, Link, Hash
 		 FROM Community.Member cm
 		 WHERE cm.Uid > 0)
 		 
 	if '((SQLCODE = 0) || (SQLCODE = 100)) quit $$$ERROR($$$SQLError, SQLCODE, $get(%msg))
 	
 	&sql(DECLARE SQLCursor CURSOR FOR
-		 SELECT cm.Uid, cm.Added, cm.Name, cm.FirstName, cm.LastName, cm.Company, cm.Position, cm.Created, cm.Link, cm.SubSuspended, cm.Hash
-		 INTO :Uid, :Added, :Name, :FirstName, :LastName, :Company, :Position, :Created, :Link, :SubSuspended, :Hash
+		 SELECT cm.Uid, cm.Added, cm.Name, cm.FirstName, cm.LastName, cm.Created, cm.Link, cm.Hash
+		 INTO :Uid, :Added, :Name, :FirstName, :LastName, :Created, :Link, :Hash
 		 FROM Community.Member cm
 		 	LEFT OUTER JOIN Community_Public.Member cpm ON cm.id = cpm.id
 		 WHERE cm.Id <= :lastMember AND cm.Hash != cpm.Hash)
@@ -63,8 +57,7 @@ ClassMethod Update() As %Status
 	&sql(FETCH SQLCursor)
 	while (SQLCODE = 0) {
 		&sql(UPDATE Community_Public.Member 
-			 SET Added = :Added, Name = :Name, FirstName = :FirstName, LastName = :LastName, Company = :Company, 
-			 	 Position = :Position, Created = :Created, Link = :Link, SubSuspended = :SubSuspended, Hash = :Hash
+			 SET Added = :Added, Name = :Name, FirstName = :FirstName, LastName = :LastName, Created = :Created, Link = :Link, Hash = :Hash
 			 WHERE Uid = :Uid)
 		
 		&sql(FETCH SQLCursor)

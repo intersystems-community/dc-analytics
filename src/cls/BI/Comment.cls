@@ -122,18 +122,6 @@ ClassMethod GetGroupName(postId, prop As %String) As %String
 	Quit result
 }
 
-ClassMethod GSContestOrAllDate(date As %Date, groupName As %String) As %String
-{
-	set date = $zdh(date,3)
-	set result = "NonGSContest"
-	if (date<=63977)&(date>=63963)&(groupName'="Developer Community Feedback") {set result = "GSContest"} //2016-02-15 - 2016-02-29
-	elseif (date<=63993)&(date>=63980)
-	&(groupName'="Developer Community Feedback")
-	&(groupName'="Announcements")
-	&(groupName'="Alerts") {set result = "GSContest-2"} //2016-03-03 - 2016-03-16
-	Quit result
-}
-
 ClassMethod GetDaysNumber(date, id)
 {
 	set result = 0

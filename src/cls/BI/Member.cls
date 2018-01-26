@@ -22,6 +22,10 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
   </dimension>
   <dimension name="DateDimension" disabled="false" hasAll="false" allCaption="All Created1" allDisplayName="Created1" sourceProperty="Created" type="time" calendar="gregorian" iKnowType="entity" hidden="false" showHierarchies="default">
     <additionalDescription>undefined</additionalDescription>
+    <hierarchy name="H2" disabled="false" hidden="false">
+      <level name="MonthNum" displayName="Month" disabled="false" timeFunction="MonthNumber" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      </level>
+    </hierarchy>
     <hierarchy name="H1" disabled="false" hidden="false">
       <level name="Year" disabled="false" timeFunction="Year" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
       </level>
@@ -33,12 +37,6 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
       </level>
     </hierarchy>
   </dimension>
-  <dimension name="SubSuspended" disabled="false" hasAll="false" allCaption="All SubSuspended" allDisplayName="SubSuspended" type="data" hidden="false" showHierarchies="default">
-    <hierarchy name="H1" disabled="false" hidden="false">
-      <level name="SubSuspended" disabled="false" sourceProperty="SubSuspended" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
-      </level>
-    </hierarchy>
-  </dimension>
   <measure name="MembersAmountBeforeDate" disabled="true" sourceExpression="%cube.GetMembersAmountBeforeDate(%source.Created)" aggregate="MAX" type="integer" hidden="false" searchable="false">
   </measure>
   <measure name="Views" disabled="true" sourceExpression="%cube.GetViewsOfAuthor(%source.%ID)" aggregate="SUM" type="number" hidden="false" searchable="false">
@@ -47,7 +45,7 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
   </measure>
   <measure name="MembersAmountBeforeDateMonth" disabled="true" sourceExpression="%cube.GetMembersAmountBeforeDate($zdateh($piece($zdate(%source.Created,3),&quot;-&quot;,1,2)_&quot;-01&quot;,3))" aggregate="AVG" type="integer" hidden="false" searchable="false">
   </measure>
-  <listing name="New_listing1" disabled="false" listingType="table" fieldList="Name,Link">
+  <listing name="New_listing1" disabled="false" listingType="table" fieldList="Name,Position,Email,Company,Link">
   </listing>
 </cube>
 }

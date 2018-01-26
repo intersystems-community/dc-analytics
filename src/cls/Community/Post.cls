@@ -1,6 +1,6 @@
 Include Community
 
-Class Community.Post Extends %Persistent
+Class Community.Post Extends %Persistent [ DependsOn = (Community.Member, Community.Utils.Hash) ]
 {
 
 Parameter DSTIME = "AUTO";
@@ -56,6 +56,8 @@ Property HasCorrectAnswer As %Boolean;
 
 Relationship Votes As Community.Vote [ Cardinality = many, Inverse = Post ];
 
+Property AcceptedAnswerTS As %TimeStamp;
+
 ClassMethod GetCommentsAmount(id) As %Integer
 {
 	set result = 0
@@ -67,8 +69,7 @@ ClassMethod GetCommentsAmount(id) As %Integer
 
 ClassMethod Upsert(Nid, Name, Created, Uid, Tags, Type, Views, AvgVote, VotesAmount, Text, Groups, Published, PostType, SubsCount, HasCorrectAnswer) As %Status
 {
-	Set Hash = ##class(Community.Utils.Hash).Hash(Nid, Name, Created, Uid, Tags, Type, Views, AvgVote, VotesAmount, Text, 
-													Groups, Published, PostType, SubsCount, HasCorrectAnswer) 
+	Set Hash = ##class(Community.Utils.Hash).Hash(Nid, Name, Created, Uid, Tags, Type, Views, AvgVote, VotesAmount, Text, Groups, Published, PostType, SubsCount, HasCorrectAnswer) 
  	Return:(Hash=..HashGetStored(Nid)) $$$OK
  	
 	If ..%ExistsId(Nid) {
@@ -91,14 +92,12 @@ ClassMethod Upsert(Nid, Name, Created, Uid, Tags, Type, Views, AvgVote, VotesAmo
 	set reg = ##class(%Regex.Matcher).%New("<(([^>]|\n)*)>")
 	set reg.Text = Text
 	set Text = reg.ReplaceAll("")
-	
 	set Text = $replace(Text,"&nbsp;"," ")
 	set Text = $replace(Text,"&gt;",">")
 	set Text = $replace(Text,"&lt;","<")
 	set Text = $replace(Text,"&amp;","&")
 	set Text = $replace(Text,"&quot;","""")
 	set Text = $replace(Text,"&#39;","'")
-	
 	Set Post.Text = Text
 	Set Post.SubsCount = SubsCount
 	Set Post.HasCorrectAnswer = HasCorrectAnswer
@@ -190,6 +189,9 @@ Storage Default
 </Value>
 <Value name="20">
 <Value>HasCorrectAnswer</Value>
+</Value>
+<Value name="21">
+<Value>AcceptedAnswerTS</Value>
 </Value>
 </Data>
 <DataLocation>^Community.PostD</DataLocation>
