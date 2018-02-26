@@ -45,7 +45,7 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
   </measure>
   <measure name="MembersAmountBeforeDateMonth" disabled="true" sourceExpression="%cube.GetMembersAmountBeforeDate($zdateh($piece($zdate(%source.Created,3),&quot;-&quot;,1,2)_&quot;-01&quot;,3))" aggregate="AVG" type="integer" hidden="false" searchable="false">
   </measure>
-  <listing name="New_listing1" disabled="false" listingType="table" fieldList="Name,Position,Email,Company,Link">
+  <listing name="New_listing1" disabled="false" listingType="table" fieldList="Name,Link">
   </listing>
 </cube>
 }

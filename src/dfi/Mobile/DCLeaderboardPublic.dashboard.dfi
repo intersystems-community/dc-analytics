@@ -12,9 +12,4 @@
   </widget>
   <widget name="W4" type="pivot" subtype="pivot" subtypeClass="lineChart" title="Views" dataSource="Mobile/Leaderboard/AuthorsByViews.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="4" homeColL="4" colSpanL="4" rowSpanL="4" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="#F0F0F0" opacity="1" theme="" dataColorList="">
   </widget>
-  <widget name="Widget5" type="pivot" subtype="barChart" subtypeClass="barChart" title="test" dataSource="Mobile/Leaderboard/DCLeaderboard.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="8" homeColL="0" colSpanL="4" rowSpanL="4" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="#F0F0F0" opacity="1" theme="" dataColorList="">
-    <control name="" action="applyFilter" target="" targetProperty="[DateDimension].[H1].[MonthYear]" location="widget" type="auto" controlClass="" label="MonthYear" title="" value="&amp;[NOW]" text="" readOnly="false" valueList="" displayList="" activeWhen="">
-      <valueRequired>false</valueRequired>
-    </control>
-  </widget>
 </dashboard>

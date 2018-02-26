@@ -1,0 +1,4 @@
+ROUTINE dev
+	set gbl = "Community.CommentD.GBL,Community.GroupD.GBL,Community.GroupPostD.GBL,Community.PostD.GBL,Community.Public.MemberD.GBL,Community.VoteD.GBL,History.ActiveMembersD.GBL,History.AvgCommentsD.GBL,History.AvgPostsD.GBL,History.ViewsD.GBL"
+	set fn = "DCPublic_globals.gz"
+	set s=##class(%Stream.FileBinaryGzip).%New() do s.LinkToFile(fn) do $System.OBJ.ExportToStream(gbl,s) do s.%Save() kill s

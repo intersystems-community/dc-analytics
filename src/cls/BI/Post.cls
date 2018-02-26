@@ -137,7 +137,7 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
   </measure>
   <measure name="SubsCount" displayName="Subscriptions" disabled="false" sourceProperty="SubsCount" aggregate="SUM" type="number" hidden="false" searchable="false" formatString="#">
   </measure>
-  <listing name="New_listing1" disabled="false" listingType="table" fieldList="Link,Name As Post,Created,Views,CommentsAmount As Comments,AvgVote as Votes,SubsCount as Favorites,Author-&gt;Name as Author,Author-&gt;Email as &quot;Author Email&quot;">
+  <listing name="New_listing1" disabled="false" listingType="table" fieldList="Link,Name As Post,Created,Views,CommentsAmount As Comments,AvgVote as Votes,SubsCount as Favorites,Author-&gt;Name as Author">
   </listing>
 </cube>
 }
