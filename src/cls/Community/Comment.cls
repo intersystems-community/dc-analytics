@@ -1,6 +1,6 @@
 Include Community
 
-Class Community.Comment Extends %Persistent [ DependsOn = (Community.Member, Community.Post, Community.Utils.Hash) ]
+Class Community.Comment Extends %Persistent [ DependsOn = (Community.Member, Community.Post) ]
 {
 
 Parameter DSTIME = "AUTO";
@@ -45,64 +45,6 @@ Index TextHashIndex On TextHash;
 Relationship Votes As Community.Vote [ Cardinality = many, Inverse = Comment ];
 
 Property AcceptedAnswerTS As %TimeStamp;
-
-ClassMethod Upsert(Id, Type, Nid, Created, Uid, AvgVote, VotesAmount, Text, Correct) As %Status
-{
-	Set Id1 = Type _ "||" _ Id
- 	Set Hash = ##class(Community.Utils.Hash).Hash(Id, Type, Nid, Created, Uid, AvgVote, VotesAmount, Text, Correct)
- 	Return:(Hash=..HashGetStored(Id1)) $$$OK
- 	
- 	If ..%ExistsId(Id1) {
- 		Set Comment = ..%OpenId(Id1)
-	} Else {
-		Set Comment = ..%New()
-		Set Comment.Id = Id
-		Set Comment.Type = Type
-		Do Comment.PostSetObjectId(Nid)
-		Do Comment.AuthorSetObjectId(Uid)
-	}
-	
-	Set Comment.Hash = Hash
-	Set Comment.Created = Created
-	Set Comment.AvgVote = AvgVote
-	Set Comment.VotesAmount = VotesAmount
-	Set Comment.Correct = Correct
-	
-	Set modify = 0
-	If (Correct = 1) & (Comment.AcceptedAnswerTS = "") {
-		Set Comment.AcceptedAnswerTS = $zdt($now(300),3)
-		Set modify = 1
-	} ElseIf (Correct = 0) & (Comment.AcceptedAnswerTS '= "") {
-		Set Comment.AcceptedAnswerTS = ""
-		Set modify = 1
-	}
-	
-	if modify = 1 {
-		Set Comment.Post.AcceptedAnswerTS = Comment.AcceptedAnswerTS
-		Set st = Comment.Post.%Save()
-	}
-	
-	Set TextHash = ##class(Community.Utils.Hash).Hash(Text)
-	
-	If TextHash '= Comment.TextHash {
-		Set Text = $replace(Text,"</p>"," ")
-		Set reg = ##class(%Regex.Matcher).%New("<(([^>]|\n)*)>")
-		Set reg.Text = Text
-		Set Text = reg.ReplaceAll("")
-		Set Text = $replace(Text,"&nbsp;"," ")
-		Set Text = $replace(Text,"&gt;",">")
-		Set Text = $replace(Text,"&lt;","<")
-		Set Text = $replace(Text,"&amp;","&")
-		Set Text = $replace(Text,"&quot;","""")
-		Set Text = $replace(Text,"$#39;","'")
-		Set Comment.Text = Text
-		Set Comment.TextHash = TextHash
-	}
-	
-	set st = Comment.%Save()
-	
-	return st
-}
 
 Storage Default
 {

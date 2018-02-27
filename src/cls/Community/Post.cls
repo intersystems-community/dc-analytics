@@ -1,6 +1,6 @@
 Include Community
 
-Class Community.Post Extends %Persistent [ DependsOn = (Community.Member, Community.Utils.Hash) ]
+Class Community.Post Extends %Persistent [ DependsOn = Community.Member ]
 {
 
 Parameter DSTIME = "AUTO";
@@ -65,66 +65,6 @@ ClassMethod GetCommentsAmount(id) As %Integer
 	set rs = ##class(%SQL.Statement).%ExecDirect(,sql, id)
 	if rs.%Next() {set result = rs.CommentsAmount}
 	Quit result
-}
-
-ClassMethod Upsert(Nid, Name, Created, Uid, Tags, Type, Views, AvgVote, VotesAmount, Text, Groups, Published, PostType, SubsCount, HasCorrectAnswer) As %Status
-{
-	Set Hash = ##class(Community.Utils.Hash).Hash(Nid, Name, Created, Uid, Tags, Type, Views, AvgVote, VotesAmount, Text, Groups, Published, PostType, SubsCount, HasCorrectAnswer) 
- 	Return:(Hash=..HashGetStored(Nid)) $$$OK
- 	
-	If ..%ExistsId(Nid) {
-		Set Post = ..%OpenId(Nid)
-	} Else {
-		Set Post = ..%New()
-		Set Post.Nid = Nid
-		Do Post.AuthorSetObjectId(Uid)
-	}
-	
-	Set Post.Hash = Hash
-	Set Post.Name = Name
-	Set Post.Created = Created
-	Set Post.Tags = Tags
-	Set Post.Views = Views
-	Set Post.AvgVote = AvgVote
-	Set Post.VotesAmount = VotesAmount
-	
-	set Text = $replace(Text,"</p>"," ")
-	set reg = ##class(%Regex.Matcher).%New("<(([^>]|\n)*)>")
-	set reg.Text = Text
-	set Text = reg.ReplaceAll("")
-	set Text = $replace(Text,"&nbsp;"," ")
-	set Text = $replace(Text,"&gt;",">")
-	set Text = $replace(Text,"&lt;","<")
-	set Text = $replace(Text,"&amp;","&")
-	set Text = $replace(Text,"&quot;","""")
-	set Text = $replace(Text,"&#39;","'")
-	Set Post.Text = Text
-	Set Post.SubsCount = SubsCount
-	Set Post.HasCorrectAnswer = HasCorrectAnswer
-	
-	Set Post.Type = Type
-	Set Post.PostType = PostType
-	
-	If (Post.Published '= Published) {
-		If Published {
-			Set Post.PublishedDate = $ZDT($H, 3)	
-		} Else {
-			Set Post.PublishedDate = ""
-		}		
-		Set Post.Published = Published
-	}
-	
-	Set st = Post.%Save()
-	Return:$$$ISERR(st) st
-	
-	For i=1:1:$Length(Groups, ",") {
-		Set st1 = ##class(Community.GroupPost).Insert($Piece(Groups, ",", i), Nid)
-		Set st = $$$ADDSC(st, st1)
-	}
-	
-	Set st = Post.%Save()
-	
-	Return st
 }
 
 Storage Default

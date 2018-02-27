@@ -1,4 +1,4 @@
-Class Community.Public.Utils [ Abstract ]
+Class Community.Utils [ Abstract ]
 {
 
 ClassMethod setup(globalPath As %String = "") As %Status

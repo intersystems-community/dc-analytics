@@ -1,6 +1,6 @@
 Include Community
 
-Class Community.Group Extends %Persistent [ DependsOn = Community.Utils.Hash, SqlTableName = GroupClass ]
+Class Community.Group Extends %Persistent [ SqlTableName = GroupClass ]
 {
 
 Parameter DSTIME = "AUTO";
@@ -34,27 +34,6 @@ ClassMethod GetPostsAmount(id) As %Integer
 	set rs = ##class(%SQL.Statement).%ExecDirect(,sql, id)
 	if rs.%Next() {set result = rs.PostsAmount}
 	Quit result
-}
-
-ClassMethod Upsert(Nid, Name, Created, Tags) As %Status
-{
-	Set Hash = ##class(Community.Utils.Hash).Hash(Nid, Name, Created, Tags) 
- 	Return:(Hash=..HashGetStored(Nid)) $$$OK
-	
-	If ..%ExistsId(Nid) {
-		Set Group = ..%OpenId(Nid)
-	} Else {
-		Set Group = ..%New()
-		Set Group.Nid = Nid
-	}
-	
-	Set Group.Hash = Hash
-	Set Group.Name = Name
-	Set Group.Created = Created
-	Set Group.Tags = Tags
-	
-	Set st = Group.%Save()
-	Return st
 }
 
 Storage Default

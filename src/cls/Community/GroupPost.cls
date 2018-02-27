@@ -7,23 +7,6 @@ Relationship Post As Community.Post [ Cardinality = one, Inverse = GroupsClass, 
 
 Index GroupPost On (GroupClass, Post) [ Unique ];
 
-ClassMethod Insert(groupId, postId) As %Status
-{
-	Set st = $$$OK
-	Return:##class(Community.GroupPost).GroupPostExists(groupId,postId) st
-	
-	&sql(
-		Insert Into Community.GroupPost (GroupClass, Post)
-		Values (:groupId, :postId)
-	)
-	
-	If (SQLCODE'=0) {
-		Set st = $$$ERROR($$$SQLError, SQLCODE, $g(%msg))
-	}
-	
-	Return st
-}
-
 Storage Default
 {
 <Data name="GroupPostDefaultData">

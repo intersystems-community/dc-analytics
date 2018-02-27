@@ -22,42 +22,6 @@ Index CommentIndex On Comment;
 
 Property Value As %Integer(VALUELIST = ",-1,1") [ Required ];
 
-ClassMethod Insert(Id, Created, EntityId, EntityType, Uid, Value) As %Status
-{
- 	If ..%ExistsId(Id) {
- 		Return $$$OK
-	} 
-	Set Vote = ..%New()
-	Set Vote.Id = Id
-	Set Vote.Created = Created
-	Set Vote.Value = Value
-	
-	If ((EntityType = "node") && (##class(Community.Post).%ExistsId(EntityId))) {	
-		Do Vote.PostSetObjectId(EntityId)
-	} Else {
-		
-		set ID = $Case(EntityType, "node":"answer", :EntityType) _"||" _ EntityId
-		
-		if (##class(Community.Comment).%ExistsId(ID)) {
-			Do Vote.CommentSetObjectId(ID)
-		}
-		Else {
-			Quit $$$OK
-		}
-	}
-	
-	if (##class(Community.Member).%ExistsId(Uid)) {
-		Do Vote.AuthorSetObjectId(Uid)
-	}
-	Else {
-		Quit $$$OK
-	}
-	
-	Set st = Vote.%Save()
-	
-	Return st
-}
-
 Storage Default
 {
 <Data name="VoteDefaultData">

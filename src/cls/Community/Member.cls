@@ -1,6 +1,6 @@
 Include Community
 
-Class Community.Member Extends %Persistent [ DependsOn = Community.Utils.Hash ]
+Class Community.Member Extends %Persistent
 {
 
 Parameter MANAGEDEXTENT = 0;
@@ -32,29 +32,6 @@ Relationship Posts As Community.Post [ Cardinality = many, Inverse = Author ];
 Relationship Comments As Community.Comment [ Cardinality = many, Inverse = Author ];
 
 Relationship Votes As Community.Vote [ Cardinality = many, Inverse = Author ];
-
-ClassMethod Upsert(Uid, FirstName, LastName, Company, Position, Created, SubSuspended) As %Status
-{
-	Set Hash = ##class(Community.Utils.Hash).Hash(Uid, FirstName, LastName, Company, Position, Created) 
- 	Return:(Hash=..HashGetStored(Uid)) $$$OK
-	
-	If ..%ExistsId(Uid) {
-		Set Member = ..%OpenId(Uid)
-	} Else {
-		Set Member = ..%New()
-		Set Member.Uid = Uid
-	}
-
-	Set Member.Hash = Hash
-	Set Member.FirstName = FirstName
-	Set Member.LastName = LastName
-	
-	Set Member.Created = Created
-	
-	Set st = Member.%Save()
-	
-	Return st
-}
 
 Storage Default
 {
