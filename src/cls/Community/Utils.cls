@@ -4,7 +4,7 @@ Class Community.Utils [ Abstract ]
 ClassMethod setup(globalPath As %String = "") As %Status
 {
 	if globalPath = "" {
-		write "Please input path to global XML file.", !
+		write "Please input path to global GZ file.", !
 		return $$$ERROR(5001, "Please input path to global XML file.")
 	}
 	
@@ -16,9 +16,11 @@ ClassMethod setup(globalPath As %String = "") As %Status
 		return sc
 	}
 	
+	write "Building indices", !
 	set sc = ..buildIndices()
 	return:$$$ISERR(sc) sc
 	
+	write "Building cubes", !
 	set sc = ..UpdateCubes()
 	return:$$$ISERR(sc) sc
 	
