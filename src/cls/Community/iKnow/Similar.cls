@@ -1,6 +1,6 @@
 Include Community
 
-Class Community.iKnow.Similar Extends %Persistent
+Class Community.iKnow.Similar Extends %Persistent [ DependsOn = Community.Post ]
 {
 
 Property Nid As %Integer [ Required ];

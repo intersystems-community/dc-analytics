@@ -1,6 +1,6 @@
 Include %IKPublic
 
-Class Community.iKnow.Answer
+Class Community.iKnow.Answer [ DependsOn = Community.Comment ]
 {
 
 Parameter DomainName As STRING = "CommunityAnswer";

@@ -1,6 +1,6 @@
 Include %IKPublic
 
-Class Community.iKnow.Post
+Class Community.iKnow.Post [ DependsOn = Community.Post ]
 {
 
 Parameter DomainName As STRING = "CommunityPost";

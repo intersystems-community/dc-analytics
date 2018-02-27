@@ -1,6 +1,6 @@
 Include %IKPublic
 
-Class Community.iKnow.SimilarPosts
+Class Community.iKnow.SimilarPosts [ DependsOn = Community.Post ]
 {
 
 Parameter DomainName As STRING = "SimilarPosts";
