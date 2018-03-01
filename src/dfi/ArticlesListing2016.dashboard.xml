@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25" zv="Cache for Windows (x86-64) 2018.2 (Build 201U)" ts="2018-03-01 21:23:07">
+<Document name="ArticlesListing2016.dashboard.DFI">
+<dashboard xmlns="http://www.intersystems.com/deepsee/library" name="ArticlesListing2016" folderName="" title="Articles 2016" description="" keywords="" owner="" shared="true" public="true" locked="false" resource="" timeCreated="2017-01-05T14:28:18.046Z" createdBy="mobile" category="" bookCover="" scheme="" worklistCount="0" snapTo="true" snapGrid="true" gridRows="10" gridCols="10" canResize="true" canModify="true" showTitleBar="true" titleBarOpacity="" titleBarColor="" selectedTitleBarOpacity="" selectedTitleBarColor="" titleBarTextColor="" selectedTitleBarTextColor="" titleBarFont="" companyName="" companyLogo="" companyStyle="" backgroundColor="white" backgroundImage="none" backgroundRepeat="no-repeat" backgroundSize="100% 100%" backgroundOpacity="1" widgetBorders="1px solid #F0F0F0" widgetBordersSwitch="edit" widgetBordersColor="#F0F0F0" widgetBordersStyle="solid" widgetBordersWidth="1" widgetBordersToggle="true">
+  <widget name="Widget1" type="pivot" subtype="pivot" subtypeClass="lineChart" title="" dataSource="Tag/Posts.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="0" homeColL="0" colSpanL="10" rowSpanL="9" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="#F0F0F0" opacity="1" theme="" dataColorList="">
+    <control name="" action="applyFilter" target="" targetProperty="[DateDimension].[H1].[Year]" location="widget" type="auto" controlClass="" label="Year" title="" value="&amp;[2016]" text="" readOnly="false" valueList="" displayList="" activeWhen="">
+      <valueRequired>false</valueRequired>
+    </control>
+    <control name="" action="applyFilter" target="" targetProperty="[DateDimension].[H1].[MonthYear]" location="widget" type="auto" controlClass="" label="Month" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
+      <valueRequired>false</valueRequired>
+    </control>
+    <control name="" action="applyFilter" target="" targetProperty="[PostType].[H1].[PostType]" location="widget" type="auto" controlClass="" label="PostType" title="" value="&amp;[Article]" text="" readOnly="false" valueList="" displayList="" activeWhen="">
+      <valueRequired>false</valueRequired>
+    </control>
+    <control name="" action="applyFilter" target="" targetProperty="[AuthorName].[H1].[AuthorName]" location="widget" type="auto" controlClass="" label="Member" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
+      <valueRequired>false</valueRequired>
+    </control>
+    <control name="" action="applyFilter" target="" targetProperty="[Group].[H1].[GroupName]" location="widget" type="auto" controlClass="" label="Group" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
+      <valueRequired>false</valueRequired>
+    </control>
+  </widget>
+</dashboard>
+</Document></Export>

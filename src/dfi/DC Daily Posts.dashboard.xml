@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Export generator="Cache" version="25" zv="Cache for Windows (x86-64) 2017.1 (Build 730U)" ts="2018-02-27 23:16:18">
-<Document name="Public-DC Daily Posts.dashboard.DFI">
-<dashboard xmlns="http://www.intersystems.com/deepsee/library" name="DC Daily Posts" folderName="Public" title="DC Daily Posts" description="" keywords="" owner="" shared="true" public="true" locked="false" resource="" timeCreated="2016-09-28T15:30:45.71Z" createdBy="semendev" category="" bookCover="" scheme="" worklistCount="0" snapTo="true" snapGrid="true" gridRows="10" gridCols="10" canResize="true" canModify="true" showTitleBar="true" titleBarOpacity="" titleBarColor="" selectedTitleBarOpacity="" selectedTitleBarColor="" titleBarTextColor="" selectedTitleBarTextColor="" titleBarFont="" companyName="" companyLogo="" companyStyle="" backgroundColor="white" backgroundImage="none" backgroundRepeat="no-repeat" backgroundSize="100% 100%" backgroundOpacity="1" widgetBorders="1px solid #F0F0F0" widgetBordersSwitch="edit" widgetBordersColor="#F0F0F0" widgetBordersStyle="solid" widgetBordersWidth="1" widgetBordersToggle="true">
+<Export generator="Cache" version="25" zv="Cache for Windows (x86-64) 2018.2 (Build 201U)" ts="2018-03-01 21:23:07">
+<Document name="DC Daily Posts.dashboard.DFI">
+<dashboard xmlns="http://www.intersystems.com/deepsee/library" name="DC Daily Posts" folderName="" title="DC Daily Posts" description="" keywords="" owner="" shared="true" public="true" locked="false" resource="" timeCreated="2016-09-28T15:30:45.71Z" createdBy="semendev" category="" bookCover="" scheme="" worklistCount="0" snapTo="true" snapGrid="true" gridRows="10" gridCols="10" canResize="true" canModify="true" showTitleBar="true" titleBarOpacity="" titleBarColor="" selectedTitleBarOpacity="" selectedTitleBarColor="" titleBarTextColor="" selectedTitleBarTextColor="" titleBarFont="" companyName="" companyLogo="" companyStyle="" backgroundColor="white" backgroundImage="none" backgroundRepeat="no-repeat" backgroundSize="100% 100%" backgroundOpacity="1" widgetBorders="1px solid #F0F0F0" widgetBordersSwitch="edit" widgetBordersColor="#F0F0F0" widgetBordersStyle="solid" widgetBordersWidth="1" widgetBordersToggle="true">
   <widget name="Posts" type="pivot" subtype="pivot" subtypeClass="lineChart" title="Posts Daily" dataSource="PublicDash/PublicPosts.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="0" homeColL="0" colSpanL="4" rowSpanL="6" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="#F0F0F0" opacity="1" theme="" dataColorList="">
-    <control name="" action="applyFilter" target="Posts,Comments" targetProperty="[DateDimension].[H1].[MonthYear]" location="widget" type="auto" controlClass="" label="Month" title="" value="&amp;[NOW]" text="" readOnly="false" valueList="" displayList="" activeWhen="">
+    <control name="" action="applyFilter" target="Posts,Comments,Authors" targetProperty="[DateDimension].[H1].[MonthYear]" location="widget" type="auto" controlClass="" label="Month" title="" value="&amp;[NOW]" text="" readOnly="false" valueList="" displayList="" activeWhen="">
       <valueRequired>false</valueRequired>
     </control>
     <control name="" action="applyFilter" target="Posts,Comments" targetProperty="[PostType].[H1].[PostType]" location="widget" type="auto" controlClass="" label="Post Type" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
@@ -29,6 +29,11 @@
       <valueRequired>false</valueRequired>
     </control>
     <control name="" action="applyFilter" target="" targetProperty="[AuthorName].[H1].[AuthorName]" location="widget" type="auto" controlClass="" label="Member" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
+      <valueRequired>false</valueRequired>
+    </control>
+  </widget>
+  <widget name="Authors" type="pivot" subtype="pieChart" subtypeClass="pieChart" title="Authors" dataSource="Week/PostsByMembers.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="6" homeColL="0" colSpanL="4" rowSpanL="4" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="#F0F0F0" opacity="1" theme="" dataColorList="">
+    <control name="" action="showListing" target="" targetProperty="New_listing1" location="widget" type="auto" controlClass="" label="" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="itemSelected">
       <valueRequired>false</valueRequired>
     </control>
   </widget>
