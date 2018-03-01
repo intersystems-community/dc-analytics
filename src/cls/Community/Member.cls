@@ -31,6 +31,8 @@ Relationship Posts As Community.Post [ Cardinality = many, Inverse = Author ];
 
 Relationship Comments As Community.Comment [ Cardinality = many, Inverse = Author ];
 
+Relationship Positions As History.ChampionshipPositions [ Cardinality = many, Inverse = Member ];
+
 Relationship Votes As Community.Vote [ Cardinality = many, Inverse = Author ];
 
 Storage Default

@@ -25,6 +25,8 @@ Property Tags As %String;
 
 Property PostsAmount As %Integer [ Calculated, SqlComputeCode = { set {*} = ##class(Community.Group).GetPostsAmount({Id})}, SqlComputed ];
 
+Relationship Positions As History.ChampionshipPositions [ Cardinality = many, Inverse = GroupClass ];
+
 Property Hash As %String;
 
 ClassMethod GetPostsAmount(id) As %Integer

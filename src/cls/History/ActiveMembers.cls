@@ -11,61 +11,6 @@ Property Link As %String(MAXLEN = 250);
 
 Property Added As %Date;
 
-ClassMethod InsertActiveMembersHistory()
-{
-	set sql = "SELECT ActiveMemberId, Min(Added) AS MinAdded, Link "
-			 _"FROM "
-				_"(SELECT Author->Id AS ActiveMemberId, Created AS Added, Link "
-				_"FROM Community.Comment "
-					_"UNION ALL "
-				_"SELECT Author->Id, Created, Link "
-				_"FROM Community.Post) "
-			 _"GROUP BY ActiveMemberId "
-			 _"ORDER BY MinAdded"
-		
-	set rs = ##class(%SQL.Statement).%ExecDirect(,sql)
-	
-	while rs.%Next(){
-		kill data
-		
-		set data("Added") = $zdh(rs.MinAdded,3)
-		set data("ActiveMemberId") = rs.ActiveMemberId
-		set data("Link") = rs.Link
-		
-		set sc = ##class(History.ActiveMembers).InsertOrUpdate(.data) 
-		quit:$$$ISERR(sc)
-	}
-		
-	quit sc
-}
-
-ClassMethod InsertOrUpdate(ByRef data) As %Status
-{
-	set sc = ##class(History.ActiveMembers).MemberExists(data("ActiveMemberId"))
-	
-	if sc {
-		quit $$$OK
-	} else { 
-		set sc = ..Insert(.data)
-	}
-	
-	quit sc
-}
-
-ClassMethod Insert(ByRef data) As %Status
-{
-	&sql(
-		INSERT INTO History.ActiveMembers (Added,Member,Link)
-		VALUES (:data("Added"), :data("ActiveMemberId"), :data("Link"))
-	)
-	if SQLCODE=0 {
-		set data = %ROWID 
-		quit $$$OK	
-	}
-	
-	quit $$$ERROR($$$SQLError, SQLCODE, $get(%msg))
-}
-
 Storage Default
 {
 <Data name="ActiveMembersDefaultData">
