@@ -22,5 +22,5 @@ DCPUBLIC> do ##class(Community.iKnow.Utils).setup()
 DCPUBLIC> do ##class(Community.iKnow.Utils).update()
 DCPUBLIC> do ##class(Community.Utils).UpdateСubes()
 ```
-4.Open iKnow dashboard:`<server:port>/dsw/index.html#!/d/iKnow.dashboard?ns=DCPUBLIC`
-5.Done
+4. Open iKnow dashboard:`<server:port>/dsw/index.html#!/d/iKnow.dashboard?ns=DCPUBLIC`
+5. Done
