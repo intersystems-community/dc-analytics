@@ -1,5 +1,5 @@
 /// 
-Class BI.CommentCopy Extends %DeepSee.CubeDefinition [ DependsOn = Community.Comment, ProcedureBlock ]
+Class BI.CommentCopy Extends %DeepSee.CubeDefinition [ DependsOn = (Community.Comment, Community.Post), ProcedureBlock ]
 {
 
 /// Cube definition from Architect.
