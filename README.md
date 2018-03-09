@@ -19,9 +19,9 @@ DCPUBLIC> do ##class(Community.Utils).setup("path/to/global/archive")
 2. Download from release `DSW.config.and.iKnow.files.zip` and move files `sets.txt` and `backlist.txt` from archive to `<your_instance>/Mgr/DCANALYTICS/`.
 3. Run in terminal:
 ```
-DCPUBLIC> do ##class(Community.iKnow.Utils).setup()
-DCPUBLIC> do ##class(Community.iKnow.Utils).update()
-DCPUBLIC> do ##class(Community.Utils).UpdateСubes()
+DCANALYTICS> do ##class(Community.iKnow.Utils).setup()
+DCANALYTICS> do ##class(Community.iKnow.Utils).update()
+DCANALYTICS> do ##class(Community.Utils).UpdateСubes()
 ```
 4. Open iKnow dashboard:`<server:port>/dsw/index.html#!/d/iKnow.dashboard?ns=DCANALYTICS`
 5. Done
