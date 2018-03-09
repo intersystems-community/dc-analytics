@@ -3,7 +3,7 @@ InterSystems Developer Community analytics.
 Project made with InterSystems Analytics (DeepSee) to visualize and analyze members, articles, questions, answers, views and other pieces of content and activity on [InterSystems Developer Community](community.intersystems.com)
 
 [See Live DC analytics](https://analytics.community.intersystems.com/dswpub/index.html#!/?ns=COMMUNITYPUBLIC&embed=1)
-(https://www.dropbox.com/s/u59s6w4e87sdhdk/Screenshot%202018-03-09%2014.25.44.jpg?dl=0)
+![DC analytics](https://github.com/MakarovS96/images/blob/master/dcanalitycs.jpg)
 
 # Collaboration
 
