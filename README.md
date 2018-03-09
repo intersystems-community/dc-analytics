@@ -1,6 +1,12 @@
 # DC Analytics
 InterSystems Developer Community analytics.
 Project made with InterSystems Analytics (DeepSee) to visualize and analyze members, articles, questions, answers, views and other pieces of content and activity on [InterSystems Developer Community](community.intersystems.com)
+
+[See Live DC analytics](https://analytics.community.intersystems.com/dswpub/index.html#!/?ns=COMMUNITYPUBLIC&embed=1)
+(https://www.dropbox.com/s/u59s6w4e87sdhdk/Screenshot%202018-03-09%2014.25.44.jpg?dl=0)
+
+# Collaboration
+
 ## Installation
 ### Basic
 1. First be sure, that you have [MDX2JSON](https://github.com/intersystems-ru/Cache-MDX2JSON) and [DSW](https://github.com/intersystems-ru/DeepSeeWeb) installed.
