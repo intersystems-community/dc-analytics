@@ -54,8 +54,6 @@ Property SubsCount As %Integer;
 
 Property HasCorrectAnswer As %Boolean;
 
-Relationship Votes As Community.Vote [ Cardinality = many, Inverse = Post ];
-
 Property AcceptedAnswerTS As %TimeStamp;
 
 ClassMethod GetCommentsAmount(id) As %Integer

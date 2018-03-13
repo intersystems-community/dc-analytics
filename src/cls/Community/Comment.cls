@@ -42,8 +42,6 @@ Property TextHash As %String;
 
 Index TextHashIndex On TextHash;
 
-Relationship Votes As Community.Vote [ Cardinality = many, Inverse = Comment ];
-
 Property AcceptedAnswerTS As %TimeStamp;
 
 Storage Default

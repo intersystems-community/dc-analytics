@@ -33,8 +33,6 @@ Relationship Comments As Community.Comment [ Cardinality = many, Inverse = Autho
 
 Relationship Positions As History.ChampionshipPositions [ Cardinality = many, Inverse = Member ];
 
-Relationship Votes As Community.Vote [ Cardinality = many, Inverse = Author ];
-
 Storage Default
 {
 <Data name="MemberDefaultData">
