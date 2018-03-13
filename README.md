@@ -1,6 +1,12 @@
 # DC Analytics
 InterSystems Developer Community analytics.
 Project made with InterSystems Analytics (DeepSee) to visualize and analyze members, articles, questions, answers, views and other pieces of content and activity on [InterSystems Developer Community](community.intersystems.com)
+
+[See Live DC analytics](https://analytics.community.intersystems.com/dswpub/index.html#!/?ns=COMMUNITYPUBLIC&embed=1)
+![DC analytics](https://github.com/MakarovS96/images/blob/master/dcanalitycs.jpg)
+
+# Collaboration
+
 ## Installation
 ### Basic
 1. First be sure, that you have [MDX2JSON](https://github.com/intersystems-ru/Cache-MDX2JSON) and [DSW](https://github.com/intersystems-ru/DeepSeeWeb) installed.
@@ -19,9 +25,9 @@ DCPUBLIC> do ##class(Community.Utils).setup("path/to/global/archive")
 2. Download from release `DSW.config.and.iKnow.files.zip` and move files `sets.txt` and `backlist.txt` from archive to `<your_instance>/Mgr/DCANALYTICS/`.
 3. Run in terminal:
 ```
-DCPUBLIC> do ##class(Community.iKnow.Utils).setup()
-DCPUBLIC> do ##class(Community.iKnow.Utils).update()
-DCPUBLIC> do ##class(Community.Utils).UpdateСubes()
+DCANALYTICS> do ##class(Community.iKnow.Utils).setup()
+DCANALYTICS> do ##class(Community.iKnow.Utils).update()
+DCANALYTICS> do ##class(Community.Utils).UpdateСubes()
 ```
 4. Open iKnow dashboard:`<server:port>/dsw/index.html#!/d/iKnow.dashboard?ns=DCANALYTICS`
 5. Done
