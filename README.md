@@ -21,7 +21,7 @@ DCANALYTICS> do ##class(Community.Utils).setup("path/to/global/archive")
 7. Open in your browser `<server:port>/dsw/index.html?ns=DCANALYTICS`.
 8. Done
 ### With iKnow
-1. Be sure, that everything listed above is installed.
+1. Enable iKnow in namespace web-application settings. Be sure, that everything listed above is installed.
 2. Download from release `DSW.config.and.iKnow.files.zip` and move files `sets.txt` and `backlist.txt` from archive to `<your_instance>/Mgr/DCANALYTICS/`.
 3. Run in terminal:
 ```
