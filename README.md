@@ -1,4 +1,7 @@
 # DC Analytics
+
+[![Gitter](https://img.shields.io/badge/chat-on%20telegram-blue.svg)](https://t.me/joinchat/FoZ4M0KF5NakAJPwyg1Saw)
+
 InterSystems Developer Community analytics.
 Project made with InterSystems Analytics (DeepSee) to visualize and analyze members, articles, questions, answers, views and other pieces of content and activity on [InterSystems Developer Community](community.intersystems.com)
 
