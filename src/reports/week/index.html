@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <link href="../lib/bootstrap-grid.css" rel="stylesheet">
+        <link rel="stylesheet" href="../lib/style.css">
+    </head>
+
+    <body ng-app="app">
+        <div class="custom-container" ng-controller="report">
+            <div class="head">
+                <span>Weekly DC Report</span>
+            </div>
+            <div id="content" >
+                <div class="block" ng-repeat="block in model.blocks">
+                    <div class="block-title">
+                        <span>{{block.title}}</span>
+                    </div>
+                    <div class="row block-content">
+                        <div class="col widget">
+                            <iframe style="border: none" ng-src="{{block.widget.url}}" width="{{block.widget.width}}" height="{{block.widget.height}}" ></iframe>
+                        </div>
+                        <div class="col-3 totals">
+                            <div class="total" align="center" ng-repeat="total in block.totals">
+                                <div class="string" ng-repeat="string in total.strings">
+                                    <span ng-bind-html="string.title"></span> {{string.value}}<span ng-bind-html="string.value_append"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="note">
+                        <span ng-bind-html="block.note"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../lib/angular.min.js"></script>
+        <script src="../lib/angular-sanitize.min.js"></script>
+        <script src="config.js"></script>
+        <script src="../lib/script.js"></script>
+    </body>
+</html>
