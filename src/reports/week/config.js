@@ -5,6 +5,7 @@
  */
 function getConfiguration(params) {
     if (params.namespace == undefined || params.namespace == null) params.namespace = "DSWREP";
+    if (params.filter == undefined || params.filter == null) params.filter = "2018W10";
     return {
         REPORT_NAME: "Report Example", // Заголовок отчёта
         BLOCKS: getReportBlocks(params),
@@ -48,21 +49,21 @@ function getReportBlocks(params) {
             title: "Posts by Members",
             note: "",
             widget: {
-                url: server + "/dsw/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B2018W10%5D&widget=0&height=500&ns=" + namespace,
+                url: server + "/dsw/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B"+params.filter+"%5D&widget=0&height=450&ns=" + namespace,
                 width: 700,
-                height: 500
+                height: 450
             }
         },
         {
         title: "Weekly Posts",
         note: "",
         widget: {
-            url: server + "/dsw/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B2018W10%5D&widget=1&height=300&isLegend=true" + namespace,
-            width: 500,
+            url: server + "/dsw/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B"+params.filter+"%5D&widget=1&height=300&isLegend=true" + namespace,
+            width: 400,
             height: 350
         },
         totals: [{
-            mdx: "SELECT NON EMPTY {AVG([DateDimension].[H1].[WeekYear].Members),[DateDimension].[H1].[WeekYear].&[2018W10],%LABEL(%CELL(0,-1)-%CELL(0,-2),\"Performance\",\"\")} ON 1 FROM [POST]",
+            mdx: "SELECT NON EMPTY {AVG([DateDimension].[H1].[WeekYear].Members),[DateDimension].[H1].[WeekYear].&["+params.filter+"],%LABEL(%CELL(0,-1)-%CELL(0,-2),\"Performance\",\"\")} ON 1 FROM [POST]",
             strings: [{
                 title: "Posts this week: ",
                 value: "None",
@@ -81,9 +82,9 @@ function getReportBlocks(params) {
         title: "Comments by Members",
         note: "",
         widget: {
-        url: server + "/dsw/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B2018W10%5D&widget=2&height=500&ns=" + namespace,
+        url: server + "/dsw/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B"+params.filter+"%5D&widget=2&height=450&ns=" + namespace,
         width: 700,
-        height: 500
+        height: 450
             }
     }, 
      {
@@ -91,12 +92,12 @@ function getReportBlocks(params) {
     title: "Weekly Comments",
     note: "",
     widget: {
-        url: server + "/dsw/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B2018W10%5D&widget=3&height=400&isLegend=true" + namespace,
-        width: 500,
-        height: 400
+        url: server + "/dsw/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B"+params.filter+"%5D&widget=3&height=300&isLegend=true" + namespace,
+        width: 400,
+        height: 350
     },
     totals: [{
-        mdx: "SELECT NON EMPTY {AVG([DateDimension].[H1].[WeekYear].Members),[DateDimension].[H1].[WeekYear].&[2018W10],%LABEL(%CELL(0,-1)-%CELL(0,-2),\"Performance\",\"\")} ON 1 FROM [COMMENT]",
+        mdx: "SELECT NON EMPTY {AVG([DateDimension].[H1].[WeekYear].Members),[DateDimension].[H1].[WeekYear].&["+params.filter+"],%LABEL(%CELL(0,-1)-%CELL(0,-2),\"Performance\",\"\")} ON 1 FROM [COMMENT]",
         strings: [{
             title: "Comments this week: ",
             value: "None",
@@ -115,17 +116,17 @@ function getReportBlocks(params) {
     title: "Posts by Groups",
     note: "",
     widget: {
-    url: server + "/dsw/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B2018W10%5D&widget=4&height=400&ns=" + namespace,
+    url: server + "/dsw/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B"+params.filter+"%5D&widget=4&height=400&ns=" + namespace,
     width: 700,
-    height: 450
+    height: 400
         }
 }, {
     title: "Comments by Groups",
     note: "",
     widget: {
-    url: server + "/dsw/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B2018W10%5D&widget=5&height=400&ns=" + namespace,
+    url: server + "/dsw/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B"+params.filter+"%5D&widget=5&height=400&ns=" + namespace,
     width: 700,
-    height: 450
+    height: 400
         }
 }
 

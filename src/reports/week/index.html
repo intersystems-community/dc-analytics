@@ -5,9 +5,9 @@
     </head>
 
     <body ng-app="app">
-        <div class="custom-container" ng-controller="report">
+        <div class="container" ng-controller="report">
             <div class="head">
-                <span>Weekly DC Report</span>
+                <span>{{model.header}}</span>
             </div>
             <div id="content" >
                 <div class="block" ng-repeat="block in model.blocks">
