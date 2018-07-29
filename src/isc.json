@@ -2,6 +2,6 @@
     "compileList": "Com*.INC,BI*.CLS,Com*.CLS,His*.CLS,*.DFI",
     "projectName": "pa",
     "owner": "intersystems-community",
-    "repository": "DCPublic-Analytics",
+    "repository": "dc-analytics",
     "git": 0
 }
