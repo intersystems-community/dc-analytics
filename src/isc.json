@@ -1,5 +1,5 @@
 {
-    "compileList": "Com*.INC,BI*.CLS,Com*.CLS,His*.CLS,*.DFI",
+    "compileList": "BI*.CLS,Com*.CLS,His*.CLS,*.DFI",
     "projectName": "pa",
     "owner": "intersystems-community",
     "repository": "dc-analytics",
