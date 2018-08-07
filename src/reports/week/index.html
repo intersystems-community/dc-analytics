@@ -7,7 +7,7 @@
     <body ng-app="app">
         <div class="container" ng-controller="report">
             <div class="head">
-                <span>{{model.header}}</span>
+                <span ng-bind-html="model.header"></span>
             </div>
             <div id="content" >
                 <div class="block" ng-repeat="block in model.blocks">
@@ -19,7 +19,7 @@
                             <iframe style="border: none" ng-src="{{block.widget.url}}" width="{{block.widget.width}}" height="{{block.widget.height}}" ></iframe>
                         </div>
                         <div class="col-3 totals">
-                            <div class="total" align="center" ng-repeat="total in block.totals">
+                            <div class="total" ng-repeat="total in block.totals">
                                 <div class="string" ng-repeat="string in total.strings">
                                     <span ng-bind-html="string.title"></span> {{string.value}}<span ng-bind-html="string.value_append"></span>
                                 </div>
