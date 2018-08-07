@@ -1,5 +1,3 @@
-Include Community
-
 Class Community.Group Extends %Persistent [ SqlTableName = GroupClass ]
 {
 
@@ -13,7 +11,7 @@ Relationship Posts As Community.GroupPost [ Cardinality = many, Inverse = GroupC
 
 Property Name As %String(MAXLEN = 150);
 
-Property Link As %String(MAXLEN = 250) [ SqlComputeCode = {set {*} = $$$Server _ "node/" _ {Nid}}, SqlComputed, SqlComputeOnChange = %%INSERT ];
+Property Link As %String(MAXLEN = 250) [ SqlComputeCode = {set {*} = "https://community.intersystems.com/" _ "node/" _ {Nid}}, SqlComputed, SqlComputeOnChange = %%INSERT ];
 
 Index Link On Link [ Unique ];
 

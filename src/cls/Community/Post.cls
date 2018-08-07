@@ -1,5 +1,3 @@
-Include Community
-
 Class Community.Post Extends %Persistent [ DependsOn = Community.Member ]
 {
 
@@ -31,7 +29,7 @@ Property Deleted As %Boolean;
 
 Property Text As %String(MAXLEN = "");
 
-Property Link As %String(MAXLEN = 150) [ SqlComputeCode = {set {*} = $$$Server _ "node/" _ {Nid}}, SqlComputed, SqlComputeOnChange = %%INSERT ];
+Property Link As %String(MAXLEN = 150) [ SqlComputeCode = {set {*} = "https://community.intersystems.com/" _ "node/" _ {Nid}}, SqlComputed, SqlComputeOnChange = %%INSERT ];
 
 Index Link On Link [ Unique ];
 

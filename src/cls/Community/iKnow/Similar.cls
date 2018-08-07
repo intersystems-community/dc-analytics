@@ -1,5 +1,3 @@
-Include Community
-
 Class Community.iKnow.Similar Extends %Persistent [ DependsOn = Community.Post ]
 {
 
@@ -21,7 +19,7 @@ ClassMethod ToJSON(Nid As %Integer, ReturnURL As %Boolean, count As %Integer) As
 	for i=1:1:obj.Similar.Count()
 	{
 		if (ReturnURL = $$$YES){
-			do arr.%Push($$$Server _ "node/" _ obj.Similar.GetAt(i))
+			do arr.%Push("https://community.intersystems.com/node/" _ obj.Similar.GetAt(i))
 		}else{
 			do arr.%Push(obj.Similar.GetAt(i))
 		}
