@@ -93,7 +93,7 @@ Storage Default
 <IdLocation>^History.ChampionshipPositionsD</IdLocation>
 <IndexLocation>^History.ChampionshipPositionsI</IndexLocation>
 <StreamLocation>^History.ChampionshipPositionsS</StreamLocation>
-<Type>%Library.CacheStorage</Type>
+<Type>%Storage.Persistent</Type>
 }
 
 }

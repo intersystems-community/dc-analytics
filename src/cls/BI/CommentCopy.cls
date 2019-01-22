@@ -1,3 +1,5 @@
+Include Community
+
 /// 
 Class BI.CommentCopy Extends %DeepSee.CubeDefinition [ DependsOn = (Community.Comment, Community.Post), ProcedureBlock ]
 {
@@ -5,7 +7,7 @@ Class BI.CommentCopy Extends %DeepSee.CubeDefinition [ DependsOn = (Community.Co
 /// Cube definition from Architect.
 XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
 {
-<cube xmlns="http://www.intersystems.com/deepsee" name="CommentCopy" displayName="CommentCopy" disabled="false" abstract="false" sourceClass="Community.Comment" countMeasureName="COMCOUNT" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false">
+<cube xmlns="http://www.intersystems.com/deepsee" name="CommentCopy" displayName="CommentCopy" disabled="false" abstract="false" sourceClass="Community.Comment" buildRestriction="Post-&gt;Deleted = 0" countMeasureName="COMCOUNT" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false">
   <dimension name="AuthorName" disabled="false" sharesFrom="Post" hasAll="false" allCaption="All AuthorName" allDisplayName="AuthorName" type="data" hidden="false" showHierarchies="default">
   </dimension>
   <measure name="Comments" disabled="false" sourceProperty="Id" aggregate="COUNT" type="number" scale="0" hidden="false" searchable="false">
@@ -42,12 +44,21 @@ ClassMethod IsNonOwnPostComment(commentLink)
 ClassMethod GetGroupName(postId, prop As %String) As %String
 {
 	set result = ""
-	set sql = "Select GroupClass->"_prop_" As GroupProp From Community.GroupPost Where Post = ?"
+	/*set sql = "Select GroupClass->"_prop_" As GroupProp From Community.GroupPost Where Post = ?"
 	set rs = ##class(%SQL.Statement).%ExecDirect(,sql, postId)
 	while rs.%Next(){
 		if result = "" {set result = rs.GroupProp}
 		else{set result = result_","_rs.GroupProp}
-	}
+	}*/
+	for i=1:1:$l($$$MainTags,",") set intag($p($$$MainTags,",",i))=""
+	&sql(select tags into :tags from Community.Post where id = :postId)
+	for i=1:1:$l(tags, ",") {
+		set tag = $p(tags, ",", i)
+		if $d(intag(tag)) {
+			if result = "" {set result = tag}
+			else{set result = result_","_tag}
+		}
+	}	
 	Quit result
 }
 

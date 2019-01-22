@@ -1,3 +1,5 @@
+Include Community
+
 Class Community.Post Extends %Persistent [ DependsOn = Community.Member ]
 {
 
@@ -29,7 +31,7 @@ Property Deleted As %Boolean;
 
 Property Text As %String(MAXLEN = "");
 
-Property Link As %String(MAXLEN = 150) [ SqlComputeCode = {set {*} = "https://community.intersystems.com/" _ "node/" _ {Nid}}, SqlComputed, SqlComputeOnChange = %%INSERT ];
+Property Link As %String(MAXLEN = 150) [ SqlComputeCode = {set {*} = $$$Server _ "node/" _ {Nid}}, SqlComputed, SqlComputeOnChange = "%%INSERT" ];
 
 Index Link On Link [ Unique ];
 
@@ -39,7 +41,7 @@ Relationship Author As Community.Member [ Cardinality = one, Inverse = Posts, On
 
 Index AuthorIndex On Author;
 
-Relationship GroupsClass As Community.GroupPost [ Cardinality = many, Inverse = Post ];
+// Relationship GroupsClass As Community.GroupPost [ Cardinality = many, Inverse = Post ];
 
 Property CommentsAmount As %Integer [ Calculated, SqlComputeCode = { set {*} = ##class(Community.Post).GetCommentsAmount({Id})}, SqlComputed ];
 
@@ -135,7 +137,7 @@ Storage Default
 <IdLocation>^Community.PostD</IdLocation>
 <IndexLocation>^Community.PostI</IndexLocation>
 <StreamLocation>^Community.PostS</StreamLocation>
-<Type>%Library.CacheStorage</Type>
+<Type>%Storage.Persistent</Type>
 }
 
 }

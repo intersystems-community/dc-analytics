@@ -119,7 +119,7 @@ Storage Default
 <IdLocation>^History.ViewsD</IdLocation>
 <IndexLocation>^History.ViewsI</IndexLocation>
 <StreamLocation>^History.ViewsS</StreamLocation>
-<Type>%Library.CacheStorage</Type>
+<Type>%Storage.Persistent</Type>
 }
 
 }

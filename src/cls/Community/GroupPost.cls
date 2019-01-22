@@ -3,9 +3,9 @@ Class Community.GroupPost Extends %Persistent [ DependsOn = (Community.Group, Co
 
 Relationship GroupClass As Community.Group [ Cardinality = one, Inverse = Posts, OnDelete = cascade, Required ];
 
-Relationship Post As Community.Post [ Cardinality = one, Inverse = GroupsClass, OnDelete = cascade, Required ];
+// Relationship Post As Community.Post [ Cardinality = one, Inverse = GroupsClass, OnDelete = cascade, Required ];
 
-Index GroupPost On (GroupClass, Post) [ Unique ];
+// Index GroupPost On (GroupClass, Post) [ Unique ];
 
 Storage Default
 {
@@ -25,7 +25,7 @@ Storage Default
 <IdLocation>^Community.GroupPostD</IdLocation>
 <IndexLocation>^Community.GroupPostI</IndexLocation>
 <StreamLocation>^Community.GroupPostS</StreamLocation>
-<Type>%Library.CacheStorage</Type>
+<Type>%Storage.Persistent</Type>
 }
 
 }

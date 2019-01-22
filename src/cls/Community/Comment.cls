@@ -1,3 +1,5 @@
+Include Community
+
 Class Community.Comment Extends %Persistent [ DependsOn = (Community.Member, Community.Post) ]
 {
 
@@ -19,7 +21,7 @@ Relationship Author As Community.Member [ Cardinality = one, Inverse = Comments,
 
 Index AuthorIndex On Author;
 
-Property Link As %String(MAXLEN = 250) [ SqlComputeCode = {set {*} = "https://community.intersystems.com/" _ $case({Type}, "comment":"comment/", :"node/") _ {Id}}, SqlComputed, SqlComputeOnChange = %%INSERT ];
+Property Link As %String(MAXLEN = 250) [ SqlComputeCode = {set {*} = $$$Server _ $case({Type}, "comment":"comment/", :"node/") _ {Id}}, SqlComputed, SqlComputeOnChange = "%%INSERT" ];
 
 Index Link On Link [ Unique ];
 
@@ -93,7 +95,7 @@ Storage Default
 <IdLocation>^Community.CommentD</IdLocation>
 <IndexLocation>^Community.CommentI</IndexLocation>
 <StreamLocation>^Community.CommentS</StreamLocation>
-<Type>%Library.CacheStorage</Type>
+<Type>%Storage.Persistent</Type>
 }
 
 }

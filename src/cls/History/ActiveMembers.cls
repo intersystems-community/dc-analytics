@@ -44,7 +44,7 @@ Storage Default
 <IdLocation>^History.ActiveMembersD</IdLocation>
 <IndexLocation>^History.ActiveMembersI</IndexLocation>
 <StreamLocation>^History.ActiveMembersS</StreamLocation>
-<Type>%Library.CacheStorage</Type>
+<Type>%Storage.Persistent</Type>
 }
 
 }

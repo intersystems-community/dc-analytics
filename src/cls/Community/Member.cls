@@ -1,3 +1,5 @@
+Include Community
+
 Class Community.Member Extends %Persistent
 {
 
@@ -19,7 +21,7 @@ Property LastName As %String(MAXLEN = 255);
 
 Property Created As %TimeStamp;
 
-Property Link As %String(MAXLEN = 150) [ SqlComputeCode = {set {*} = "https://community.intersystems.com/" _ "user/" _ {Uid}}, SqlComputed, SqlComputeOnChange = %%INSERT ];
+Property Link As %String(MAXLEN = 150) [ SqlComputeCode = {set {*} = $$$Server _ "user/" _ {Uid}}, SqlComputed, SqlComputeOnChange = "%%INSERT" ];
 
 Index Link On Link [ Unique ];
 
@@ -73,7 +75,7 @@ Storage Default
 <IdLocation>^Community.Public.MemberD</IdLocation>
 <IndexLocation>^Community.Public.MemberI</IndexLocation>
 <StreamLocation>^Community.Public.MemberS</StreamLocation>
-<Type>%Library.CacheStorage</Type>
+<Type>%Storage.Persistent</Type>
 }
 
 }

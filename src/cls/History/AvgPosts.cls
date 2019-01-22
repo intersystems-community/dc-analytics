@@ -27,7 +27,7 @@ Storage Default
 <IdLocation>^History.AvgPostsD</IdLocation>
 <IndexLocation>^History.AvgPostsI</IndexLocation>
 <StreamLocation>^History.AvgPostsS</StreamLocation>
-<Type>%Library.CacheStorage</Type>
+<Type>%Storage.Persistent</Type>
 }
 
 }

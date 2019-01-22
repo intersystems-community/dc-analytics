@@ -171,7 +171,7 @@ Storage Default
 <IdLocation>^Community.iKnow.SimilarD</IdLocation>
 <IndexLocation>^Community.iKnow.SimilarI</IndexLocation>
 <StreamLocation>^Community.iKnow.SimilarS</StreamLocation>
-<Type>%Library.CacheStorage</Type>
+<Type>%Storage.Persistent</Type>
 }
 
 }

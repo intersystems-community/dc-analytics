@@ -1,3 +1,5 @@
+Include Community
+
 /// 
 Class BI.Comment Extends %DeepSee.CubeDefinition [ DependsOn = Community.Comment, ProcedureBlock ]
 {
@@ -5,7 +7,7 @@ Class BI.Comment Extends %DeepSee.CubeDefinition [ DependsOn = Community.Comment
 /// Cube definition from Architect.
 XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
 {
-<cube xmlns="http://www.intersystems.com/deepsee" name="Comment" displayName="Comment" disabled="false" abstract="false" sourceClass="Community.Comment" countMeasureName="%COUNT" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false">
+<cube xmlns="http://www.intersystems.com/deepsee" name="Comment" displayName="Comment" disabled="false" abstract="false" sourceClass="Community.Comment" buildRestriction="Post-&gt;Deleted = 0 and Post-&gt;Published = 1 " countMeasureName="%COUNT" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false">
   <dimension name="Post" disabled="false" hasAll="false" allCaption="All Post" allDisplayName="Post" type="data" hidden="false" showHierarchies="default">
     <hierarchy name="H1" disabled="false" hidden="false">
       <level name="AuthorName" disabled="false" sourceProperty="Post.Author.Name" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
@@ -22,9 +24,9 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
   </dimension>
   <dimension name="Group" disabled="false" hasAll="false" allCaption="All %ID" allDisplayName="%ID" type="data" calendar="gregorian" iKnowType="entity" hidden="false" showHierarchies="default">
     <hierarchy name="H1" disabled="false" hidden="false">
-      <level name="GroupName" disabled="false" sourceExpression="%cube.GetGroupName(%source.Post.%ID,&quot;Name&quot;)" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      <level name="GroupName" disabled="false" sourceExpression="%cube.GetGroupName(%source.Post.%ID,&quot;Name&quot;)" list="true" listDelimiter="," useDisplayValue="true" useAsFilter="true" hidden="false">
       </level>
-      <level name="PostName" disabled="false" sourceProperty="Post.Name" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      <level name="PostName" disabled="true" sourceProperty="Post.Name" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
       </level>
     </hierarchy>
   </dimension>
@@ -113,12 +115,21 @@ ClassMethod GetAddedPercent(date)
 ClassMethod GetGroupName(postId, prop As %String) As %String
 {
 	set result = ""
-	set sql = "Select GroupClass->"_prop_" As GroupProp From Community.GroupPost Where Post = ?"
+	/*set sql = "Select GroupClass->"_prop_" As GroupProp From Community.GroupPost Where Post = ?"
 	set rs = ##class(%SQL.Statement).%ExecDirect(,sql, postId)
 	while rs.%Next(){
 		if result = "" {set result = rs.GroupProp}
 		else{set result = result_","_rs.GroupProp}
-	}
+	}*/
+	for i=1:1:$l($$$MainTags,",") set intag($p($$$MainTags,",",i))=""
+	&sql(select tags into :tags from Community.Post where id = :postId)
+	for i=1:1:$l(tags, ",") {
+		set tag = $p(tags, ",", i)
+		if $d(intag(tag)) {
+			if result = "" {set result = tag}
+			else{set result = result_","_tag}
+		}
+	}	
 	Quit result
 }
 

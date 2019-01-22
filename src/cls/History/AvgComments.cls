@@ -27,7 +27,7 @@ Storage Default
 <IdLocation>^History.AvgCommentsD</IdLocation>
 <IndexLocation>^History.AvgCommentsI</IndexLocation>
 <StreamLocation>^History.AvgCommentsS</StreamLocation>
-<Type>%Library.CacheStorage</Type>
+<Type>%Storage.Persistent</Type>
 }
 
 }

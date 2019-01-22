@@ -1,3 +1,5 @@
+Include Community
+
 /// 
 Class BI.Post Extends %DeepSee.CubeDefinition [ DependsOn = Community.Post, ProcedureBlock ]
 {
@@ -125,6 +127,12 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
       </level>
     </hierarchy>
   </dimension>
+  <dimension name="Author" disabled="false" hasAll="false" allCaption="All Author1" allDisplayName="Author1" type="data" calendar="gregorian" iKnowType="entity" hidden="false" showHierarchies="default">
+    <hierarchy name="H1" disabled="false" hidden="false">
+      <level name="Author" disabled="false" sourceProperty="Author.Name" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      </level>
+    </hierarchy>
+  </dimension>
   <measure name="CommentsAmount" disabled="false" sourceProperty="CommentsAmount" aggregate="SUM" type="number" hidden="false" searchable="false">
   </measure>
   <measure name="Posts" disabled="false" sourceProperty="%ID" aggregate="COUNT" type="number" hidden="false" searchable="false" formatString="#">
@@ -179,12 +187,21 @@ ClassMethod GetAddedPercent(date)
 ClassMethod GetGroupName(postId, prop As %String) As %String
 {
 	set result = ""
-	set sql = "Select GroupClass->"_prop_" As GroupProp From Community.GroupPost Where Post = ?"
+	/*set sql = "Select GroupClass->"_prop_" As GroupProp From Community.GroupPost Where Post = ?"
 	set rs = ##class(%SQL.Statement).%ExecDirect(,sql, postId)
 	while rs.%Next(){
 		if result = "" {set result = rs.GroupProp}
 		else{set result = result_","_rs.GroupProp}
-	}
+	}*/
+	for i=1:1:$l($$$MainTags,",") set intag($p($$$MainTags,",",i))=""
+	&sql(select tags into :tags from Community.Post where id = :postId)
+	for i=1:1:$l(tags, ",") {
+		set tag = $p(tags, ",", i)
+		if $d(intag(tag)) {
+			if result = "" {set result = tag}
+			else{set result = result_","_tag}
+		}
+	}	
 	Quit result
 }
 

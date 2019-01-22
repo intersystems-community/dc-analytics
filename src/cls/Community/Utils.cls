@@ -67,6 +67,7 @@ ClassMethod UpdateCubes(verbose = 1) As %Status
      /// Reported as prodlog 141297
      set st1 = $$$OK
    }
+   if (cube="POST") continue
    
    set st = $$$ADDSC(st, st1) 
  }
