@@ -9,7 +9,8 @@ ClassMethod setup(globalPath As %String = "") As %Status
 	}
 	
 	try {
-		do ..importXMLGlobal(globalPath)
+		if globalPath[".gz"  do ..importXMLGlobal(globalPath)
+		if globalPath[".xml" do $System.OBJ.Load(globalPath)
 	} catch e {
 		set sc = e.AsStatus()
 		w "Err ",e.Name, ": ", e.Data, ": ", e.Location, !
