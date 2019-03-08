@@ -38,11 +38,15 @@ RUN iris start $ISC_PACKAGE_INSTANCENAME quietly EmergencyId=sys,sys && \
             " Do ##class(Security.Users).UnExpireUserPasswords(\"*\")\n" \
             " Do ##class(Security.Users).AddRoles(\"admin\", \"%ALL\")\n" \
             " do \$system.OBJ.Load(\"/opt/app/dswinstaller.cls\",\"ck\")\n" \
+            " Do ##class(Security.System).Get(,.p)\n" \
+            " Set p(\"AutheEnabled\")=p(\"AutheEnabled\")+16\n" \
+            " Do ##class(Security.System).Modify(,.p)\n" \
+            " set ^%SYS(\"CSP\",\"DefaultFileCharset\")=\"utf-8\"\n" \
             # " do \$system.OBJ.Load(\"/tmp/deps/Cache-MDX2JSON-master/MDX2JSON/Installer.cls.xml\",\"ck\")\n" \
             # " do \$system.OBJ.Load(\"/tmp/deps/deepseeweb.xml\",\"ck\")\n" \
             " s sc=##class(DSWMDX2JSON.Installer).setup()\n" \
             " If 'sc do \$zu(4, \$JOB, 1)\n" \
-            "do CreateDatabase^%SYS.SQLSEC(\"DCANALYTICS\",\"\",,0)\n" \
+            # "do CreateDatabase^%SYS.SQLSEC(\"DCANALYTICS\",\"\",,0)\n" \
             "zn \"DCANALYTICS\"\n" \
             " do \$system.OBJ.ImportDir(\"/opt/app/src\",,\"ck\",,1)\n" \
             " do ##class(Community.Utils).setup(\"/opt/app/globals.xml\")" \

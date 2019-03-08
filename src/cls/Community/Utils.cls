@@ -17,6 +17,10 @@ ClassMethod setup(globalPath As %String = "") As %Status
 		return sc
 	}
 	
+	write "Enabling iKnow",!
+	set sc=..enableIknow()
+	return:$$$ISERR(sc) sc
+
 	write "Building indices", !
 	set sc = ..buildIndices()
 	return:$$$ISERR(sc) sc
@@ -26,6 +30,13 @@ ClassMethod setup(globalPath As %String = "") As %Status
 	return:$$$ISERR(sc) sc
 	
 	w "Done!", !
+	return $$$OK
+}
+
+ClassMethod enableIknow() As %Status
+{
+	set app = $System.CSP.GetDefaultApp($znspace) _ "/"
+	do EnableIKnow^%SYS.cspServer(app)
 	return $$$OK
 }
 
@@ -76,4 +87,3 @@ ClassMethod UpdateCubes(verbose = 1) As %Status
 }
 
 }
-
