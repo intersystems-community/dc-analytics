@@ -32,14 +32,13 @@ RUN mkdir -p /tmp/deps \
   | wget -O - -i - \
   | gunzip > /opt/app/globals.xml 
 
-
 RUN iris start $ISC_PACKAGE_INSTANCENAME quietly EmergencyId=sys,sys && \
     /bin/echo -e "sys\nsys\n" \
             " Do ##class(Security.Users).UnExpireUserPasswords(\"*\")\n" \
             " Do ##class(Security.Users).AddRoles(\"admin\", \"%ALL\")\n" \
             " do \$system.OBJ.Load(\"/opt/app/dswinstaller.cls\",\"ck\")\n" \
             " Do ##class(Security.System).Get(,.p)\n" \
-            " Set p(\"AutheEnabled\")=p(\"AutheEnabled\")+16\n" \
+            " Set p(\"AutheEnabled\")=\$zb(p(\"AutheEnabled\"),16,7)\n" \
             " Do ##class(Security.System).Modify(,.p)\n" \
             " set ^%SYS(\"CSP\",\"DefaultFileCharset\")=\"utf-8\"\n" \
             # " do \$system.OBJ.Load(\"/tmp/deps/Cache-MDX2JSON-master/MDX2JSON/Installer.cls.xml\",\"ck\")\n" \
@@ -47,7 +46,7 @@ RUN iris start $ISC_PACKAGE_INSTANCENAME quietly EmergencyId=sys,sys && \
             " s sc=##class(DSWMDX2JSON.Installer).setup()\n" \
             " If 'sc do \$zu(4, \$JOB, 1)\n" \
             # "do CreateDatabase^%SYS.SQLSEC(\"DCANALYTICS\",\"\",,0)\n" \
-            "zn \"DCANALYTICS\"\n" \
+            " zn \"DCANALYTICS\"\n" \
             " do \$system.OBJ.ImportDir(\"/opt/app/src\",,\"ck\",,1)\n" \
             " do ##class(Community.Utils).setup(\"/opt/app/globals.xml\")" \
             " halt" \
@@ -57,4 +56,6 @@ RUN iris start $ISC_PACKAGE_INSTANCENAME quietly EmergencyId=sys,sys && \
 
 COPY ./other/dcanalytics.json /usr/irissys/csp/dsw/configs/
 
-CMD [ "-l", "/usr/irissys/mgr/messages.log" ]
+COPY ./buildiknow.sh ./
+
+CMD [ "-l", "/usr/irissys/mgr/messages.log", "-a", "/opt/app/buildiknow.sh" ]

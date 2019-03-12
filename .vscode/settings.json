@@ -1,0 +1,10 @@
+{
+  "objectscript.conn": {
+    "active": true,
+    "port": 52774,
+    "user": "admin",
+    "password": "SYS",
+    "ns": "DCANALYTICS"
+  },
+  "objectscript.conn.version": 3
+}
