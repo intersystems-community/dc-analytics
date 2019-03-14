@@ -35,8 +35,12 @@ ClassMethod setup(globalPath As %String = "") As %Status
 
 ClassMethod enableIknow() As %Status
 {
-	set app = $System.CSP.GetDefaultApp($znspace) _ "/"
-	do EnableIKnow^%SYS.cspServer(app)
+	set app = $System.CSP.GetDefaultApp($znspace)
+	new $NAMESPACE
+	set $NAMESPACE = "%SYS"
+	set props("DeepSeeEnabled") = 1
+	set props("iKnowEnabled") = 1
+	do ##class(Security.Applications).Modify(app, .props)
 	return $$$OK
 }
 
@@ -62,28 +66,20 @@ ClassMethod buildIndices() As %Status
 
 ClassMethod UpdateCubes(verbose = 1) As %Status
 {
- set st = ##class(%DeepSee.Utils).%GetCubeList(.list, "cubes")
- return:$$$ISERR(st) st
+	set st = ##class(%DeepSee.Utils).%GetCubeList(.list, "cubes")
+	return:$$$ISERR(st) st
  
- set cube=""
- for {
-   set cube=$Order(list(cube)) 
-   
-   quit:cube=""
-   Set st1 = ##class(%DeepSee.Utils).%BuildCube(cube, $$$YES, verbose)
-   
-   // TODO Fix that hack
-   if ((cube="POST") && 
-    ($SYSTEM.Status.GetErrorCodes(st1) = 5001/*GeneralError*/) && 
-    ($SYSTEM.Status.GetErrorText(st1) [ "Insert into dimension table failed")) {
-     /// Reported as prodlog 141297
-     set st1 = $$$OK
-   }
-   if (cube="POST") continue
-   
-   set st = $$$ADDSC(st, st1) 
- }
- return st
+	set cube=""
+	for {
+		set cube=$Order(list(cube)) 
+		if (cube="POST") continue
+		quit:cube=""
+
+		Set st1 = ##class(%DeepSee.Utils).%BuildCube(cube, $$$YES, verbose)
+		
+		set st = $$$ADDSC(st, st1) 
+	}
+	return st
 }
 
 }
