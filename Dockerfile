@@ -57,5 +57,6 @@ RUN iris start $ISC_PACKAGE_INSTANCENAME quietly EmergencyId=sys,sys && \
 COPY ./other/dcanalytics.json /usr/irissys/csp/dsw/configs/
 
 COPY ./buildiknow.sh ./
+COPY ./fixoverlay.sh ./
 
-CMD [ "-l", "/usr/irissys/mgr/messages.log", "-a", "/opt/app/buildiknow.sh" ]
+CMD [ "-l", "/usr/irissys/mgr/messages.log", "-a", "/opt/app/buildiknow.sh", "-b", "/opt/app/fixoverlay.sh" ]
