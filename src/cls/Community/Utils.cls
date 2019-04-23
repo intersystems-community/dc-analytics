@@ -72,7 +72,7 @@ ClassMethod UpdateCubes(verbose = 1) As %Status
 	set cube=""
 	for {
 		set cube=$Order(list(cube)) 
-		if (cube="POST") continue
+		#; if (cube="POST") continue
 		quit:cube=""
 
 		Set st1 = ##class(%DeepSee.Utils).%BuildCube(cube, $$$YES, verbose)
