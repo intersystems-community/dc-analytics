@@ -6,5 +6,4 @@ services:
     ports:
       - 52774:52773
     volumes:
-      - ~/iris.key:/usr/irissys/mgr/iris.key
       - ./src:/usr/src
