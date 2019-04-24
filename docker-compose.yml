@@ -5,3 +5,5 @@ services:
     restart: always
     ports:
       - 52774:52773
+    volumes:
+      - ./src:/usr/src
