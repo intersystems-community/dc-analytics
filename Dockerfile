@@ -20,18 +20,32 @@ RUN mkdir -p /tmp/deps \
 
 RUN iris start $ISC_PACKAGE_INSTANCENAME quietly EmergencyId=sys,sys && \
     /bin/echo -e "sys\nsys\n" \
-            " Do ##class(Security.Users).UnExpireUserPasswords(\"*\")\n" \
-            " Do ##class(Security.Users).AddRoles(\"admin\", \"%ALL\")\n" \
+            " do ##class(Security.Users).UnExpireUserPasswords(\"*\")\n" \
+            " do ##class(Security.Users).AddRoles(\"admin\", \"%ALL\")\n" \
             " do \$system.OBJ.Load(\"/opt/app/dswinstaller.cls\",\"ck\")\n" \
-            " Do ##class(Security.System).Get(,.p)\n" \
-            " Set p(\"AutheEnabled\")=\$zb(p(\"AutheEnabled\"),16,7)\n" \
-            " Do ##class(Security.System).Modify(,.p)\n" \
+            " do ##class(Security.System).Get(,.p)\n" \
+            " set p(\"AutheEnabled\")=\$zb(p(\"AutheEnabled\"),16,7)\n" \
+            " do ##class(Security.System).Modify(,.p)\n" \
             " Do \$system.OBJ.Load(\"/tmp/deps/zpm.xml\", \"ck\")" \
             " do CreateDatabase^%SYS.SQLSEC(\"DCANALYTICS\",\"\",,0)\n" \
             " zn \"DCANALYTICS\"" \
             " zpm \"install dsw\"" \
             " do \$system.OBJ.ImportDir(\"/opt/app/src\",,\"ck\",,1)\n" \
             " do ##class(Community.Utils).setup(\"/opt/app/globals.xml\")" \
+            " zn \"%sys\"" \
+            " write \"Create web application ...\",!" \
+            " set webName = \"/csp/dcanalytics\"" \
+            " set webProperties(\"NameSpace\") = \"DCANALYTICS\"" \
+            " set webProperties(\"Enabled\") = 1" \
+            " set webProperties(\"IsNameSpaceDefault\") = 1" \
+            " set webProperties(\"CSPZENEnabled\") = 1" \
+            " set webProperties(\"AutheEnabled\") = 32" \
+            " set webProperties(\"iKnowEnabled\") = 1" \
+            " set webProperties(\"DeepSeeEnabled\") = 1" \
+            " set status = ##class(Security.Applications).Create(webName, .webProperties)" \
+            " write:'status \$system.Status.DisplayError(status)" \
+            " write \"Web application \"\"\"_webName_\"\"\" was created!\",!" \
+            " zn \"DCANALYTICS\"" \
             " halt" \
     | iris session $ISC_PACKAGE_INSTANCENAME && \
     /bin/echo -e "sys\nsys\n" \
