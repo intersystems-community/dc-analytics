@@ -45,7 +45,7 @@ Index AuthorIndex On Author;
 
 Property CommentsAmount As %Integer [ Calculated, SqlComputeCode = { set {*} = ##class(Community.Post).GetCommentsAmount({Id})}, SqlComputed ];
 
-Property PostType As %String(VALUELIST = ",Question,Article,Announcement");
+Property PostType As %String(VALUELIST = ",Question,Article,Announcement,Digest");
 
 /// Hash of input row, used to build this object
 Property Hash As %String;
