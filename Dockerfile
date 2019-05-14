@@ -51,6 +51,8 @@ RUN iris start $ISC_PACKAGE_INSTANCENAME quietly EmergencyId=sys,sys && \
     /bin/echo -e "sys\nsys\n" \
     | iris stop $ISC_PACKAGE_INSTANCENAME quietly
 
+RUN apt update && apt install -y git && git clone https://github.com/intersystems-community/dsw-reports.git && cp -r dsw-reports/src/web/reports /usr/irissys/csp/dsw/ && cp -r src/reports /usr/irissys/csp/dsw/ && rm -rf dsw-reports
+
 COPY ./other/dcanalytics.json /usr/irissys/csp/dsw/configs/
 
 COPY ./fixoverlay.sh ./

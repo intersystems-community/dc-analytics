@@ -20,7 +20,7 @@ function beforeWeekDates(UTCtimezone) {
  * @returns {{REPORT_NAME: string, BLOCKS: *[], NAMESPACE: string}}
  */
 function getConfiguration(params) {
-    if (params.ns == undefined || params.ns == null) params.ns = "COMMUNITYPUBLIC";
+    if (params.ns == undefined || params.ns == null) params.ns = "DCANALYTICS";
     if (params.filter == undefined || params.filter == null) params.filter = "NOW-1";
     if (params.date_string == undefined || params.date_string == null) params.date_string = beforeWeekDates(-5);
     return {
@@ -67,7 +67,7 @@ function getReportBlocks(params) {
             title: "Posts by Members",
             note: "",
             widget: {
-                url: server + "/dswpub/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B"+filter+"%5D&widget=0&height=450&showValues=true&ns=" + namespace,
+                url: server + "/dsw/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B"+filter+"%5D&widget=0&height=450&showValues=true&ns=" + namespace,
                 width: 1000,
                 height: 450
             }
@@ -76,7 +76,7 @@ function getReportBlocks(params) {
         title: "Posts Daily",
         note: "",
         widget: {
-            url: server + "/dswpub/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B"+filter+"%5D&widget=1&height=300&isLegend=true" + namespace,
+            url: server + "/dsw/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B"+filter+"%5D&widget=1&height=300&isLegend=true" + namespace,
             width: 800,
             height: 350
         },
@@ -100,7 +100,7 @@ function getReportBlocks(params) {
     title: "Comments by Members",
     note: "",
     widget: {
-        url: server + "/dswpub/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B"+filter+"%5D&widget=2&height=450&showValues=true&ns=" + namespace,
+        url: server + "/dsw/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B"+filter+"%5D&widget=2&height=450&showValues=true&ns=" + namespace,
         width: 1000,
         height: 750
     }
@@ -108,7 +108,7 @@ function getReportBlocks(params) {
     title: "Comments Daily",
     note: "",
     widget: {
-        url: server + "/dswpub/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B"+filter+"%5D&widget=3&height=300&isLegend=true" + namespace,
+        url: server + "/dsw/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B"+filter+"%5D&widget=3&height=300&isLegend=true" + namespace,
         width: 800,
         height: 350
     },
@@ -132,7 +132,7 @@ function getReportBlocks(params) {
     title: "Posts by Groups",
     note: "",
     widget: {
-    url: server + "/dswpub/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B"+filter+"%5D&widget=4&height=400&ns=" + namespace,
+    url: server + "/dsw/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B"+filter+"%5D&widget=4&height=400&ns=" + namespace,
     width: 1000,
     height: 400
         }
@@ -140,7 +140,7 @@ function getReportBlocks(params) {
     title: "Comments by Groups",
     note: "",
     widget: {
-    url: server + "/dswpub/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B"+filter+"%5D&widget=5&height=400&ns=" + namespace,
+    url: server + "/dsw/index.html#!/d/Week/WeekView.dashboard?FILTERS=TARGET:*;FILTER:%5BDateDimension%5D.%5BH1%5D.%5BWeekYear%5D.%26%5B"+filter+"%5D&widget=5&height=400&ns=" + namespace,
     width: 1000,
     height: 800
         }
@@ -148,7 +148,7 @@ function getReportBlocks(params) {
     title: "Articles and Announcements of the week",
     note: "",
     widget: {
-        url: server + "/dswpub/index.html#!/d/Week/DigestLists.dashboard?widget=0&height=500&isLegend=false" + namespace,
+        url: server + "/dsw/index.html#!/d/Week/DigestLists.dashboard?widget=0&height=500&isLegend=false" + namespace,
         width: 800,
         height: 500
     },
@@ -193,7 +193,7 @@ function getReportBlocks(params) {
     title: "Questions of the week",
     note: "",
     widget: {
-        url: server + "/dswpub/index.html#!/d/Week/DigestLists.dashboard?widget=1&height=1000&isLegend=false" + namespace,
+        url: server + "/dsw/index.html#!/d/Week/DigestLists.dashboard?widget=1&height=1000&isLegend=false" + namespace,
         width: 800,
         height: 1000
     },
