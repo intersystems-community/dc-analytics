@@ -7,9 +7,9 @@ Relationship Member As Community.Member [ Cardinality = one, Inverse = Positions
 
 Index Member On Member;
 
-Relationship GroupClass As Community.Group [ Cardinality = one, Inverse = Positions, OnDelete = cascade ];
+// Relationship GroupClass As Community.Group [ Cardinality = one, Inverse = Positions, OnDelete = cascade ];
 
-Index GroupClass On GroupClass;
+// Index GroupClass On GroupClass;
 
 Property CommentVotes As %Integer;
 
@@ -31,7 +31,7 @@ Property Overall As %Integer [ Calculated, SqlComputeCode = { set {*} = {Comment
 
 Property Added As %Date;
 
-Index MemberAndAddedAndGroup On (Member, Added, GroupClass);
+Index MemberAndAdded On (Member, Added);
 
 Storage Default
 {

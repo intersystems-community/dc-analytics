@@ -54,7 +54,11 @@ Property SubsCount As %Integer;
 
 Property HasCorrectAnswer As %Boolean;
 
+Property FavsCount As %Integer;
+
 Property AcceptedAnswerTS As %TimeStamp;
+
+Property Lang As %String;
 
 ClassMethod GetCommentsAmount(id) As %Integer
 {
@@ -130,6 +134,15 @@ Storage Default
 </Value>
 <Value name="21">
 <Value>AcceptedAnswerTS</Value>
+</Value>
+<Value name="22">
+<Value>FavsCount</Value>
+</Value>
+<Value name="23">
+<Value>Language</Value>
+</Value>
+<Value name="24">
+<Value>Lang</Value>
 </Value>
 </Data>
 <DataLocation>^Community.PostD</DataLocation>

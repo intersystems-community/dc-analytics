@@ -37,6 +37,12 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
       </level>
     </hierarchy>
   </dimension>
+  <dimension name="Language" disabled="false" hasAll="false" allCaption="All Lang" allDisplayName="Lang" type="data" calendar="gregorian" iKnowType="entity" hidden="false" showHierarchies="default">
+    <hierarchy name="H1" disabled="false" hidden="false">
+      <level name="Language" disabled="false" sourceProperty="Lang" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      </level>
+    </hierarchy>
+  </dimension>
   <measure name="MembersAmountBeforeDate" disabled="true" sourceExpression="%cube.GetMembersAmountBeforeDate(%source.Created)" aggregate="MAX" type="integer" hidden="false" searchable="false">
   </measure>
   <measure name="Views" disabled="true" sourceExpression="%cube.GetViewsOfAuthor(%source.%ID)" aggregate="SUM" type="number" hidden="false" searchable="false">
@@ -114,6 +120,16 @@ ClassMethod GetViewsOfAuthor(authorId) As %Integer
 		set result = rs.Views
 		}
 	Quit result
+}
+
+ClassMethod %OnGetFilterSpec(pFilterSpec As %String) As %String
+{
+	if ($username = "esdevcom") {
+	//if ($username = "UnknownUser") {
+		quit "[Language].[H1].[Language].[es]"
+	} else {
+		quit "[Language].[H1].[Language].[en]"
+	}
 }
 
 Parameter DOMAIN;

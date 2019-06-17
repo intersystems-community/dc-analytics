@@ -27,6 +27,8 @@ Index Link On Link [ Unique ];
 
 Property Hash As %String;
 
+Property Lang As %String;
+
 Relationship Posts As Community.Post [ Cardinality = many, Inverse = Author ];
 
 Relationship Comments As Community.Comment [ Cardinality = many, Inverse = Author ];
@@ -68,6 +70,9 @@ Storage Default
 </Value>
 <Value name="11">
 <Value>Hash</Value>
+</Value>
+<Value name="12">
+<Value>Lang</Value>
 </Value>
 </Data>
 <DataLocation>^Community.Public.MemberD</DataLocation>

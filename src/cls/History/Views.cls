@@ -13,6 +13,9 @@ Property Delta As %Integer;
 
 Index DateOfDataAndPost On (DateOfData, Post) [ Unique ];
 
+/// This is fake property, please don't use it in DeepSee
+Property Lang As %String [ Calculated, SqlComputeCode = {set {*} = ##class(Community.Post).%OpenId({Post}).Lang}, SqlComputed ];
+
 ClassMethod InsertHistoryViews() As %Status
 {
 	set sc = $$$OK
@@ -112,6 +115,12 @@ Storage Default
 </Value>
 <Value name="5">
 <Value>Delta</Value>
+</Value>
+<Value name="6">
+<Value>Language</Value>
+</Value>
+<Value name="7">
+<Value>Lang</Value>
 </Value>
 </Data>
 <DataLocation>^History.ViewsD</DataLocation>

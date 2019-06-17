@@ -62,6 +62,12 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
       </level>
     </hierarchy>
   </dimension>
+  <dimension name="Language" disabled="false" hasAll="false" allCaption="All Lang" allDisplayName="Lang" type="data" calendar="gregorian" iKnowType="entity" hidden="false" showHierarchies="default">
+    <hierarchy name="H1" disabled="false" hidden="false">
+      <level name="Language" disabled="false" sourceProperty="Lang" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      </level>
+    </hierarchy>
+  </dimension>
   <measure name="ViewsH" disabled="false" sourceProperty="Views" aggregate="SUM" type="number" hidden="false" searchable="false" formatString="#">
   </measure>
   <measure name="Delta" disabled="false" sourceProperty="Delta" aggregate="SUM" type="number" hidden="false" searchable="false" formatString="#,#">
@@ -70,13 +76,22 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
   </measure>
   <calculatedMember name="ViewsAVG" disabled="false" dimension="Measures" valueExpression="Measures.VIewsH/Measures.%Count" hidden="false">
   </calculatedMember>
-  <calculatedMember name="ViewsMonthlyAVGRT" disabled="false" dimension="Measures" valueExpression="AGGREGATE([DateDimension].[H2].[MonthYear].CurrentMember.LASTCHILD,MEASURES.ViewsAVG)
-" formatString="#" hidden="false">
+  <calculatedMember name="ViewsMonthlyAVGRT" disabled="false" dimension="Measures" valueExpression="AGGREGATE([DateDimension].[H2].[MonthYear].CurrentMember.LASTCHILD,MEASURES.ViewsAVG) " formatString="#" hidden="false">
   </calculatedMember>
   <listing name="New_listing1" disabled="false" listingType="table" fieldList="Post-&gt;Link,Post-&gt;Name,Post-&gt;Created,Post-&gt;Views">
     <additionalDescription>undefined</additionalDescription>
   </listing>
 </cube>
+}
+
+ClassMethod %OnGetFilterSpec(pFilterSpec As %String) As %String
+{
+	if ($username = "esdevcom") {
+	//if ($username = "UnknownUser") {
+		quit "[Language].[H1].[Language].[es]"
+	} else {
+		quit "[Language].[H1].[Language].[en]"
+	}
 }
 
 Parameter DOMAIN;

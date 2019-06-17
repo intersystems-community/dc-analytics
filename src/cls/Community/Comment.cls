@@ -44,6 +44,9 @@ Index TextHashIndex On TextHash;
 
 Property AcceptedAnswerTS As %TimeStamp;
 
+/// This is fake property, please don't use it in DeepSee
+Property Lang As %String [ Calculated, SqlComputeCode = {set {*} = ##class(Community.Post).%OpenId({Post}).Lang}, SqlComputed ];
+
 Storage Default
 {
 <Data name="CommentDefaultData">
@@ -88,6 +91,12 @@ Storage Default
 </Value>
 <Value name="14">
 <Value>AcceptedAnswerTS</Value>
+</Value>
+<Value name="15">
+<Value>Language</Value>
+</Value>
+<Value name="16">
+<Value>Lang</Value>
 </Value>
 </Data>
 <DataLocation>^Community.CommentD</DataLocation>

@@ -10,6 +10,8 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
 <cube xmlns="http://www.intersystems.com/deepsee" name="CommentCopy" displayName="CommentCopy" disabled="false" abstract="false" sourceClass="Community.Comment" buildRestriction="Post-&gt;Deleted = 0" countMeasureName="COMCOUNT" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false">
   <dimension name="AuthorName" disabled="false" sharesFrom="Post" hasAll="false" allCaption="All AuthorName" allDisplayName="AuthorName" type="data" hidden="false" showHierarchies="default">
   </dimension>
+  <dimension name="Language" disabled="false" sharesFrom="Post" hasAll="false" allCaption="All Language" allDisplayName="Language" type="data" hidden="false" showHierarchies="default">
+  </dimension>
   <measure name="Comments" disabled="false" sourceProperty="Id" aggregate="COUNT" type="number" scale="0" hidden="false" searchable="false">
   </measure>
   <measure name="Comment points" disabled="false" sourceExpression="((%source.AvgVote)*(%source.VotesAmount))" aggregate="AVG" type="integer" hidden="false" searchable="false">
@@ -62,6 +64,17 @@ ClassMethod GetGroupName(postId, prop As %String) As %String
 	Quit result
 }
 
+/*
+ClassMethod %OnGetFilterSpec(pFilterSpec As %String) As %String
+{
+	if ($username = "esdevcom") {
+	//if ($username = "UnknownUser") {
+		quit "[Language].[H1].[Language].[es]"
+	} else {
+		quit "[Language].[H1].[Language].[en]"
+	}
+}
+*/
 Parameter DOMAIN;
 
 }

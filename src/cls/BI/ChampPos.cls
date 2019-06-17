@@ -15,7 +15,7 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
       </level>
     </hierarchy>
   </dimension>
-  <dimension name="Group" disabled="false" hasAll="false" allCaption="All Name1" allDisplayName="Name1" type="data" calendar="gregorian" iKnowType="entity" hidden="false" showHierarchies="default">
+  <dimension name="Group" disabled="true" hasAll="false" allCaption="All Name1" allDisplayName="Name1" type="data" calendar="gregorian" iKnowType="entity" hidden="false" showHierarchies="default">
     <additionalDescription>undefined</additionalDescription>
     <hierarchy name="H1" disabled="false" hidden="false">
       <level name="GroupName" disabled="false" sourceProperty="GroupClass.Name" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
@@ -38,9 +38,15 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
       </level>
     </hierarchy>
   </dimension>
-  <dimension name="Tags" disabled="false" hasAll="false" allCaption="All Tags" allDisplayName="Tags" type="data" hidden="false" showHierarchies="default">
+  <dimension name="Tags" disabled="true" hasAll="false" allCaption="All Tags" allDisplayName="Tags" type="data" calendar="gregorian" iKnowType="entity" hidden="false" showHierarchies="default">
     <hierarchy name="H1" disabled="false" hidden="false">
       <level name="Tags" disabled="false" sourceProperty="GroupClass.Tags" list="true" listDelimiter="," useDisplayValue="true" useAsFilter="true" hidden="false">
+      </level>
+    </hierarchy>
+  </dimension>
+  <dimension name="Language" disabled="false" hasAll="false" allCaption="All Lang" allDisplayName="Lang" type="data" calendar="gregorian" iKnowType="entity" hidden="false" showHierarchies="default">
+    <hierarchy name="H1" disabled="false" hidden="false">
+      <level name="Language" disabled="false" sourceProperty="Member.Lang" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
       </level>
     </hierarchy>
   </dimension>
@@ -92,6 +98,16 @@ ClassMethod GSContestOrAllDate(date As %Date, groupName As %String) As %String
 }
 
 Parameter DOMAIN;
+
+ClassMethod %OnGetFilterSpec(pFilterSpec As %String) As %String
+{
+	if ($username = "esdevcom") {
+	//if ($username = "UnknownUser") {
+		quit "[Language].[H1].[Language].[es]"
+	} else {
+		quit "[Language].[H1].[Language].[en]"
+	}
+}
 
 }
 
