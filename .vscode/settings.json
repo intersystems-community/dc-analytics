@@ -6,5 +6,7 @@
     "password": "SYS",
     "ns": "DCANALYTICS"
   },
-  "objectscript.conn.version": 3
+  "objectscript.conn.version": 3,
+  "objectscript.conn.active": true,
+  "objectscript.export.addCategory": true
 }

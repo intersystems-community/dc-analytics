@@ -7,7 +7,7 @@ Class BI.CommentCopy Extends %DeepSee.CubeDefinition [ DependsOn = (Community.Co
 /// Cube definition from Architect.
 XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
 {
-<cube xmlns="http://www.intersystems.com/deepsee" name="CommentCopy" displayName="CommentCopy" disabled="false" abstract="false" sourceClass="Community.Comment" buildRestriction="Post-&gt;Deleted = 0" countMeasureName="COMCOUNT" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false">
+<cube xmlns="http://www.intersystems.com/deepsee" name="CommentCopy" displayName="CommentCopy" disabled="false" abstract="false" sourceClass="Community.Comment" buildRestriction="Post-&gt;Deleted = 0 and Post-&gt;Published = 1 " countMeasureName="COMCOUNT" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false" enableSqlRestrict="false">
   <dimension name="AuthorName" disabled="false" sharesFrom="Post" hasAll="false" allCaption="All AuthorName" allDisplayName="AuthorName" type="data" hidden="false" showHierarchies="default">
   </dimension>
   <dimension name="Language" disabled="false" sharesFrom="Post" hasAll="false" allCaption="All Language" allDisplayName="Language" type="data" hidden="false" showHierarchies="default">
@@ -78,4 +78,3 @@ ClassMethod %OnGetFilterSpec(pFilterSpec As %String) As %String
 Parameter DOMAIN;
 
 }
-

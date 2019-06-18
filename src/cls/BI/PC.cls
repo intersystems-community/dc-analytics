@@ -9,7 +9,6 @@ XData SubjectArea [ XMLNamespace = "http://www.intersystems.com/deepsee/subjecta
 </subjectArea>
 }
 
-/*
 ClassMethod %OnGetFilterSpec(pFilterSpec As %String) As %String
 {
 	if ($username = "esdevcom") {
@@ -19,8 +18,7 @@ ClassMethod %OnGetFilterSpec(pFilterSpec As %String) As %String
 		quit "[Language].[H1].[Language].[en]"
 	}
 }
-*/
+
 Parameter DOMAIN;
 
 }
-
