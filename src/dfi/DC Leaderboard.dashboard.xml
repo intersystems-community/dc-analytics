@@ -9,9 +9,6 @@
     <control name="" action="applyFilter" target="*" targetProperty="[DateDimension].[H1].[MonthYear]" location="widget" type="auto" controlClass="" label="Month" title="" value="&amp;[NOW]" text="" readOnly="false" valueList="" displayList="" activeWhen="">
       <valueRequired>false</valueRequired>
     </control>
-    <control name="" action="applyFilter" target="*" targetProperty="[Group].[H1].[GroupName]" location="widget" type="hidden" controlClass="" label="Group" title="" value="&amp;[Developer Community Feedback].%NOT" text="" readOnly="false" valueList="" displayList="" activeWhen="">
-      <valueRequired>false</valueRequired>
-    </control>
     <control name="" action="applyFilter" target="*" targetProperty="[IsraelContest].[H1].[IsraelContest]" location="widget" type="hidden" controlClass="" label="IsraelContest" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
       <valueRequired>false</valueRequired>
     </control>
