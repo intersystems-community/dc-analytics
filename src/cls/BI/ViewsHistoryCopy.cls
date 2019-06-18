@@ -5,7 +5,7 @@ Class BI.ViewsHistoryCopy Extends %DeepSee.CubeDefinition [ DependsOn = (History
 /// Cube definition from Architect.
 XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
 {
-<cube xmlns="http://www.intersystems.com/deepsee" name="ViewsHistoryCopy" displayName="ViewsHistoryCopy" disabled="false" abstract="false" sourceClass="History.Views" countMeasureName="ViewsCount" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false">
+<cube xmlns="http://www.intersystems.com/deepsee" name="ViewsHistoryCopy" displayName="ViewsHistoryCopy" disabled="false" abstract="false" sourceClass="History.Views" buildRestriction="Post-&gt;Published=1 AND Post-&gt;Deleted=0" countMeasureName="ViewsCount" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false" enableSqlRestrict="false">
   <dimension name="Language" disabled="false" sharesFrom="Post" hasAll="false" allCaption="All Language" allDisplayName="Language" type="data" hidden="false" showHierarchies="default">
   </dimension>
   <measure name="ViewsH" disabled="false" sourceProperty="Views" aggregate="SUM" type="number" hidden="false" searchable="false">
@@ -27,4 +27,3 @@ ClassMethod %OnGetFilterSpec(pFilterSpec As %String) As %String
 Parameter DOMAIN;
 
 }
-
