@@ -84,7 +84,7 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
 </cube>
 }
 
-ClassMethod %OnGetFilterSpec(pFilterSpec As %String) As %String
+/*ClassMethod %OnGetFilterSpec(pFilterSpec As %String) As %String
 {
 	if ($username = "esdevcom") {
 	//if ($username = "UnknownUser") {
@@ -92,7 +92,7 @@ ClassMethod %OnGetFilterSpec(pFilterSpec As %String) As %String
 	} else {
 		quit "[Language].[H1].[Language].[en]"
 	}
-}
+}*/
 
 Parameter DOMAIN;
 
