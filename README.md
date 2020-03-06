@@ -18,7 +18,7 @@ Project made with InterSystems Analytics (DeepSee) to visualize and analyze memb
 4. Download from release and import `DCAnalytics_classes*.xml` file.
 5. Download from release `DCAnalytics_globals.gz` and run in terminal:
 ```
-DCANALYTICS> do ##class(Community.Utils).setup("path/to/global/archive")
+DCANALYTICS> do ##class(Community.Utils).setup("path/to/global/archive.gz file")
 ```
 6. Download from release `DSW.config.and.iKnow.files.zip` and move file `dcanalytics.json` from archive to `<your_instance>/CSP/dsw/configs/`. The name of `dcanalytics.json` should match the name of the namespace.
 7. Open in your browser `<server:port>/dsw/index.html?ns=DCANALYTICS`.
