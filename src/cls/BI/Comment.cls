@@ -77,6 +77,12 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
       </level>
     </hierarchy>
   </dimension>
+  <dimension name="Correct" disabled="false" hasAll="false" allCaption="All Correct" allDisplayName="Correct" type="data" hidden="false" showHierarchies="default">
+    <hierarchy name="H1" disabled="false" hidden="false">
+      <level name="Correct" disabled="false" sourceExpression="$select(%source.Correct:&quot;Yes&quot;,1:&quot;No&quot;)" list="false" useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="15">
+      </level>
+    </hierarchy>
+  </dimension>
   <measure name="CommentRating" displayName="Comment Rating" disabled="false" sourceProperty="AvgVote" aggregate="SUM" type="number" scale="0" hidden="false" searchable="false">
   </measure>
   <listing name="New_listing1" disabled="false" listingType="table" fieldList="Link,Post-&gt;Name As Post,AvgVote as Rating,Created,&apos;&lt;a href=&quot;&apos;||$Extract(Author-&gt;Link,7,Length(Author-&gt;Link))||&apos;&quot; target=&quot;_blank&quot; onclick=&quot;var e=event||window.event;e.stopPropagation();e.cancelBubble=true;&quot;&gt;&apos;||Author-&gt;Name||&apos;&lt;/a&gt;&apos; As Author">
@@ -169,8 +175,6 @@ ClassMethod GetDaysNumber(date, id)
 		quit "[Language].[H1].[Language].[en]"
 	}
 }*/
-
 Parameter DOMAIN;
 
 }
-
