@@ -32,6 +32,7 @@ RUN \
   zn "DCANALYTICS" \
   zpm "install dsw" \
   zpm "install isc-dev" \
+  zpm "install webterminal" \
   do ##class(dev.code).workdir("/irisdev/app/src") \
   do EnableDeepSee^%SYS.cspServer("/csp/dcanalytics/") \
   do ##class(Community.Utils).setup("/opt/dcanalytics/globals.xml") \

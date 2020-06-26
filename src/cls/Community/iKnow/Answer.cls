@@ -7,7 +7,7 @@ Parameter DomainName As STRING = "CommunityAnswer";
 
 Parameter BlackLists As STRING = "BLcommunity";
 
-ClassMethod GetConceptsByID(ID As %Integer, ByRef CList, Flg = 0) As %String
+ClassMethod GetConceptsByID(ID As %Integer, ByRef CList, Flg = 0)
 {
 	set domId  = ##class(%iKnow.Domain).GetOrCreateId(..#DomainName)
 
@@ -38,7 +38,7 @@ ClassMethod GetConceptsByID(ID As %Integer, ByRef CList, Flg = 0) As %String
 }
 
 /// Returns the combined sets and concepts by answer ID
-ClassMethod GetSetsAndConceptsByID(ID As %Integer) As %String
+ClassMethod GetSetsAndConceptsByID(ID As %Integer)
 {
 	set st = ..GetConceptsByID(ID, .CList, 1)
 	set ^AnswerSets(ID) = ""
@@ -133,8 +133,7 @@ ClassMethod Update() As %Status
 	set tSC = lister.AddListToBatch(myquery, id, group, data, meta)
 	do loader.ProcessBatch()
 	
-	return "OK"
+	return $$$OK
 }
 
 }
-

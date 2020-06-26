@@ -1,7 +1,7 @@
 Class Community.Utils [ Abstract ]
 {
 
-ClassMethod setup(globalPath As %String = "") As %Status
+ClassMethod setup(globalPath As %String = "", facts = 10000) As %Status
 {
 	if globalPath = "" {
 		write "Please input path to global GZ file.", !
@@ -26,7 +26,7 @@ ClassMethod setup(globalPath As %String = "") As %Status
 	return:$$$ISERR(sc) sc
 	
 	write "Building cubes", !
-	set sc = ..UpdateCubes()
+	set sc = ..UpdateCubes(,facts)
 	return:$$$ISERR(sc) sc
 	
 	w "Done!", !
@@ -64,7 +64,7 @@ ClassMethod buildIndices() As %Status
 	return sc
 }
 
-ClassMethod UpdateCubes(verbose = 1) As %Status
+ClassMethod UpdateCubes(verbose = 1, facts = 10000) As %Status
 {
 	set st = ##class(%DeepSee.Utils).%GetCubeList(.list, "cubes")
 	return:$$$ISERR(st) st
@@ -75,7 +75,7 @@ ClassMethod UpdateCubes(verbose = 1) As %Status
 		#; if (cube="POST") continue
 		quit:cube=""
 
-		Set st1 = ##class(%DeepSee.Utils).%BuildCube(cube, $$$YES, verbose,,10000)
+		Set st1 = ##class(%DeepSee.Utils).%BuildCube(cube, $$$YES, verbose,,facts)
 		
 		set st = $$$ADDSC(st, st1) 
 	}
