@@ -17,5 +17,11 @@ docker-compose exec iris iris session iris -U IRISAPP
 ```
 
 ## global export
+```
  $System.OBJ.Export("GlobalName.GBL","/irisdev/app/src/gbl/globalname.xml")
+```
+
+## service account key base64 command
+```
+$ base64 iris-community-demos-09899421cfc4.json | tr -d '\n'
 ```

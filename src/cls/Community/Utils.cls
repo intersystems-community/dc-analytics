@@ -75,7 +75,7 @@ ClassMethod UpdateCubes(verbose = 1) As %Status
 		#; if (cube="POST") continue
 		quit:cube=""
 
-		Set st1 = ##class(%DeepSee.Utils).%BuildCube(cube, $$$YES, verbose)
+		Set st1 = ##class(%DeepSee.Utils).%BuildCube(cube, $$$YES, verbose,,10000)
 		
 		set st = $$$ADDSC(st, st1) 
 	}
