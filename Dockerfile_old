@@ -1,0 +1,87 @@
+ARG IMAGE=store/intersystems/iris:2019.1.0.511.0-community
+ARG IMAGE=store/intersystems/iris:2019.2.0.107.0-community
+ARG IMAGE=intersystemsdc/iris-community:2020.2.0.204.0-zpm
+FROM $IMAGE
+
+USER root
+WORKDIR /opt/irisapp
+RUN chown ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /opt/irisapp
+COPY irissession.sh /
+RUN chmod +x /irissession.sh 
+
+RUN mkdir -p /tmp/deps \
+
+ && cd /tmp/deps \
+
+ # Download globals data
+&& wget -q -O - https://api.github.com/repos/intersystems-community/dc-analytics/releases/latest \
+  | egrep 'http.*DCAnalytics_globals.*gz' \
+  | cut -d : -f 2,3 \
+  | tr -d '"' \
+  | wget -O - -i - \
+  | gunzip > /opt/irisapp/globals.xml 
+
+
+USER ${ISC_PACKAGE_MGRUSER}
+
+COPY  Installer.cls .
+COPY  src src
+SHELL ["/irissession.sh"]
+
+RUN \
+  do $SYSTEM.OBJ.Load("Installer.cls", "ck") \
+  set sc = ##class(App.Installer).setup() \
+  zn "DCANALYTICS" \
+  zpm "install dsw" \
+  zpm "install isc-dev" \
+  do ##class(dev.code).workdir("/irisdev/app/src") \
+  do EnableDeepSee^%SYS.cspServer("/csp/dcanalytics/") \
+  do ##class(Community.Utils).setup("/opt/irisapp/globals.xml") \
+  zn "%SYS" \
+  write "Modify MDX2JSON application security...",! \
+  set webName = "/mdx2json" \
+  set webProperties("AutheEnabled") = 64 \
+  set webProperties("MatchRoles")=":%DB_IRISAPP" \
+  set sc = ##class(Security.Applications).Modify(webName, .webProperties) \
+
+
+RUN iris start $ISC_PACKAGE_INSTANCENAME quietly EmergencyId=sys,sys && \
+    /bin/echo -e "sys\nsys\n" \
+            " do ##class(Security.Users).UnExpireUserPasswords(\"*\")\n" \
+            " do ##class(Security.Users).AddRoles(\"admin\", \"%ALL\")\n" \
+            " do \$system.OBJ.Load(\"/opt/app/dswinstaller.cls\",\"ck\")\n" \
+            " do ##class(Security.System).Get(,.p)\n" \
+            " set p(\"AutheEnabled\")=\$zb(p(\"AutheEnabled\"),16,7)\n" \
+            " do ##class(Security.System).Modify(,.p)\n" \
+            " Do \$system.OBJ.Load(\"/tmp/deps/zpm.xml\", \"ck\")" \
+            " do CreateDatabase^%SYS.SQLSEC(\"DCANALYTICS\",\"\",,0)\n" \
+            " zn \"DCANALYTICS\"" \
+            " zpm \"install dsw\"" \
+            " do \$system.OBJ.ImportDir(\"/opt/app/src\",,\"ck\",,1)\n" \
+            " do ##class(Community.Utils).setup(\"/opt/app/globals.xml\")" \
+            " zn \"%sys\"" \
+            " write \"Create web application ...\",!" \
+            " set webName = \"/csp/dcanalytics\"" \
+            " set webProperties(\"NameSpace\") = \"DCANALYTICS\"" \
+            " set webProperties(\"Enabled\") = 1" \
+            " set webProperties(\"IsNameSpaceDefault\") = 1" \
+            " set webProperties(\"CSPZENEnabled\") = 1" \
+            " set webProperties(\"AutheEnabled\") = 32" \
+            " set webProperties(\"iKnowEnabled\") = 1" \
+            " set webProperties(\"DeepSeeEnabled\") = 1" \
+            " set status = ##class(Security.Applications).Create(webName, .webProperties)" \
+            " write:'status \$system.Status.DisplayError(status)" \
+            " write \"Web application \"\"\"_webName_\"\"\" was created!\",!" \
+            " zn \"DCANALYTICS\"" \
+            " halt" \
+    | iris session $ISC_PACKAGE_INSTANCENAME && \
+    /bin/echo -e "sys\nsys\n" \
+    | iris stop $ISC_PACKAGE_INSTANCENAME quietly
+
+RUN apt update && apt install -y git && git clone https://github.com/intersystems-community/dsw-reports.git && cp -r dsw-reports/src/web/reports /usr/irissys/csp/dsw/ && cp -r src/reports /usr/irissys/csp/dsw/ && rm -rf dsw-reports
+
+COPY ./other/dcanalytics.json /usr/irissys/csp/dsw/configs/
+
+COPY ./fixoverlay.sh ./
+
+CMD [ "-b", "/opt/app/fixoverlay.sh" ]

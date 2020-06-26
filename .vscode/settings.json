@@ -1,12 +1,15 @@
 {
-  "objectscript.conn": {
-    "active": true,
-    "port": 52774,
-    "user": "admin",
-    "password": "SYS",
-    "ns": "DCANALYTICS"
-  },
-  "objectscript.conn.version": 3,
-  "objectscript.conn.active": true,
-  "objectscript.export.addCategory": true
+    "objectscript.conn" :{
+      "ns": "DCANALYTICS",
+      "active": true,
+      "docker-compose": {
+        "service": "iris",
+        "internalPort": 52773
+      },
+      "links": {
+        "RESTForms2-UI": "http://localhost:${port}/restforms2-ui/index.html"
+
+    }
+  }
+
 }
