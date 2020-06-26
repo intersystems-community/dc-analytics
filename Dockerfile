@@ -39,9 +39,8 @@ RUN \
   write "Modify MDX2JSON application security...",! \
   set webName = "/mdx2json" \
   set webProperties("AutheEnabled") = 64 \
-  set webProperties("MatchRoles")=":%DB_IRISAPP" \
-  set sc = ##class(Security.Applications).Modify(webName, .webProperties) \
-
+  set webProperties("MatchRoles")=":%DB_DCANALYTICS" \
+  set sc = ##class(Security.Applications).Modify(webName, .webProperties) 
 
 SHELL ["/bin/bash", "-c"]
 

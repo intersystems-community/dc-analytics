@@ -7,7 +7,7 @@
         "internalPort": 52773
       },
       "links": {
-        "RESTForms2-UI": "http://localhost:${port}/restforms2-ui/index.html"
+        "DC-Analytics": "http://localhost:${port}/dsw/index.html#!/?ns=DCANALYTICS"
 
     }
   }
