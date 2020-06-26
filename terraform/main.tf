@@ -43,7 +43,7 @@
 terraform {
   required_version = "~> 0.12"
   backend "gcs" {
-    bucket      = "dc-analytics"
+    bucket      = "dc-analytics-bucket"
     prefix      = "terraform/state"
   }
 }
