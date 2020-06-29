@@ -50,6 +50,17 @@ spec:
         ports:
         - containerPort: 52773
           name: web
+        readinessProbe:
+          httpGet:
+            path: /csp/sys/UtilHome.csp
+            port: 52773
+          initialDelaySeconds: 10
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /csp/sys/UtilHome.csp
+            port: 52773
+          periodSeconds: 10
         volumeMounts:
         - mountPath: /opt/dcanalytics/DCANALYTICS-DATA
           name: dc-volume

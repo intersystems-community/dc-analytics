@@ -114,6 +114,8 @@ jobs:
       run: |
         gcloud container clusters get-credentials ${GKE_CLUSTER} --zone ${GKE_ZONE} --project ${PROJECT_ID}
         kubectl apply -f namespace.yaml
+        kubectl apply -f managed-certificate.yaml
         kubectl apply -f service.yaml
+        kubectl apply -f ingress.yaml
         kubectl apply -f statefulset.yaml
         kubectl -n ${K8S_NAMESPACE} rollout status statefulset/${STATEFULSET_NAME}

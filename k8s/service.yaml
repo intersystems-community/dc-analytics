@@ -15,4 +15,4 @@ spec:
     protocol: TCP
     port: 51773
     targetPort: 51773
-  type: LoadBalancer
+  type: NodePort
