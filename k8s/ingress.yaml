@@ -3,13 +3,13 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: gce
-    networking.gke.io/managed-certificates: dc-analytics-certificate
+    networking.gke.io/managed-certificates: dc-analytics
     kubernetes.io/ingress.global-static-ip-name: dc-analytics
   name: dc-analytics
   namespace: iris
 spec:
   rules:
-  - host: dc-analytics.myardyas.online
+  - host: public-analytics.community.intersystems.com
     http:
       paths:
       - backend:

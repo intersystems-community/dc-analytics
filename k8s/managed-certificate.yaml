@@ -1,8 +1,8 @@
 apiVersion: networking.gke.io/v1beta1
 kind: ManagedCertificate
 metadata:
-  name: dc-analytics-certificate
+  name: dc-analytics
   namespace: iris
 spec:
   domains:
-  - dc-analytics.myardyas.online
+  - public-analytics.community.intersystems.com
