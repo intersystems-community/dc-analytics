@@ -35,7 +35,7 @@ RUN \
   zpm "install webterminal" \
   do ##class(dev.code).workdir("/irisdev/app/src") \
   do EnableDeepSee^%SYS.cspServer("/csp/dcanalytics/") \
-  do ##class(Community.Utils).setup("/opt/dcanalytics/globals.xml") \
+  do ##class(Community.Utils).setup("/opt/dcanalytics/globals.xml",10000000) \
   zn "%SYS" \
   write "Modify MDX2JSON application security...",! \
   set webName = "/mdx2json" \
