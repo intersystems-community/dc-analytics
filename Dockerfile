@@ -45,5 +45,7 @@ RUN \
 
 SHELL ["/bin/bash", "-c"]
 
-COPY /dsw/dcanalytics.json /usr/irissys/csp/dsw/configs/
+COPY --chown=${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /dsw/dcanalytics.json /usr/irissys/csp/dsw/configs/
+COPY --chown=${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /dsw/config.json /usr/irissys/csp/dsw/
+
 

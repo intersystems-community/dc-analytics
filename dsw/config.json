@@ -1,0 +1,6 @@
+{
+    "namespace": "DCANALYTICS",
+    "endpoints": {
+        "mdx2json": "MDX2JSON"
+    }
+}
