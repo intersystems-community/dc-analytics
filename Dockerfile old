@@ -6,6 +6,8 @@ FROM $IMAGE
 USER root
 WORKDIR /opt/dcanalytics
 RUN chown ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /opt/dcanalytics
+COPY irissession.sh /
+RUN chmod +x /irissession.sh 
 
 RUN mkdir -p /tmp/deps \
  && cd /tmp/deps \
@@ -22,12 +24,26 @@ USER ${ISC_PACKAGE_MGRUSER}
 
 COPY  Installer.cls .
 COPY  src src
-COPY iris.script iris.script
+SHELL ["/irissession.sh"]
 
-RUN iris start IRIS \
-	&& iris session IRIS < iris.script \
-    && iris stop IRIS quietly
+RUN \
+  do $SYSTEM.OBJ.Load("Installer.cls", "ck") \
+  set sc = ##class(App.Installer).setup() \
+  zn "DCANALYTICS" \
+  zpm "install dsw" \
+  zpm "install isc-dev" \
+  zpm "install webterminal" \
+  do ##class(dev.code).workdir("/irisdev/app/src") \
+  do EnableDeepSee^%SYS.cspServer("/csp/dcanalytics/") \
+  do ##class(Community.Utils).setup("/opt/dcanalytics/globals.xml",10000000) \
+  zn "%SYS" \
+  write "Modify MDX2JSON application security...",! \
+  set webName = "/mdx2json" \
+  set webProperties("AutheEnabled") = 64 \
+  set webProperties("MatchRoles")=":%DB_DCANALYTICS" \
+  set sc = ##class(Security.Applications).Modify(webName, .webProperties) 
 
+SHELL ["/bin/bash", "-c"]
 
 COPY --chown=${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /dsw/dcanalytics.json /usr/irissys/csp/dsw/configs/
 COPY --chown=${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /dsw/config.json /usr/irissys/csp/dsw/
