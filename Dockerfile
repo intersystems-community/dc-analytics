@@ -21,6 +21,7 @@ RUN mkdir -p /tmp/deps \
 USER ${ISC_PACKAGE_MGRUSER}
 
 COPY  Installer.cls .
+COPY  post_start_hook .
 COPY  src src
 COPY iris.script iris.script
 

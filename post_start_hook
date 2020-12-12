@@ -1,0 +1,14 @@
+#!/bin/bash -e
+set -o pipefail
+
+/bin/echo -e ""                                                                                                                                          \
+  " set sc = ##class(Security.Users).UnExpireUserPasswords(\"*\")"                                                                                       \
+  " if '\$Get(sc) { do ##class(%SYSTEM.Process).Terminate(, 1) }"                                                                                        \
+  " set sc = ##class(SYS.Container).ChangePassword(\"/etc/iris-secrets/iris-password\")"                                                                  \
+  " if '\$Get(sc) { do ##class(%SYSTEM.Process).Terminate(, 1) }"                                                                                        \
+  " set sc = ##class(SYS.Container).ChangeGatewayMgrPassword(\"/etc/iris-secrets/iris-password\")"                                                        \
+  " if '\$Get(sc) { do ##class(%SYSTEM.Process).Terminate(, 1) }"                                                                                        \
+  " halt"                                                                                                                                                \
+| iris session ${ISC_PACKAGE_INSTANCENAME} -U %SYS
+
+iris stop ${ISC_PACKAGE_INSTANCENAME} restart quietly
