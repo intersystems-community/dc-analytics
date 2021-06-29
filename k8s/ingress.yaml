@@ -5,6 +5,8 @@ metadata:
     kubernetes.io/ingress.class: gce
     networking.gke.io/managed-certificates: dc-analytics
     kubernetes.io/ingress.global-static-ip-name: dc-analytics
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
   name: dc-analytics
   namespace: iris
 spec:
