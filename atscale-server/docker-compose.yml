@@ -1,0 +1,25 @@
+version: "3.6"
+services:
+  atscale:
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+    restart: always
+    tty: true
+    hostname: atscale
+    volumes:
+      - data:/opt/atscale/data
+      - conf:/opt/atscale/conf
+      - log:/opt/atscale/log
+      - ./atscale.yaml:/root/atscale.yaml
+    ports:
+      - 10500:10500
+      - 10502:10502
+      - 10503:10503
+      - 10525:10525
+      - 11111:11111
+
+volumes:
+  data:
+  conf:
+  log:

@@ -73,6 +73,11 @@ ClassMethod UpdateCubes(verbose = 1, facts = 10000) As %Status
 	for {
 		set cube=$Order(list(cube)) 
 		#; if (cube="POST") continue
+		#;if (ViewsLoad = "False") 
+		#;{
+		#;	if (cube="ViewsHistory") continue
+		#;	if (cube="ViewsHistoryCopy") continue
+		#;}
 		quit:cube=""
 
 		Set st1 = ##class(%DeepSee.Utils).%BuildCube(cube, $$$YES, verbose,,facts)
