@@ -1,0 +1,24 @@
+
+installation_location: "/opt/atscale"
+service_account: "atscale"
+loadbalancer_dns_name: "localhost"
+
+tls:
+  enabled: false
+  certificate: "/opt/atscale/conf/server.cert"
+  key: "/opt/atscale/conf/server.key"
+
+kerberos:
+  enabled: false
+  keytab: "/opt/atscale/conf/atscale.keytab"
+  principal: "atscale/atscale.community.intersystems.com@REALM"
+
+hosts:
+  - dnsname: atscale
+    services:
+      - atscale
+      - coordinator
+    override:
+      coordinator:
+        id: 12
+

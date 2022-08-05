@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+  <Document name="isc-aa-udaf.ZPM">
+    <Module>
+      <Name>isc-aa-udaf</Name>
+      <Version>2021.2.0</Version>
+      <Packaging>module</Packaging>
+      <SourcesRoot>src</SourcesRoot>
+      <Resource Name="AtScaleUDAF.PKG"/>
+      <Resource Name="HLL.PKG"/>
+      <Resource Name="HLL.inc" Directory="HLL"/>
+      <Resource Name="QUANTILE.PKG"/>
+      <Invoke Class="AtScaleUDAF.Utils" Method="Register"></Invoke>
+    </Module>
+  </Document>
+</Export>

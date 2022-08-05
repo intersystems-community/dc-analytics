@@ -1,0 +1,37 @@
+{
+    "platformType": "iris",
+    "name": "iris",
+    "connectionId": "iris",
+    "overrideConnectionId":true,
+    "namespase": "DCANALYTICS",
+    "extraProperties": 
+      {
+        "namespace": "DCANALYTICS",
+        "udafMode": "none"
+      },
+    "aggregateSchema": "ATSCALE",
+    "readOnly":false,
+    "isImpersonationEnabled": false,
+    "isCanaryAlwaysEnabled": false,
+    "isPartialAggHitEnabled": false,
+    "subgroups": 
+      [
+        {
+          "name": "iris",
+          "hosts": "iris",
+          "port": 1972,
+          "connectorType": "iris",
+          "username": "_system",
+          "password":"SYS",
+          "isKerberosClientEnabled": false,
+          "queryRoles": 
+            [
+              "large_user_query_role",
+              "small_user_query_role",
+              "system_query_role"
+            ],
+           "extraProperties": {},
+          "connectionGroupsExtraProps": {}
+        }
+      ]
+  }

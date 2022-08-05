@@ -1,0 +1,13 @@
+{
+    "name": "bulkUpdate",
+    "elements": [
+        {
+            "name": "connection.pool.group.maxConnections",
+            "value": "3"
+        },
+        {
+            "name": "connection.pool.user.maxConnections",
+            "value": "3"
+        }
+    ]
+}
