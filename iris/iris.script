@@ -1,25 +1,26 @@
-;do $System.OBJ.LoadDir("/opt/irisbuild/src","ck",,1)
-set ViewsLoad = "False" 
+    ; Set ViewsLoad=False if you are not going to build Views and ViewsHistory cubes.
+    ; Set something else if you are going to build them (can take approx 15 minutes of container building).  
 
-do $SYSTEM.OBJ.Load("/opt/dcanalytics/Installer.cls", "ck") 
-set sc = ##class(App.Installer).setup()
+    do $SYSTEM.OBJ.Load("/opt/dcanalytics/Installer.cls", "ck")
+    set sc = ##class(App.Installer).setup()
+    set ViewsLoad = "False"
+    DO DISABLE^%NOJRN
+ 
+    zn "%SYS"
+    Do ##class(Security.Users).UnExpireUserPasswords("*")
+    set webName = "/mdx2json" 
+    set webProperties("AutheEnabled") = 64 
+    set webProperties("MatchRoles")=":%DB_DCANALYTICS" 
+    set sc = ##class(Security.Applications).Modify(webName, .webProperties)
 
-zn "%SYS"
-Do ##class(Security.Users).UnExpireUserPasswords("*")
+    zn "DCANALYTICS"
+    do $SYSTEM.OBJ.Load("/opt/dcanalytics/src/inc/Community.inc", "ck")
+    do $System.OBJ.LoadDir("/opt/dcanalytics/src/","ck",,1)
+    zpm "install dsw" 
+    zpm "install isc-dev" 
+    zpm "install webterminal" 
+    do ##class(dev.code).workdir("/irisdev/app/src")
+    do EnableDeepSee^%SYS.cspServer("/csp/dcanalytics/") 
+    do ##class(Community.Utils).setup("/opt/dcanalytics/globals.xml",100000, ViewsLoad)
 
-zn "DCANALYTICS"
-zpm "install dsw" 
-zpm "install isc-dev" 
-zpm "install webterminal" 
-do ##class(dev.code).workdir("/irisdev/app/src") 
-do EnableDeepSee^%SYS.cspServer("/csp/dcanalytics/") 
-do ##class(Community.Utils).setup("/opt/dcanalytics/globals.xml",10000000) 
-zn "%SYS" 
-write "Modify MDX2JSON application security...",! 
-set webName = "/mdx2json" 
-set webProperties("AutheEnabled") = 64 
-set webProperties("MatchRoles")=":%DB_DCANALYTICS" 
-set sc = ##class(Security.Applications).Modify(webName, .webProperties)
-
-;zpm "load /opt/irisbuild/ -v":1:1
-halt
+    halt

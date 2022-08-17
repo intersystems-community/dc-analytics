@@ -5,16 +5,16 @@ Class BI.Member Extends %DeepSee.CubeDefinition [ DependsOn = Community.Member, 
 /// Cube definition from Architect.
 XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
 {
-<cube xmlns="http://www.intersystems.com/deepsee" name="Member" displayName="Member" disabled="false" abstract="false" sourceClass="Community.Member" countMeasureName="%COUNT" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false">
+<cube xmlns="http://www.intersystems.com/deepsee" name="Member" displayName="Member" disabled="false" abstract="false" sourceClass="Community.Member" namedFactNums="true" countMeasureName="%COUNT" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false" enableSqlRestrict="false">
   <dimension name="Link" disabled="false" hasAll="false" allCaption="All Link" allDisplayName="Link" type="data" hidden="false" showHierarchies="default">
     <hierarchy name="H1" disabled="false" hidden="false">
-      <level name="Link" disabled="false" sourceProperty="Link" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      <level name="Link" disabled="false" sourceProperty="Link" list="false" useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="2">
       </level>
     </hierarchy>
   </dimension>
   <dimension name="Name" disabled="false" hasAll="false" allCaption="All Name" allDisplayName="Name" type="data" hidden="false" showHierarchies="default">
     <hierarchy name="H1" disabled="false" hidden="false">
-      <level name="Name" disabled="false" sourceProperty="Name" factName="DxName" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      <level name="Name" disabled="false" sourceProperty="Name" factName="DxName" list="false" useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="3">
         <property name="Created" disabled="false" sourceExpression="$P(%source.Created,&quot; &quot;)" hidden="false" isName="false" isDescription="false" isReference="false" useDisplayValue="false">
         </property>
       </level>
@@ -23,23 +23,23 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
   <dimension name="DateDimension" disabled="false" hasAll="false" allCaption="All Created1" allDisplayName="Created1" sourceProperty="Created" type="time" calendar="gregorian" iKnowType="entity" hidden="false" showHierarchies="default">
     <additionalDescription>undefined</additionalDescription>
     <hierarchy name="H2" disabled="false" hidden="false">
-      <level name="MonthNum" displayName="Month" disabled="false" timeFunction="MonthNumber" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      <level name="MonthNum" displayName="Month" disabled="false" timeFunction="MonthNumber" list="false" useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="4">
       </level>
     </hierarchy>
     <hierarchy name="H1" disabled="false" hidden="false">
-      <level name="Year" disabled="false" timeFunction="Year" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      <level name="Year" disabled="false" timeFunction="Year" list="false" useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="5">
       </level>
-      <level name="MonthYear" disabled="false" timeFunction="MonthYear" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      <level name="MonthYear" disabled="false" timeFunction="MonthYear" list="false" useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="6">
       </level>
-      <level name="WeekYear" disabled="false" timeFunction="WeekYear" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      <level name="WeekYear" disabled="false" timeFunction="WeekYear" list="false" useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="7">
       </level>
-      <level name="DayMonthYear" disabled="false" timeFunction="DayMonthYear" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      <level name="DayMonthYear" disabled="false" timeFunction="DayMonthYear" list="false" useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="8">
       </level>
     </hierarchy>
   </dimension>
   <dimension name="Language" disabled="false" hasAll="false" allCaption="All Lang" allDisplayName="Lang" type="data" calendar="gregorian" iKnowType="entity" hidden="false" showHierarchies="default">
     <hierarchy name="H1" disabled="false" hidden="false">
-      <level name="Language" disabled="false" sourceProperty="Lang" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      <level name="Language" disabled="false" sourceProperty="Lang" list="true" listDelimiter="," useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="9">
       </level>
     </hierarchy>
   </dimension>
@@ -131,7 +131,6 @@ ClassMethod GetViewsOfAuthor(authorId) As %Integer
 		quit "[Language].[H1].[Language].[en]"
 	}
 }*/
-
 Parameter DOMAIN;
 
 }

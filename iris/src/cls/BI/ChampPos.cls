@@ -5,10 +5,10 @@ Class BI.ChampPos Extends %DeepSee.CubeDefinition [ DependsOn = History.Champion
 /// Cube definition from Architect.
 XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
 {
-<cube xmlns="http://www.intersystems.com/deepsee" name="ChampPos" displayName="ChampPos" disabled="false" abstract="false" sourceClass="History.ChampionshipPositions" countMeasureName="%COUNT" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false">
+<cube xmlns="http://www.intersystems.com/deepsee" name="ChampPos" displayName="ChampPos" disabled="false" abstract="false" sourceClass="History.ChampionshipPositions" namedFactNums="true" countMeasureName="%COUNT" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false" enableSqlRestrict="false">
   <dimension name="AuthorName" disabled="false" hasAll="true" allCaption="All Name" allDisplayName="Name" type="data" calendar="gregorian" iKnowType="entity" hidden="false" showHierarchies="default">
     <hierarchy name="H1" disabled="false" hidden="false">
-      <level name="AuthorName" disabled="false" sourceProperty="Member.%ID" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      <level name="AuthorName" disabled="false" sourceProperty="Member.%ID" list="false" useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="2">
         <property name="Name" disabled="false" sourceProperty="Member.Name" hidden="false" isName="true" isDescription="false" isReference="false" useDisplayValue="false">
           <additionalDescription>undefined</additionalDescription>
         </property>
@@ -24,17 +24,17 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
   </dimension>
   <dimension name="DateDimension" disabled="false" hasAll="false" allCaption="All Added" allDisplayName="Added" sourceProperty="Added" type="time" calendar="gregorian" iKnowType="entity" hidden="false" showHierarchies="default">
     <hierarchy name="H2" disabled="false" hidden="false">
-      <level name="MonthNum" displayName="Month" disabled="false" timeFunction="MonthNumber" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      <level name="MonthNum" displayName="Month" disabled="false" timeFunction="MonthNumber" list="false" useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="3">
       </level>
     </hierarchy>
     <hierarchy name="H1" disabled="false" hidden="false">
-      <level name="Year" disabled="false" timeFunction="Year" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      <level name="Year" disabled="false" timeFunction="Year" list="false" useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="4">
       </level>
-      <level name="MonthYear" disabled="false" timeFunction="MonthYear" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      <level name="MonthYear" disabled="false" timeFunction="MonthYear" list="false" useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="5">
       </level>
-      <level name="WeekYear" disabled="false" timeFunction="WeekYear" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      <level name="WeekYear" disabled="false" timeFunction="WeekYear" list="false" useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="6">
       </level>
-      <level name="DayMonthYear" disabled="false" timeFunction="DayMonthYear" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      <level name="DayMonthYear" disabled="false" timeFunction="DayMonthYear" list="false" useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="7">
       </level>
     </hierarchy>
   </dimension>
@@ -46,25 +46,25 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
   </dimension>
   <dimension name="Language" disabled="false" hasAll="false" allCaption="All Lang" allDisplayName="Lang" type="data" calendar="gregorian" iKnowType="entity" hidden="false" showHierarchies="default">
     <hierarchy name="H1" disabled="false" hidden="false">
-      <level name="Language" disabled="false" sourceProperty="Member.Lang" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
+      <level name="Language" disabled="false" sourceProperty="Member.Lang" list="true" listDelimiter="," useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="8">
       </level>
     </hierarchy>
   </dimension>
-  <measure name="Overall" disabled="false" sourceProperty="Overall" aggregate="SUM" type="number" hidden="false" searchable="false">
+  <measure name="Overall" disabled="false" sourceProperty="Overall" aggregate="SUM" type="number" hidden="false" searchable="false" factNumber="1">
   </measure>
-  <measure name="CommentVotes" disabled="false" sourceProperty="CommentVotes" aggregate="SUM" type="number" hidden="false" searchable="false">
+  <measure name="CommentVotes" disabled="false" sourceProperty="CommentVotes" aggregate="SUM" type="number" hidden="false" searchable="false" factNumber="2">
   </measure>
-  <measure name="Comments" disabled="false" sourceProperty="Comments" aggregate="SUM" type="number" hidden="false" searchable="false">
+  <measure name="Comments" disabled="false" sourceProperty="Comments" aggregate="SUM" type="number" hidden="false" searchable="false" factNumber="3">
   </measure>
-  <measure name="CommentsAmount" disabled="false" sourceProperty="CommentsAmount" aggregate="SUM" type="number" hidden="false" searchable="false">
+  <measure name="CommentsAmount" disabled="false" sourceProperty="CommentsAmount" aggregate="SUM" type="number" hidden="false" searchable="false" factNumber="4">
   </measure>
-  <measure name="PostVotes" disabled="false" sourceProperty="PostVotes" aggregate="SUM" type="number" hidden="false" searchable="false">
+  <measure name="PostVotes" disabled="false" sourceProperty="PostVotes" aggregate="SUM" type="number" hidden="false" searchable="false" factNumber="5">
   </measure>
-  <measure name="Posts" disabled="false" sourceProperty="Posts" aggregate="SUM" type="number" hidden="false" searchable="false">
+  <measure name="Posts" disabled="false" sourceProperty="Posts" aggregate="SUM" type="number" hidden="false" searchable="false" factNumber="6">
   </measure>
-  <measure name="Views" disabled="false" sourceProperty="Views" aggregate="SUM" type="number" hidden="false" searchable="false">
+  <measure name="Views" disabled="false" sourceProperty="Views" aggregate="SUM" type="number" hidden="false" searchable="false" factNumber="7">
   </measure>
-  <measure name="Subscriptions" disabled="false" sourceProperty="PostSubscriptions" aggregate="SUM" type="number" hidden="false" searchable="false" formatString="#">
+  <measure name="Subscriptions" disabled="false" sourceProperty="PostSubscriptions" aggregate="SUM" type="number" hidden="false" searchable="false" formatString="#" factNumber="8">
   </measure>
   <listing name="New_listing1" disabled="false" listingType="table" fieldList="Added,CommentVotes,Comments,CommentsAmount,CorrectAnswers,Overall,PostSubscriptions,PostVotes,Posts,Views">
     <additionalDescription>undefined</additionalDescription>
@@ -97,8 +97,6 @@ ClassMethod GSContestOrAllDate(date As %Date, groupName As %String) As %String
 	Quit result
 }
 
-Parameter DOMAIN;
-
 /*ClassMethod %OnGetFilterSpec(pFilterSpec As %String) As %String
 {
 	if ($username = "esdevcom") {
@@ -108,6 +106,7 @@ Parameter DOMAIN;
 		quit "[Language].[H1].[Language].[en]"
 	}
 }*/
+Parameter DOMAIN;
 
 }
 

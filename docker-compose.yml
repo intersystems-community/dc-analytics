@@ -14,7 +14,7 @@ services:
       - ~/iris.key:/usr/irissys/mgr/iris.key
       - ./:/irisdev/app
   atscale:
-    image: ghcr.io/intersystems-community/atscale-server:2021.3.0.3934
+    image: containers.intersystems.com/intersystems/adaptive-analytics:2021.3.0.3934
     restart: always
     tty: true
     hostname: atscale
@@ -23,6 +23,7 @@ services:
       - conf:/opt/atscale/conf
       - log:/opt/atscale/log
       - ./atscale-server/atscale.yaml:/root/atscale.yaml
+      - ./atscale-server/entrypoint.sh:/root/entrypoint.sh
       - ./atscale-server/src/connections:/root/connections
       - ./atscale-server/src/cubes:/root/cubes
       - ./atscale-server/src/license:/root/license

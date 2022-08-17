@@ -1,7 +1,7 @@
 Class Community.Utils [ Abstract ]
 {
 
-ClassMethod setup(globalPath As %String = "", facts = 10000) As %Status
+ClassMethod setup(globalPath As %String = "", facts = 10000, ViewsLoad = "True") As %Status
 {
 	if globalPath = "" {
 		write "Please input path to global GZ file.", !
@@ -26,7 +26,7 @@ ClassMethod setup(globalPath As %String = "", facts = 10000) As %Status
 	return:$$$ISERR(sc) sc
 	
 	write "Building cubes", !
-	set sc = ..UpdateCubes(,facts)
+	set sc = ..UpdateCubes(,facts,ViewsLoad)
 	return:$$$ISERR(sc) sc
 	
 	w "Done!", !
@@ -64,25 +64,25 @@ ClassMethod buildIndices() As %Status
 	return sc
 }
 
-ClassMethod UpdateCubes(verbose = 1, facts = 10000) As %Status
+ClassMethod UpdateCubes(verbose = 1, facts = 10000, ViewsLoad = "True") As %Status
 {
 	set st = ##class(%DeepSee.Utils).%GetCubeList(.list, "cubes")
 	return:$$$ISERR(st) st
  
 	set cube=""
 	for {
-		set cube=$Order(list(cube)) 
+		set cube=$Order(list(cube))
 		#; if (cube="POST") continue
-		#;if (ViewsLoad = "False") 
-		#;{
-		#;	if (cube="ViewsHistory") continue
-		#;	if (cube="ViewsHistoryCopy") continue
-		#;}
+		if ((ViewsLoad = "False") & (cube="VIEWSHISTORY")) || ((ViewsLoad = "False") & (cube="VIEWSHISTORYCOPY")) { 
+			write "Skipping cube: "_cube_", because ViewsLoad variable is set to "_ViewsLoad, ! 
+			} else {
+				write "Building cube: "_cube_", because it's not skipped", !
 		quit:cube=""
 
 		Set st1 = ##class(%DeepSee.Utils).%BuildCube(cube, $$$YES, verbose,,facts)
-		
+
 		set st = $$$ADDSC(st, st1) 
+			} ; if skipping cube
 	}
 	return st
 }
