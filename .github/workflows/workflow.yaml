@@ -6,7 +6,7 @@ on:
       - master
   release:
     types:
-      - published 
+      - published
 
 # Environment variables.
 # ${{ secrets }} are taken from GitHub -> Settings -> Secrets
@@ -26,76 +26,82 @@ env:
 jobs:
   gcloud-setup-and-build-and-publish-to-GCR:
     name: Setup gcloud utility, Build DC-ANALYTICS image and Publish it to Container Registry
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
+
+    - name: Google Authentication
+      uses: google-github-actions/auth@v0.8.0
+      with:
+        credentials_json: ${{ secrets.SERVICE_ACCOUNT_KEY }}
 
     - name: Setup gcloud cli
-      uses: google-github-actions/setup-gcloud@v0.2.0
+      uses: google-github-actions/setup-gcloud@v0.6.0
       with:
-        version: '320.0.0'
-        service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY }}
+        version: '391.0.0'
 
     - name: Configure docker to use the gcloud as a credential helper
       run: |
-        gcloud auth configure-docker
+        gcloud --quiet auth configure-docker
 
     - name: Build DC-ANALYTICS image
+      working-directory: iris
       run: |
         docker build -t ${GCR_LOCATION}/${PROJECT_ID}/${IMAGE_NAME}:${GITHUB_SHA} .
 
     - name: Publish DC-ANALYTICS image to Google Container Registry
+      working-directory: iris
       run: |
         docker push ${GCR_LOCATION}/${PROJECT_ID}/${IMAGE_NAME}:${GITHUB_SHA}
 
-  gke-provisioner:
-    # Inspired by:
-    ## https://www.terraform.io/docs/github-actions/getting-started.html
-    ## https://github.com/hashicorp/terraform-github-actions
-    name: Provision GKE cluster
-    runs-on: ubuntu-18.04
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+  # gke-provisioner:
+  #   # Inspired by:
+  #   ## https://www.terraform.io/docs/github-actions/getting-started.html
+  #   ## https://github.com/hashicorp/terraform-github-actions
+  #   name: Provision GKE cluster
+  #   runs-on: ubuntu-20.04
+  #   steps:
+  #   - name: Checkout
+  #     uses: actions/checkout@v3
 
-    - name: Terraform init
-      uses: hashicorp/terraform-github-actions@master
-      with:
-        tf_actions_version: 0.12.17
-        tf_actions_subcommand: 'init'
-        tf_actions_working_dir: 'terraform'
+  #   - name: Terraform init
+  #     uses: hashicorp/terraform-github-actions@master
+  #     with:
+  #       tf_actions_version: 0.12.17
+  #       tf_actions_subcommand: 'init'
+  #       tf_actions_working_dir: 'terraform'
 
-    - name: Terraform validate
-      uses: hashicorp/terraform-github-actions@master
-      with:
-        tf_actions_version: 0.12.17
-        tf_actions_subcommand: 'validate'
-        tf_actions_working_dir: 'terraform'
+  #   - name: Terraform validate
+  #     uses: hashicorp/terraform-github-actions@master
+  #     with:
+  #       tf_actions_version: 0.12.17
+  #       tf_actions_subcommand: 'validate'
+  #       tf_actions_working_dir: 'terraform'
 
-    - name: Terraform plan
-      uses: hashicorp/terraform-github-actions@master
-      with:
-        tf_actions_version: 0.12.17
-        tf_actions_subcommand: 'plan'
-        tf_actions_working_dir: 'terraform'
+  #   - name: Terraform plan
+  #     uses: hashicorp/terraform-github-actions@master
+  #     with:
+  #       tf_actions_version: 0.12.17
+  #       tf_actions_subcommand: 'plan'
+  #       tf_actions_working_dir: 'terraform'
 
-    - name: Terraform apply
-      uses: hashicorp/terraform-github-actions@master
-      with:
-        tf_actions_version: 0.12.17
-        tf_actions_subcommand: 'apply'
-        tf_actions_working_dir: 'terraform'
+  #   - name: Terraform apply
+  #     uses: hashicorp/terraform-github-actions@master
+  #     with:
+  #       tf_actions_version: 0.12.17
+  #       tf_actions_subcommand: 'apply'
+  #       tf_actions_working_dir: 'terraform'
 
   kubernetes-deploy:
     name: Deploy Kubernetes manifests to GKE cluster
     needs:
     - gcloud-setup-and-build-and-publish-to-GCR
-    - gke-provisioner
-    runs-on: ubuntu-18.04
+    # - gke-provisioner
+    runs-on: ubuntu-20.04
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Replace placeholders with values in statefulset template
       working-directory: ./k8s/
@@ -105,15 +111,21 @@ jobs:
         sed "s|DOCKER_IMAGE_TAG|${GITHUB_SHA}|" > statefulset.yaml
         cat statefulset.yaml
 
-    - name: Setup gcloud cli
-      uses: google-github-actions/setup-gcloud@v0.2.0
+    - name: Google Authentication
+      uses: google-github-actions/auth@v0.8.0
       with:
-        version: '320.0.0'
-        service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY }}
+        credentials_json: ${{ secrets.SERVICE_ACCOUNT_KEY }}
+
+    - name: Setup gcloud cli
+      uses: google-github-actions/setup-gcloud@v0.6.0
+      with:
+        version: '391.0.0'
 
     - name: Apply Kubernetes manifests
       working-directory: ./k8s/
       run: |
+        gcloud components install gke-gcloud-auth-plugin
+        export USE_GKE_GCLOUD_AUTH_PLUGIN=True
         gcloud container clusters get-credentials ${GKE_CLUSTER} --zone ${GKE_ZONE} --project ${PROJECT_ID}
         kubectl apply -f namespace.yaml
         kubectl apply -f managed-certificate.yaml
