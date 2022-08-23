@@ -40,28 +40,6 @@ One of basic dashboards:
 <img width="1188" alt="image" src="https://user-images.githubusercontent.com/41373877/184346339-7e896fcd-629b-4225-85c2-950d9fe63723.png">
 
 
-
-#### Option: UDAF optimization
-If you have a commercial license on IRIS you may have LOGIN and PASSWORD for use in private ZPM registry.
-In that case you may install isc-udaf package from there.
-Installation command in IRIS looks like this:
-```
-zpm "repo -n registry -r -url https://pm.intersystems.com/ -user LOGIN -pass PASSWORD"
-zpm "install isc-udaf"
-```
-Next, you have to swith UDAF on in AtScale Data Warehouse settings:
-Go to http://[your-atscale-server]:10500/org/default/settings/data-warehouses and set Custom Function Installation Mode to Custom Managed value.
-![image](https://user-images.githubusercontent.com/41373877/184353600-f0032b36-cf35-418b-94bf-d79c5e1a9a53.png)
-
-UDAF gives AtScale 2 main advantages: 
-- the ability to store query cash (they call it Aggregate Tables), so that the next query, using aggregation on data, takes from the database already pre calculated results.
-- the ability to use additional functions (actually User-Defined Aggregate Functions) and data processing algorithms that AtScale is forced to store in the data source. 
-They are stored in the database in a separate table and Adaptive Analytics can call them by name in auto generated queries. When AtScale can use these functions, the speed of queries increases.
-
-AtScale has an internal logic for updating aggregate tables, but it is much more convenient to control this process yourself.
-You can configure updates on a per-cube basis in the web interface of AtScale and then use scripts from "iris/src/aggregate tables update shedule scripts" to export schedules and import to another instance, or use the exported schedule file as a backup. You will also find a script to set all cubes to the same update schedule if you do not want to configure each one individually.
-
-
 ### 2. To start an Atscale server:  
 
 A license must be provided to run Atscale server. To do this you need to put the json file with the license in the folder "atscale-dataset/src/license". 
@@ -123,6 +101,29 @@ docker-compose down -v
 ```
 **Warning!** This will remove all created Iris and  Atscale containers and any changes saved in them.  
 
+
+### UDAF optimization
+UDAF stands for USER Defined aggregate functions. AtScale uses it to build aggregates on a host database server in order to process analytics queries faster. This is a mandatory component to use AtScale effectively.
+UDAF component must be installed into IRIS. It can be done manually (check the [documentation]([url](https://docs.intersystems.com/irisforhealthlatest/csp/docbook/DocBook.UI.Page.cls?KEY=RSQL_CREATEUDAF))) or by installing an UDAF package from IPM (InterSystems Package Manager). 
+IPM is a gated package registry thus will need a token to get the access. Token can be obtained on [IPM site](pm.intersystems.com) using yuor InterSystems credentials.
+<img width="1125" alt="Screenshot 2022-08-23 at 09 21 01" src="https://user-images.githubusercontent.com/2781759/186085099-2a38edcf-dc8c-4ea3-8d69-01b72329af31.png">
+
+Open IRIS terminal and run:
+```
+zpm "repo -n registry -r -url https://pm.intersystems.com/ -token access_token"
+zpm "install isc-udaf"
+```
+Next, you have to turn UDAF on in AtScale Data Warehouse settings:
+Go to http://[your-atscale-server]:10500/org/default/settings/data-warehouses and set Custom Function Installation Mode to Custom Managed value.
+![image](https://user-images.githubusercontent.com/41373877/184353600-f0032b36-cf35-418b-94bf-d79c5e1a9a53.png)
+
+UDAF gives AtScale 2 main advantages: 
+- the ability to store query cash (they call it Aggregate Tables), so that the next query, using aggregation on data, takes from the database already pre calculated results.
+- the ability to use additional functions (actually User-Defined Aggregate Functions) and data processing algorithms that AtScale is forced to store in the data source. 
+They are stored in the database in a separate table and Adaptive Analytics can call them by name in auto generated queries. When AtScale can use these functions, the performance of analytics queries increases dramatically.
+
+AtScale has an internal logic for updating aggregate tables, but it is much more convenient to control this process yourself.
+You can configure updates on a per-cube basis in the web interface of AtScale and then use scripts from "iris/src/aggregate tables update shedule scripts" to export schedules and import to another instance, or use the exported schedule file as a backup. You will also find a script to set all cubes to the same update schedule if you do not want to configure each one individually.
 
 ### 3. Using BI projects
 
