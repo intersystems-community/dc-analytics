@@ -14,25 +14,9 @@ Project made with InterSystems IRIS BI (DeepSee), Power BI and Logi Report Desig
 Login: user
 Password: userp@$$
 
-### How to run services local:
+### How to run DC analytics on a personal laptop:
 First, you need to clone this repository to your local machine. Below in the text we will use relative paths to files when describing what is where. We assume that you are already in the project's root directory.
 
-#### Authenticating to the ICR
-To log into the ICR, take the following steps:
-
-Load https://containers.intersystems.com/ in your browser and log in with your InterSystems/WRC credentials.
-
-Retrieve your Docker login token, or the full login command.
-
-In your Docker interface (for example, your PowerShell window or Linux command line), authenticate to the ICR using the provided credentials. You can do this by copying and pasting the full docker login command displayed, for example:
-
-```
-docker login -u="your_username" -p="provided_password" containers.intersystems.com
-```
-
-For security reasons, however, you may want to instead enter the command docker login containers.intersystems.com, then enter your username at the Username prompt and paste your password into the Password: prompt.
-
-Note: If you are logged into another Docker registry, the docker login command may result in an error; log out of the other registry before logging into containers.intersystems.com.
 
 ### 1. Starting IRIS 
 InterSystem IRIS stores all the data in this sample project/ So we need InterSystems IRIS up and running and persists data. Below we will take the vanila image of InterSystems IRIS and load Community analytics data. Open the terminal in the project directory and run:  
@@ -54,6 +38,8 @@ _system/SYS
 
 One of basic dashboards:
 <img width="1188" alt="image" src="https://user-images.githubusercontent.com/41373877/184346339-7e896fcd-629b-4225-85c2-950d9fe63723.png">
+
+
 
 #### Option: UDAF optimization
 If you have a commercial license on IRIS you may have LOGIN and PASSWORD for use in private ZPM registry.
@@ -83,6 +69,26 @@ A license must be provided to run Atscale server. To do this you need to put the
 
 In case you plan to deploy this project to some server you might want to alter hostname parameter: open directory "atscale-dataset", file "atscale.yaml" and edit (ip or dns name):  
 loadbalancer_dns_name: "127.0.0.1"  
+
+#### Authenticating to the InterSystems Container Registry(ICR)
+This sample uses [AtScale docker container](https://github.com/intersystems-community/dc-analytics/blob/28d6040ca99a99641f0c88689c3402cc5872e9b2/docker-compose.yml#L17) in ICR. This is a gated registry, thus the access token will be requested which you can obtain being a current InterSystems customer.
+To sign into the ICR, take the following steps:
+
+Open https://containers.intersystems.com/ in your browser and sign in using your InterSystems credentials.
+
+Retrieve your Docker login token, or the full login command.
+
+In your Docker interface (for example, your PowerShell window or Linux command line), authenticate to the ICR using the provided credentials. You can do this by copying and pasting the full docker login command displayed, for example:
+
+```
+docker login -u="your_username" -p="provided_password" containers.intersystems.com
+```
+
+For security reasons, however, you may want to instead enter the command docker login containers.intersystems.com, then enter your username at the Username prompt and paste your password into the Password: prompt.
+
+Note: If you are logged into another Docker registry, the docker login command may result in an error; log out of the other registry before logging into containers.intersystems.com.
+
+
     
 Run docker container with the command:  
 ```
