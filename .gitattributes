@@ -1,5 +1,6 @@
 *.sh text eol=lf
 *.cls text eol=lf
+analytic_dashboards/** binary
 *.mac text eol=lf
 *.int text eol=lf
 Dockerfil* text eol=lf
