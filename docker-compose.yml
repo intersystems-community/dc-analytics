@@ -28,6 +28,7 @@ services:
       - ./atscale-server/src/cubes:/root/cubes
       - ./atscale-server/src/license:/root/license
       - ./atscale-server/src/settings:/root/settings
+      - ./atscale-server/projects_deployment.sh:/root/projects_deployment.sh
     ports:
       - 10500:10500
       - 10502:10502

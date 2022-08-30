@@ -43,3 +43,17 @@ When entering a password, you need to use the GitHub access token, you can read 
 In the "GitHub access token" settings, should be opened access to read packages from the GitHub package registry:  
 <img src="https://user-images.githubusercontent.com/49229973/157600567-f80a8f9f-15e2-41c6-bf18-2c3ef6e1639d.jpg" width="600" />
 
+## update AtScale aggregates
+
+You can use this comand to copy scripts inside AtScale container
+
+```
+docker cp path_to_repo/Public-InterSystems-Developer-Community-analytics/iris/src/aggregate_tables_update_shedule_scripts/aggreagtes_update_instant.sh public-intersystems-developer-community-analytics_atscale_1:/root/aggreagtes_update_instant.sh 
+```
+
+Next step you run a script by this command:
+
+```
+docker exec -it public-intersystems-developer-community-analytics_atscale_1  aggreagtes_update_instant.sh 
+```
+
