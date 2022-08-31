@@ -1,15 +1,16 @@
 {
     "objectscript.conn" :{
       "ns": "DCANALYTICS",
+      "username": "_SYSTEM",
+      "password": "SYS",
       "active": true,
       "docker-compose": {
         "service": "iris",
         "internalPort": 52773
       },
       "links": {
-        "DC-Analytics": "http://localhost:${port}/dsw/index.html#!/?ns=DCANALYTICS"
-
+        "DC-Analytics": "http://localhost:${port}/dsw/index.html#/DCANALYTICS"
+      }
     }
-  }
 
 }
