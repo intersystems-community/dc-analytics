@@ -1,3 +1,7 @@
+# For beginers
+
+If you are new in Tableau you can get acquainted with the dashboards using the trial version of the product. You can download Tableau [here](https://www.tableau.com/products/desktop/download). You will be asked to fill in information about yourself. Tableau have their [get started tutorial](https://help.tableau.com/current/guides/get-started-tutorial/en-us/get-started-tutorial-home.htm). You will finde there meven more than you need to explore and change our dashdoards.
+
 ## To an existing report
 If you want to add a data source to an existing report, 
 select the **Data Source** tab on the tab bar below and click on the Tableau icon in the top left, then follow the steps above.
