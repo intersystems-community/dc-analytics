@@ -16,7 +16,6 @@ spec:
       labels:
         app: dc-analytics
     spec:
-
       initContainers:
       - name: dc-volume-change-owner-hack
         image: busybox
@@ -38,6 +37,11 @@ spec:
       containers:
       - image: DOCKER_REPO_NAME:DOCKER_IMAGE_TAG
         name: dc-analytics
+        args:
+        - --check-caps
+        - "false"
+        - --after
+        - iris session iris -U DCANALYTICS '##class(%DeepSee.Utils).%BuildCube("VIEWSHISTORY")' > /proc/1/fd/1
         lifecycle:
           postStart:
             exec:
