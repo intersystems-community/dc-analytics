@@ -11,10 +11,13 @@ Project made with InterSystems IRIS BI (DeepSee), Power BI and Logi Report Desig
 
 [Instance of Adaptive Analytics powered by AtScale](http://atscale-public.demo.community.intersystems.com:10500/login)
 
-[Iris BI DC analytics](http://public-analytics.community.intersystems.com/dsw/index.html#/DCANALYTICS/BasicDashboards)
-
 Login: user
 Password: userp@$$
+
+[Iris BI DC analytics](http://public-analytics.community.intersystems.com/dsw/index.html#/DCANALYTICS/BasicDashboards)
+
+Login: _SYSTEM
+Password: SYS
 
 ### How to run DC analytics on a personal laptop:
 First, you need to clone this repository to your local machine. Below in the text we will use relative paths to files when describing what is where. We assume that you are already in the project's root directory.
