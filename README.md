@@ -7,7 +7,7 @@ Project made with InterSystems IRIS BI (DeepSee), Power BI and Logi Report Desig
 
 ### See Live DC analytics
 
-[PowerBI Interactive Dashboard with connection to the Adaptive Analytics Instance](https://app.powerbi.com/view?r=eyJrIjoiMjU0NjgyNjgtYjA0NS00M2Q3LTg3NzUtN2EwNjVjMGQ0Yzk5IiwidCI6IjRlMzI1ZjgzLWE4YWYtNGY2Yy05ODY3LTBkYTA4YmU1MGZjMCIsImMiOjEwfQ%3D%3D&pageName=ReportSection&language=en-us)
+[PowerBI Interactive Dashboard with connection to the Adaptive Analytics Instance](https://app.powerbi.com/view?r=eyJrIjoiZDNhZDAxMTAtZDUyNy00YTRlLTkxZmQtODBlMzZmZGU3ZTkxIiwidCI6IjRlMzI1ZjgzLWE4YWYtNGY2Yy05ODY3LTBkYTA4YmU1MGZjMCIsImMiOjEwfQ%3D%3D&pageName=ReportSection&language=en-us)
 
 [Instance of Adaptive Analytics powered by AtScale](http://atscale-public.demo.community.intersystems.com:10500/login)
 
