@@ -24,9 +24,5 @@
   </widget>
   <widget name="Widget8" type="pivot" subtype="lineChartMarkers" subtypeClass="lineChart" title="Posting Contribution" dataSource="Posts/PostingContribution.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="6" homeColL="4" colSpanL="6" rowSpanL="4" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="#F0F0F0" opacity="1" theme="" dataColorList="">
   </widget>
-  <widget name="Widget9" type="pivot" subtype="columnChartStacked" subtypeClass="barChart" title="New Posts Yearly By Type" dataSource="Posts/NewPostsYearlyByType.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="0" homeColL="0" colSpanL="4" rowSpanL="4" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="#F0F0F0" opacity="1" theme="" dataColorList="">
-  </widget>
-  <widget name="Widget10" type="pivot" subtype="lineChartMarkers" subtypeClass="lineChart" title="New Posts Yearly" dataSource="Posts/NewPostsYearly.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="0" homeColL="4" colSpanL="4" rowSpanL="4" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="#F0F0F0" opacity="1" theme="" dataColorList="">
-  </widget>
 </dashboard>
 </Document></Export>
