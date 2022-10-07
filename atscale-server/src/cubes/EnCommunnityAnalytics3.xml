@@ -1,0 +1,3929 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.atscale.com/xsd/project_2_0" name="EnCommunnityAnalytics3" version="2" xsi:schemaLocation="http://www.atscale.com/xsd/project_2_0 ../../../../../core/src/main/resources/com/atscale/engine/schema/project_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <annotations>
+    <annotation name="migrationVersion">2021.3.0.3934</annotation>
+    <annotation name="version">2</annotation>
+    <annotation name="engineId">e3fbea60-10e3-4c1e-7274-8824d9809fa4</annotation>
+    <annotation name="versionTag"></annotation>
+    <annotation name="publishDate">Published on Oct 5, 2022 at 7:56am (UTC)</annotation>
+  </annotations>
+  <properties>
+    <caption>EnCommunnityAnalytics3</caption>
+    <visible>true</visible>
+    <aggressive-aggregate-promotion>false</aggressive-aggregate-promotion>
+    <aggregate-prediction>
+      <speculative-aggregates>false</speculative-aggregates>
+    </aggregate-prediction>
+  </properties>
+  <attributes>
+    <attribute-key id="2fa5263e-e840-48c0-8113-69142b2659a1">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="da1040fd-6a18-4c52-a9be-247d05d5874f">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="5445a048-3bce-42ac-ba34-bf63ed58a425">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="fb986474-8e65-417c-8fbb-25df784ded34">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="5dc73821-cbd8-4b13-b0c2-07fe17ffb13d">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="196d833f-e891-439c-90ec-cec336e7651b">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="0cf6b253-7773-4d8f-ad1e-164bb56579e8">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="32da45d8-d58a-4838-9397-1db9dc46468f">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="5ab04b5e-b842-41ce-a064-9ce24fcd4d64">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="631b7ad8-0011-4a08-b471-05913e633563">
+      <properties>
+        <visible>true</visible>
+        <columns>2</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="125f02e8-f839-4e71-90e8-41e34e69c608">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="cf77c1e1-ce9e-4e97-9aad-c0d79f16916c">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="118e9f60-fab0-4758-834f-63f7a0c35edf">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="833760f4-2a9d-4cd5-9bf6-676a316b74ed">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="894ed635-c94d-46b1-b9e4-1de2d8a67525">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="719e7beb-ccab-48db-bf87-a06d699f3b47">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="48214f40-7d44-429b-a8e0-2dc30d8bfe97">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="35f2c58e-5323-40ba-bf21-c4a1179b028c">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="e12977fb-6c45-4461-9c3e-18b5b329397b">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="4a54526c-c975-4efa-b427-3df70fbd6593">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="444b4a80-ce3d-4875-a050-0a7e52dbf9c6">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="43ebb33d-5814-406a-ba0b-218091519897">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="47a450ac-1f14-40fe-9541-94a48dc11762">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="a414208b-a77e-4af1-8ab2-c70be7055d76">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="a39adcec-aa98-4b5c-8632-ccf8b9083b12">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="d248f02f-6549-4dcb-8e57-c0855d01bc03">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <attribute-key id="a9178537-4924-4955-bf60-e06df36a40ec">
+      <properties>
+        <visible>true</visible>
+        <columns>1</columns>
+      </properties>
+    </attribute-key>
+    <keyed-attribute id="38f61acc-90d8-42f6-7e0b-0c5b811931f4" key-ref="2fa5263e-e840-48c0-8113-69142b2659a1" name="FullDate">
+      <properties>
+        <caption>FullDate</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="d0714233-18a0-4b7a-4fd4-1bba50065c3c" key-ref="da1040fd-6a18-4c52-a9be-247d05d5874f" name="YearPosts">
+      <properties>
+        <caption>YearPosts</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="8d8daa0d-f7f3-462b-6ff3-e266c7713ba9" key-ref="5445a048-3bce-42ac-ba34-bf63ed58a425" name="PostId">
+      <properties>
+        <caption>PostId</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="99f2e15f-4abf-434c-4f46-05fb2d75337b" key-ref="fb986474-8e65-417c-8fbb-25df784ded34" name="NamePost">
+      <properties>
+        <caption>NamePost</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="c8355957-d2d3-4b5a-75c1-5cd82541f388" key-ref="5dc73821-cbd8-4b13-b0c2-07fe17ffb13d" name="LinkPost">
+      <properties>
+        <caption>LinkPost</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="f484eab6-7b6e-4b75-75c5-4eb1cf264306" key-ref="196d833f-e891-439c-90ec-cec336e7651b" name="PostType">
+      <properties>
+        <caption>PostType</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="00036edc-179b-4799-5f65-bd37ec46d6c1" key-ref="0cf6b253-7773-4d8f-ad1e-164bb56579e8" name="FullDateMember">
+      <properties>
+        <caption>FullDateMember</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="5f978a3e-fd2f-4a82-6486-fba093440933" key-ref="32da45d8-d58a-4838-9397-1db9dc46468f" name="Member">
+      <properties>
+        <caption>Member</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="1dad6495-8914-4242-7f24-54e6779a77f3" key-ref="5ab04b5e-b842-41ce-a064-9ce24fcd4d64" name="AuthorInfo">
+      <properties>
+        <caption>AuthorInfo</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="3a29b992-b35e-4e18-6763-8fd1f2de1082" key-ref="631b7ad8-0011-4a08-b471-05913e633563" name="Name">
+      <properties>
+        <caption>Name</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="47143acd-add8-492a-6498-118d2a8f019b" key-ref="125f02e8-f839-4e71-90e8-41e34e69c608" name="Link">
+      <properties>
+        <caption>Link</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="180c0425-d42c-412d-6c00-8c6a1ddc4acd" key-ref="cf77c1e1-ce9e-4e97-9aad-c0d79f16916c" name="bind_key">
+      <properties>
+        <caption>MonthYearNum</caption>
+        <visible>false</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="68905df1-0365-46ad-7dd0-1140fcb6ea00" key-ref="118e9f60-fab0-4758-834f-63f7a0c35edf" name="YearContributors">
+      <properties>
+        <caption>YearContributors</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="14122cab-f606-4a0d-6f34-98351ea5fafd" key-ref="833760f4-2a9d-4cd5-9bf6-676a316b74ed" name="FullDateContribution">
+      <properties>
+        <caption>FullDateContribution</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="031786a3-e47f-41d0-6439-c553dbc7ba83" key-ref="894ed635-c94d-46b1-b9e4-1de2d8a67525" name="Tags">
+      <properties>
+        <caption>Tags</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="60b592d4-6168-443d-5ea6-659e44b2c205" key-ref="719e7beb-ccab-48db-bf87-a06d699f3b47" name="AuthorName">
+      <properties>
+        <caption>AuthorName</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="f793b096-c851-44d3-6b6b-48034b785711" key-ref="48214f40-7d44-429b-a8e0-2dc30d8bfe97" name="AuthorLink">
+      <properties>
+        <caption>AuthorLink</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="251f3363-8164-4937-43f5-09efa6c953e0" key-ref="35f2c58e-5323-40ba-bf21-c4a1179b028c" name="AuthorFullName">
+      <properties>
+        <caption>AuthorFullName</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="d8df4e6e-3e30-41bb-50a6-ac7c41de6c77" key-ref="e12977fb-6c45-4461-9c3e-18b5b329397b" name="MonthYearNum">
+      <properties>
+        <caption>MonthYearNum</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="75fb72c6-a3df-47cf-6b91-e1b2fb5fc498" key-ref="4a54526c-c975-4efa-b427-3df70fbd6593" name="MonthYear">
+      <properties>
+        <caption>MonthYear</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <key-ref id="444b4a80-ce3d-4875-a050-0a7e52dbf9c6"></key-ref>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="69615cd7-655b-4fc2-51f4-e4b9af900efe" key-ref="43ebb33d-5814-406a-ba0b-218091519897" name="FullDateViews">
+      <properties>
+        <caption>FullDateViews</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="36dcefcd-e230-4b3e-6e1d-6a67c6d293c2" key-ref="47a450ac-1f14-40fe-9541-94a48dc11762" name="YearView">
+      <properties>
+        <caption>YearView</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="ebfcd7c1-7a46-4f7c-5556-7b931e621983" key-ref="a414208b-a77e-4af1-8ab2-c70be7055d76" name="Week_year">
+      <properties>
+        <caption>Week_year</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="28042dac-be32-47c3-659f-2d391e9fc4e6" key-ref="a39adcec-aa98-4b5c-8632-ccf8b9083b12" name="YearMember">
+      <properties>
+        <caption>YearMember</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="f60cb492-cc00-413c-75b0-1fde1f0aa817" key-ref="d248f02f-6549-4dcb-8e57-c0855d01bc03" name="DataDimensionMemberNew">
+      <properties>
+        <caption>DataDimensionMemberNew</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+    <keyed-attribute id="de6c0890-bc34-4a80-7b21-632c087b55a1" key-ref="a9178537-4924-4955-bf60-e06df36a40ec" name="Country_member_id">
+      <properties>
+        <caption>Country_member_id</caption>
+        <visible>true</visible>
+        <type>
+          <enum></enum>
+        </type>
+        <ordering>
+          <sort-key>
+            <order>ascending</order>
+            <value></value>
+          </sort-key>
+        </ordering>
+      </properties>
+    </keyed-attribute>
+  </attributes>
+  <dimensions>
+    <dimension id="57d4b1fe-fb21-4aa8-4270-ba53ab784339" name="PostInfo">
+      <properties>
+        <visible>true</visible>
+        <dimension-type>Other</dimension-type>
+      </properties>
+      <hierarchy id="ef7106ed-a94f-424e-a79e-b6e5e83ffa27" name="PostInfo">
+        <properties>
+          <caption>PostInfo</caption>
+          <visible>true</visible>
+          <filter-empty>Always</filter-empty>
+          <default-member>
+            <all-member></all-member>
+          </default-member>
+        </properties>
+        <level primary-attribute="f484eab6-7b6e-4b75-75c5-4eb1cf264306">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>true</visible>
+          </properties>
+        </level>
+        <level primary-attribute="031786a3-e47f-41d0-6439-c553dbc7ba83">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>true</visible>
+          </properties>
+        </level>
+        <level primary-attribute="c8355957-d2d3-4b5a-75c1-5cd82541f388">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>true</visible>
+          </properties>
+        </level>
+        <level primary-attribute="99f2e15f-4abf-434c-4f46-05fb2d75337b">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>true</visible>
+          </properties>
+        </level>
+        <level primary-attribute="8d8daa0d-f7f3-462b-6ff3-e266c7713ba9">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>true</visible>
+          </properties>
+        </level>
+      </hierarchy>
+    </dimension>
+    <dimension id="02c8f56d-6298-47d7-4041-f8603d245279" name="Member">
+      <properties>
+        <visible>true</visible>
+        <dimension-type>Other</dimension-type>
+      </properties>
+      <hierarchy id="d64ea334-bbd0-4f72-bab6-32d116d122f3" name="Member1">
+        <properties>
+          <caption>Member</caption>
+          <visible>true</visible>
+          <filter-empty>Always</filter-empty>
+          <default-member>
+            <all-member></all-member>
+          </default-member>
+        </properties>
+        <level primary-attribute="5f978a3e-fd2f-4a82-6486-fba093440933">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>true</visible>
+          </properties>
+        </level>
+      </hierarchy>
+      <hierarchy id="ffc9fcf7-7e60-4e63-ac52-ad51b46cc1fe" name="AuthorInfo">
+        <properties>
+          <caption>AuthorInfo</caption>
+          <visible>true</visible>
+          <filter-empty>Yes</filter-empty>
+          <default-member>
+            <all-member></all-member>
+          </default-member>
+        </properties>
+        <level primary-attribute="47143acd-add8-492a-6498-118d2a8f019b">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>true</visible>
+          </properties>
+        </level>
+        <level primary-attribute="3a29b992-b35e-4e18-6763-8fd1f2de1082">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>true</visible>
+          </properties>
+        </level>
+        <level primary-attribute="1dad6495-8914-4242-7f24-54e6779a77f3">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>true</visible>
+          </properties>
+        </level>
+      </hierarchy>
+      <hierarchy id="74ae8852-0be6-4bc3-85b9-ca069f4fd314" name="CountryCode">
+        <properties>
+          <caption>CountryCode</caption>
+          <visible>true</visible>
+          <filter-empty>Yes</filter-empty>
+          <default-member>
+            <all-member></all-member>
+          </default-member>
+        </properties>
+        <level primary-attribute="de6c0890-bc34-4a80-7b21-632c087b55a1">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>true</visible>
+          </properties>
+        </level>
+      </hierarchy>
+    </dimension>
+    <dimension id="e7019834-df9e-4bfa-683a-7da9fdaf022b" name="BindPost">
+      <properties>
+        <visible>true</visible>
+        <dimension-type>Other</dimension-type>
+      </properties>
+      <hierarchy id="180307f0-342d-4f15-98b3-92919e784eb0" name="BindPost">
+        <properties>
+          <caption>BindPost</caption>
+          <visible>true</visible>
+          <filter-empty>Always</filter-empty>
+          <default-member>
+            <all-member></all-member>
+          </default-member>
+        </properties>
+        <level primary-attribute="180c0425-d42c-412d-6c00-8c6a1ddc4acd">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>false</visible>
+          </properties>
+        </level>
+      </hierarchy>
+    </dimension>
+    <dimension id="3034703e-8384-43e8-5a64-4e60b962cf9e" name="AuthorName">
+      <properties>
+        <visible>true</visible>
+        <dimension-type>Other</dimension-type>
+      </properties>
+      <hierarchy id="d25c530e-e7de-4988-8572-dfaba3e1c7b9" name="AuthorName">
+        <properties>
+          <caption>AuthorName</caption>
+          <visible>true</visible>
+          <filter-empty>Always</filter-empty>
+          <default-member>
+            <all-member></all-member>
+          </default-member>
+        </properties>
+        <level primary-attribute="60b592d4-6168-443d-5ea6-659e44b2c205">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>true</visible>
+          </properties>
+        </level>
+      </hierarchy>
+    </dimension>
+    <dimension id="1f6af7e3-e68d-4710-4d55-2cb3abdaeaa6" name="AuthorLink">
+      <properties>
+        <visible>true</visible>
+        <dimension-type>Other</dimension-type>
+      </properties>
+      <hierarchy id="e56348dc-3e89-4bb4-8486-08431f1300c4" name="AuthorLink">
+        <properties>
+          <caption>AuthorLink</caption>
+          <visible>true</visible>
+          <filter-empty>Always</filter-empty>
+          <default-member>
+            <all-member></all-member>
+          </default-member>
+        </properties>
+        <level primary-attribute="f793b096-c851-44d3-6b6b-48034b785711">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>true</visible>
+          </properties>
+        </level>
+      </hierarchy>
+    </dimension>
+    <dimension id="902063a5-6f49-45f8-54f9-2653a52dd8c0" name="AuthorFullName">
+      <properties>
+        <visible>true</visible>
+        <dimension-type>Other</dimension-type>
+      </properties>
+      <hierarchy id="dfb6fd4f-9814-4a93-a2b2-bf62b8414f80" name="AuthorFullName">
+        <properties>
+          <caption>AuthorFullName</caption>
+          <visible>true</visible>
+          <filter-empty>Always</filter-empty>
+          <default-member>
+            <all-member></all-member>
+          </default-member>
+        </properties>
+        <level primary-attribute="251f3363-8164-4937-43f5-09efa6c953e0">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>true</visible>
+          </properties>
+        </level>
+      </hierarchy>
+    </dimension>
+    <dimension id="37833eae-7d41-4420-4f55-903716b8efa2" name="DataDimensionView">
+      <properties>
+        <visible>true</visible>
+        <dimension-type>Other</dimension-type>
+      </properties>
+      <hierarchy id="fea7a6f0-2014-4316-b84e-2e54a48ee8ab" name="DataDimensionView">
+        <properties>
+          <caption>DataDimensionView</caption>
+          <visible>true</visible>
+          <filter-empty>Always</filter-empty>
+          <default-member>
+            <all-member></all-member>
+          </default-member>
+        </properties>
+        <level primary-attribute="75fb72c6-a3df-47cf-6b91-e1b2fb5fc498">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>true</visible>
+          </properties>
+        </level>
+        <level primary-attribute="d8df4e6e-3e30-41bb-50a6-ac7c41de6c77">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>true</visible>
+          </properties>
+        </level>
+      </hierarchy>
+      <hierarchy id="a842bafe-08a3-43ac-a336-86a38182b4e1" name="YearView">
+        <properties>
+          <caption>YearView</caption>
+          <visible>true</visible>
+          <filter-empty>Yes</filter-empty>
+          <default-member>
+            <all-member></all-member>
+          </default-member>
+        </properties>
+        <level primary-attribute="36dcefcd-e230-4b3e-6e1d-6a67c6d293c2">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>true</visible>
+          </properties>
+        </level>
+        <level primary-attribute="ebfcd7c1-7a46-4f7c-5556-7b931e621983">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>true</visible>
+          </properties>
+        </level>
+        <level primary-attribute="69615cd7-655b-4fc2-51f4-e4b9af900efe">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>true</visible>
+          </properties>
+        </level>
+      </hierarchy>
+    </dimension>
+    <dimension id="e7822fb2-5928-4972-6451-322b91a66d21" name="DataDimensionMemberNew">
+      <properties>
+        <visible>true</visible>
+        <dimension-type>Time</dimension-type>
+      </properties>
+      <hierarchy id="10181bfc-8bad-49f4-8687-f93a276abd0f" name="DataDimensionMemberNew">
+        <properties>
+          <caption>DataDimensionMemberNew</caption>
+          <visible>true</visible>
+          <filter-empty>Always</filter-empty>
+          <default-member>
+            <all-member></all-member>
+          </default-member>
+        </properties>
+        <level primary-attribute="f60cb492-cc00-413c-75b0-1fde1f0aa817">
+          <properties>
+            <unique-in-parent>false</unique-in-parent>
+            <visible>true</visible>
+            <level-type>TimeDays</level-type>
+          </properties>
+        </level>
+      </hierarchy>
+    </dimension>
+  </dimensions>
+  <data-sets>
+    <data-set id="e96355fd-0166-44e1-679a-67c8574f0e48" name="Calendar">
+      <properties>
+        <allow-aggregates>true</allow-aggregates>
+      </properties>
+      <physical>
+        <connection id="iris"></connection>
+        <query>
+          <sql>Select&#xA;    FullDate,&#xA;    MonthYearNum,&#xA;    Year,&#xA;    DATEPART(wk, ca.FullDate)*10000+Year(ca.FullDate) as WeekYear,&#xA;    UPPER(MonthYear) as MonthYear&#xA;from utils.calendar as ca</sql>
+        </query>
+        <immutable>false</immutable>
+        <column>
+          <name>FullDate</name>
+          <type>Date</type>
+        </column>
+        <column>
+          <name>MonthYear</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>MonthYearNum</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Year</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>WeekYear</name>
+          <type>Decimal(22,0)</type>
+        </column>
+      </physical>
+      <logical>
+        <key-ref id="e12977fb-6c45-4461-9c3e-18b5b329397b" unique="false" complete="true">
+          <column>MonthYearNum</column>
+        </key-ref>
+        <key-ref id="4a54526c-c975-4efa-b427-3df70fbd6593" unique="false" complete="true">
+          <column>MonthYear</column>
+        </key-ref>
+        <key-ref id="444b4a80-ce3d-4875-a050-0a7e52dbf9c6" unique="false" complete="true">
+          <column>MonthYearNum</column>
+        </key-ref>
+        <key-ref id="43ebb33d-5814-406a-ba0b-218091519897" unique="false" complete="true">
+          <column>FullDate</column>
+        </key-ref>
+        <key-ref id="47a450ac-1f14-40fe-9541-94a48dc11762" unique="false" complete="true">
+          <column>Year</column>
+        </key-ref>
+        <key-ref id="a414208b-a77e-4af1-8ab2-c70be7055d76" unique="false" complete="true">
+          <column>WeekYear</column>
+        </key-ref>
+        <attribute-ref id="d8df4e6e-3e30-41bb-50a6-ac7c41de6c77" complete="true">
+          <column>MonthYearNum</column>
+        </attribute-ref>
+        <attribute-ref id="75fb72c6-a3df-47cf-6b91-e1b2fb5fc498" complete="true">
+          <column>MonthYear</column>
+        </attribute-ref>
+        <attribute-ref id="69615cd7-655b-4fc2-51f4-e4b9af900efe" complete="true">
+          <column>FullDate</column>
+        </attribute-ref>
+        <attribute-ref id="36dcefcd-e230-4b3e-6e1d-6a67c6d293c2" complete="true">
+          <column>Year</column>
+        </attribute-ref>
+        <attribute-ref id="ebfcd7c1-7a46-4f7c-5556-7b931e621983" complete="true">
+          <column>WeekYear</column>
+        </attribute-ref>
+      </logical>
+    </data-set>
+    <data-set id="976368f6-8257-473b-706b-c14e3dbaa5ba" name="CalendarMembers">
+      <properties>
+        <allow-aggregates>true</allow-aggregates>
+      </properties>
+      <physical>
+        <connection id="iris"></connection>
+        <query>
+          <sql>Select&#xA;    FullDate,&#xA;    MonthYearNum,&#xA;    Year,&#xA;    DATEPART(wk, ca.FullDate)*10000+Year(ca.FullDate) as WeekYear,&#xA;    UPPER(MonthYear) as MonthYear&#xA;from utils.calendar as ca</sql>
+        </query>
+        <immutable>false</immutable>
+        <column>
+          <name>FullDate</name>
+          <type>Date</type>
+        </column>
+        <column>
+          <name>MonthYear</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>MonthYearNum</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Year</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>WeekYear</name>
+          <type>Decimal(22,0)</type>
+        </column>
+      </physical>
+      <logical>
+        <key-ref id="a39adcec-aa98-4b5c-8632-ccf8b9083b12" unique="false" complete="true">
+          <column>Year</column>
+        </key-ref>
+        <key-ref id="d248f02f-6549-4dcb-8e57-c0855d01bc03" unique="false" complete="true">
+          <column>FullDate</column>
+        </key-ref>
+        <attribute-ref id="28042dac-be32-47c3-659f-2d391e9fc4e6" complete="true">
+          <column>Year</column>
+        </attribute-ref>
+        <attribute-ref id="f60cb492-cc00-413c-75b0-1fde1f0aa817" complete="true">
+          <column>FullDate</column>
+        </attribute-ref>
+      </logical>
+    </data-set>
+    <data-set id="b9a28837-cc17-4e0e-542f-a899940dd68a" name="CalendarPosts">
+      <properties>
+        <allow-aggregates>true</allow-aggregates>
+      </properties>
+      <physical>
+        <connection id="iris"></connection>
+        <query>
+          <sql>Select&#xA;    FullDate,&#xA;    MonthYearNum,&#xA;    Year,&#xA;    DATEPART(wk, ca.FullDate)*10000+Year(ca.FullDate) as WeekYear,&#xA;    UPPER(MonthYear) as MonthYear&#xA;from utils.calendar as ca</sql>
+        </query>
+        <immutable>false</immutable>
+        <column>
+          <name>FullDate</name>
+          <type>Date</type>
+        </column>
+        <column>
+          <name>MonthYear</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>MonthYearNum</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Year</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>WeekYear</name>
+          <type>Decimal(22,0)</type>
+        </column>
+      </physical>
+      <logical></logical>
+    </data-set>
+    <data-set id="c6f79723-7e11-4563-52b4-05125ae2d65f" name="ChampionshipPositions">
+      <properties>
+        <allow-aggregates>true</allow-aggregates>
+      </properties>
+      <physical>
+        <connection id="iris"></connection>
+        <query>
+          <sql>select &#xA;    hc.*,&#xA;    UPPER(TO_CHAR(hc.Added, &#39;MON-YYYY&#39;)) as MonthYear,&#xA;    CAST(TO_CHAR(hc.Added, &#39;YYYYMM&#39;) as INT) as MonthYearNum,&#xA;    DATEPART(wk, hc.Added)*10000+Year(hc.Added) as WeekYear,&#xA;    TO_DATE(hc.Added, &#39;YYYY-MM-DD&#39;) as FullDate,&#xA;    Year(hc.Added) as &#34;Year&#34;&#xA;from History.ChampionshipPositions hc&#xA;group by hc.ID</sql>
+        </query>
+        <immutable>false</immutable>
+        <column>
+          <name>ID</name>
+          <type>Long</type>
+        </column>
+        <column>
+          <name>Added</name>
+          <type>Date</type>
+        </column>
+        <column>
+          <name>CommentVotes</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Comments</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>CommentsAmount</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>CorrectAnswers</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Member</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Overall</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>PostVotes</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Posts</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Views</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>FullDate</name>
+          <type>Date</type>
+        </column>
+        <column>
+          <name>MonthYearNum</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Year</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>MonthYear</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>WeekYear</name>
+          <type>Decimal(22,0)</type>
+        </column>
+        <column>
+          <name>PostSubscriptions</name>
+          <type>Int</type>
+        </column>
+      </physical>
+      <logical>
+        <key-ref id="118e9f60-fab0-4758-834f-63f7a0c35edf" unique="false" complete="true">
+          <column>Year</column>
+        </key-ref>
+        <key-ref id="833760f4-2a9d-4cd5-9bf6-676a316b74ed" unique="false" complete="true">
+          <column>FullDate</column>
+        </key-ref>
+        <attribute-ref id="68905df1-0365-46ad-7dd0-1140fcb6ea00" complete="true">
+          <column>Year</column>
+        </attribute-ref>
+        <attribute-ref id="14122cab-f606-4a0d-6f34-98351ea5fafd" complete="true">
+          <column>FullDate</column>
+        </attribute-ref>
+      </logical>
+    </data-set>
+    <data-set id="b37e5b00-4b29-4147-7902-1db75360cbb8" name="Comment">
+      <properties>
+        <allow-aggregates>true</allow-aggregates>
+      </properties>
+      <physical>
+        <connection id="iris"></connection>
+        <query>
+          <sql>select &#xA;&#x9;cc.*,&#xA;&#x9;CAST(TO_CHAR(cc.Created, &#39;YYYYMM&#39;) as INT) as MonthYearNum,&#xA;    TO_DATE(cc.Created, &#39;YYYY-MM-DD&#39;) as FullDate,&#xA;    Year(cc.Created) as &#34;Year&#34;,&#xA;    1 as &#34;Count&#34;&#xA;from Community.Comment cc</sql>
+        </query>
+        <immutable>false</immutable>
+        <column>
+          <name>ID1</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>AcceptedAnswerTS</name>
+          <type>DateTime</type>
+        </column>
+        <column>
+          <name>Author</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>AvgVote</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Correct</name>
+          <type>Boolean</type>
+        </column>
+        <column>
+          <name>Created</name>
+          <type>DateTime</type>
+        </column>
+        <column>
+          <name>Deleted</name>
+          <type>Boolean</type>
+        </column>
+        <column>
+          <name>Hash</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Id</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Link</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Post</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Text</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>TextHash</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Type</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>VotesAmount</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>MonthYearNum</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>FullDate</name>
+          <type>Date</type>
+        </column>
+        <column>
+          <name>Year</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Count</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Lang</name>
+          <type>String</type>
+        </column>
+      </physical>
+      <logical></logical>
+    </data-set>
+    <data-set id="f9243dc3-2476-4398-4ce5-f88b72fdfa8a" name="Comment (1)">
+      <properties>
+        <allow-aggregates>true</allow-aggregates>
+      </properties>
+      <physical>
+        <connection id="iris"></connection>
+        <table>
+          <schema>Community</schema>
+          <name>Comment</name>
+        </table>
+        <immutable>false</immutable>
+        <column>
+          <name>ID1</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>AcceptedAnswerTS</name>
+          <type>DateTime</type>
+        </column>
+        <column>
+          <name>Author</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>AvgVote</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Correct</name>
+          <type>Boolean</type>
+        </column>
+        <column>
+          <name>Created</name>
+          <type>DateTime</type>
+        </column>
+        <column>
+          <name>Deleted</name>
+          <type>Boolean</type>
+        </column>
+        <column>
+          <name>Hash</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Id</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Link</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Post</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Text</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>TextHash</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Type</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>VotesAmount</name>
+          <type>Int</type>
+        </column>
+      </physical>
+      <logical></logical>
+    </data-set>
+    <data-set id="8e1557c7-eccb-4eff-699d-1b4b8e8b44da" name="Contribution">
+      <properties>
+        <allow-aggregates>true</allow-aggregates>
+      </properties>
+      <physical>
+        <connection id="iris"></connection>
+        <query>
+          <sql>Select &#xA;1100000000 + cc.ID as ID,&#xA;cc.author  as Author,&#xA;cp.Lang as Lang,&#xA;cc.created as ContributionDate,&#xA;CAST(TO_CHAR( cc.created, &#39;YYYYMM&#39;) as INT) as MonthYearNum,&#xA;UPPER(TO_CHAR( cc.created, &#39;MON-YYYY&#39;)) as MonthYear,&#xA;TO_DATE(cc.created, &#39;YYYY-MM-DD&#39;) as FullDate,&#xA;DATEPART(wk, cc.created)*10000+Year(cc.created) as WeekYear,&#xA;Year( cc.created ) as &#34;Year&#34;&#xA;&#xA;from Community.Comment as cc&#xA;&#xA;left join&#xA;&#x9;(select cp.ID, cp.Lang &#xA;&#x9;from Community.Post as cp) cp&#xA;on cc.Post = cp.ID&#xA;&#xA;WHERE cc.Post in (select cp.ID &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;from Community.Post as cp WHERE cp.deleted = 0 and cp.published = 1  and cp.PostType != &#39;Digest&#39;) and cc.Deleted = 0&#xA;group by cc.ID&#xA;Union Select&#xA;100000000 + cp.Id as ID,&#xA;cp.author as Author,&#xA;cp.lang as Lang,&#xA;cp.created as ContributionDate,&#xA;CAST(TO_CHAR( cp.created, &#39;YYYYMM&#39;) as INT) as MonthYearNum,&#xA;UPPER(TO_CHAR( cp.created, &#39;MON-YYYY&#39;)) as MonthYear,&#xA;TO_DATE(cp.created, &#39;YYYY-MM-DD&#39;) as FullDate,&#xA;DATEPART(wk, cp.created)*10000+Year(cp.created) as WeekYear,&#xA;Year( cp.created ) as &#34;Year&#34;&#xA;&#xA;from Community.Post as cp&#xA;&#xA;WHERE deleted = 0 and published = 1  and PostType != &#39;Digest&#39;</sql>
+        </query>
+        <immutable>false</immutable>
+        <column>
+          <name>ID</name>
+          <type>Long</type>
+        </column>
+        <column>
+          <name>Author</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>ContributionDate</name>
+          <type>DateTime</type>
+        </column>
+        <column>
+          <name>FullDate</name>
+          <type>Date</type>
+        </column>
+        <column>
+          <name>Lang</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>MonthYear</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>MonthYearNum</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>WeekYear</name>
+          <type>Decimal(22,0)</type>
+        </column>
+        <column>
+          <name>Year</name>
+          <type>Int</type>
+        </column>
+      </physical>
+      <logical></logical>
+    </data-set>
+    <data-set id="c199a0a4-9132-4c66-6485-6f63310f172e" name="ContributionTotal">
+      <properties>
+        <allow-aggregates>true</allow-aggregates>
+      </properties>
+      <physical>
+        <connection id="iris"></connection>
+        <query>
+          <sql>Select&#xA;DISTINCT Author,&#xA;Lang,&#xA;Min(ContributionDate) as ContributionDate,&#xA;YEAR(Min(ContributionDate)) as Year,&#xA;Upper(TO_CHAR( TO_TIMESTAMP(CAST(Min(ContributionDate) AS VARCHAR(4000)), &#39;YYYY-MM-DD&#39;), &#39;MON-YYYY&#39;)) as MonthYear,&#xA;CAST(CONVERT(char(6), Min(ContributionDate), 112) AS int) as MonthYearNum,&#xA;TO_DATE(CAST(Min(ContributionDate) AS VARCHAR(4000)), &#39;YYYY-MM-DD&#39;) as FullDate,&#xA;DATEPART(wk, Min(ContributionDate))*10000+Year(Min(ContributionDate)) as WeekYear&#xA;From&#xA;(Select&#xA;                    1100000000 + cc.ID as ID,&#xA;                    cc.author  as Author,&#xA;                    cp.Lang as Lang,&#xA;                    cc.created as ContributionDate&#xA;&#xA;                from Community.Comment as cc&#xA;&#xA;                left join &#xA;                (Select cp.ID, cp.Lang from Community.Post as cp) cp&#xA;                on cc.Post = cp.ID&#xA;&#xA;                WHERE cc.Post in (select cp.ID from Community.Post as cp WHERE cp.deleted = 0 and cp.published = 1  and cp.PostType != &#39;Digest&#39;) and cc.Deleted = 0&#xA;&#xA;                Union Select&#xA;                    100000000 + cp.Id as ID,&#xA;                    cp.author as Author,&#xA;                    cp.lang as Lang,&#xA;                    cp.created as ContributionDate&#xA;&#xA;                from Community.Post as cp&#xA;&#xA;                WHERE deleted = 0 and published = 1  and PostType != &#39;Digest&#39;)&#xA;Group by Author, Lang</sql>
+        </query>
+        <immutable>false</immutable>
+        <column>
+          <name>Author</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>FullDate</name>
+          <type>Date</type>
+        </column>
+        <column>
+          <name>Lang</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>MonthYear</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>MonthYearNum</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>WeekYear</name>
+          <type>Decimal(22,0)</type>
+        </column>
+        <column>
+          <name>Year</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>ContributionDate</name>
+          <type>DateTime</type>
+        </column>
+      </physical>
+      <logical></logical>
+    </data-set>
+    <data-set id="eb7e3ba2-4102-4f62-63b6-cb728af3e13f" name="Contributors">
+      <properties>
+        <allow-aggregates>true</allow-aggregates>
+      </properties>
+      <physical>
+        <connection id="iris"></connection>
+        <query>
+          <sql>Select &#xA;1100000000 + cc.ID as ID,&#xA;cc.author  as Author,&#xA;cp.Lang as Lang,&#xA;cc.created as ContributionDate,&#xA;CAST(TO_CHAR( cc.created, &#39;YYYYMM&#39;) as INT) as MonthYearNum,&#xA;UPPER(TO_CHAR( cc.created, &#39;MON-YYYY&#39;)) as MonthYear,&#xA;TO_DATE(cc.created, &#39;YYYY-MM-DD&#39;) as FullDate,&#xA;DATEPART(wk, cc.created)*10000+Year(cc.created) as WeekYear,&#xA;Year( cc.created ) as &#34;Year&#34;&#xA;&#xA;from Community.Comment as cc&#xA;&#xA;left join&#xA;&#x9;(select cp.ID, cp.Lang &#xA;&#x9;from Community.Post as cp) cp&#xA;on cc.Post = cp.ID&#xA;&#xA;WHERE cc.Post in (select cp.ID &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;from Community.Post as cp WHERE cp.deleted = 0 and cp.published = 1  and cp.PostType != &#39;Digest&#39;) and cc.Deleted = 0&#xA;&#xA;&#xA;&#xA;Union Select&#xA;100000000 + cp.Id as ID,&#xA;cp.author as Author,&#xA;cp.lang as Lang,&#xA;cp.created as ContributionDate,&#xA;CAST(TO_CHAR( cp.created, &#39;YYYYMM&#39;) as INT) as MonthYearNum,&#xA;UPPER(TO_CHAR( cp.created, &#39;MON-YYYY&#39;)) as MonthYear,&#xA;TO_DATE(cp.created, &#39;YYYY-MM-DD&#39;) as FullDate,&#xA;DATEPART(wk, cp.created)*10000+Year(cp.created) as WeekYear,&#xA;Year( cp.created ) as &#34;Year&#34;&#xA;from Community.Post as cp&#xA;&#xA;WHERE deleted = 0 and published = 1  and PostType != &#39;Digest&#39;&#xA;group by cp.ID</sql>
+        </query>
+        <immutable>false</immutable>
+        <column>
+          <name>ID</name>
+          <type>Long</type>
+        </column>
+        <column>
+          <name>FullDate</name>
+          <type>Date</type>
+        </column>
+        <column>
+          <name>MonthYear</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>MonthYearNum</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>WeekYear</name>
+          <type>Decimal(22,0)</type>
+        </column>
+        <column>
+          <name>Year</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Author</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>ContributionDate</name>
+          <type>DateTime</type>
+        </column>
+        <column>
+          <name>Lang</name>
+          <type>String</type>
+        </column>
+      </physical>
+      <logical></logical>
+    </data-set>
+    <data-set id="7e7947e6-2ce9-49de-68cf-ab7f72714b7e" name="Member">
+      <properties>
+        <allow-aggregates>true</allow-aggregates>
+      </properties>
+      <physical>
+        <connection id="iris"></connection>
+        <query>
+          <sql>select &#xA;&#x9;cm.*,&#xA;    CAST(TO_CHAR( cm.Created, &#39;YYYYMM&#39;) as INT) as MonthYearNum,&#xA;    UPPER(TO_CHAR( cm.Created, &#39;MON-YYYY&#39;)) as MonthYear,&#xA;    TO_DATE(cm.Created, &#39;YYYY-MM-DD&#39;) as FullDate,&#xA;    DATEPART(wk, cm.Created)*10000+Year(cm.Created) as WeekYear,&#xA;    Year( cm.Created ) as &#34;Year&#34;&#xA;from Community.Member cm</sql>
+        </query>
+        <immutable>false</immutable>
+        <column>
+          <name>ID</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Added</name>
+          <type>Date</type>
+        </column>
+        <column>
+          <name>Created</name>
+          <type>DateTime</type>
+        </column>
+        <column>
+          <name>FirstName</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Hash</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Lang</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>LastName</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Link</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Name</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Uid</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>MonthYearNum</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>MonthYear</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>FullDate</name>
+          <type>Date</type>
+        </column>
+        <column>
+          <name>Year</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>WeekYear</name>
+          <type>Decimal(22,0)</type>
+        </column>
+      </physical>
+      <logical>
+        <key-ref id="0cf6b253-7773-4d8f-ad1e-164bb56579e8" unique="false" complete="true">
+          <column>FullDate</column>
+        </key-ref>
+        <key-ref id="32da45d8-d58a-4838-9397-1db9dc46468f" unique="false" complete="true">
+          <column>ID</column>
+        </key-ref>
+        <key-ref id="5ab04b5e-b842-41ce-a064-9ce24fcd4d64" unique="false" complete="true">
+          <column>ID</column>
+        </key-ref>
+        <key-ref id="631b7ad8-0011-4a08-b471-05913e633563" unique="false" complete="true">
+          <column>Name</column>
+          <column>ID</column>
+        </key-ref>
+        <key-ref id="125f02e8-f839-4e71-90e8-41e34e69c608" unique="false" complete="true">
+          <column>Link</column>
+        </key-ref>
+        <key-ref id="719e7beb-ccab-48db-bf87-a06d699f3b47" unique="false" complete="true">
+          <column>ID</column>
+        </key-ref>
+        <key-ref id="48214f40-7d44-429b-a8e0-2dc30d8bfe97" unique="false" complete="true">
+          <column>ID</column>
+        </key-ref>
+        <key-ref id="35f2c58e-5323-40ba-bf21-c4a1179b028c" unique="false" complete="true">
+          <column>ID</column>
+        </key-ref>
+        <key-ref id="a9178537-4924-4955-bf60-e06df36a40ec" unique="false" complete="true">
+          <column>ID</column>
+        </key-ref>
+        <attribute-ref id="00036edc-179b-4799-5f65-bd37ec46d6c1" complete="true">
+          <column>FullDate</column>
+        </attribute-ref>
+        <attribute-ref id="5f978a3e-fd2f-4a82-6486-fba093440933" complete="true">
+          <column>ID</column>
+        </attribute-ref>
+        <attribute-ref id="1dad6495-8914-4242-7f24-54e6779a77f3" complete="true">
+          <column>ID</column>
+        </attribute-ref>
+        <attribute-ref id="3a29b992-b35e-4e18-6763-8fd1f2de1082" complete="true">
+          <column>Name</column>
+        </attribute-ref>
+        <attribute-ref id="47143acd-add8-492a-6498-118d2a8f019b" complete="true">
+          <column>Link</column>
+        </attribute-ref>
+        <attribute-ref id="60b592d4-6168-443d-5ea6-659e44b2c205" complete="true">
+          <column>FirstName</column>
+        </attribute-ref>
+        <attribute-ref id="f793b096-c851-44d3-6b6b-48034b785711" complete="true">
+          <column>Link</column>
+        </attribute-ref>
+        <attribute-ref id="251f3363-8164-4937-43f5-09efa6c953e0" complete="true">
+          <column>Name</column>
+        </attribute-ref>
+        <attribute-ref id="de6c0890-bc34-4a80-7b21-632c087b55a1" complete="true">
+          <column>ID</column>
+        </attribute-ref>
+      </logical>
+    </data-set>
+    <data-set id="f1717549-b228-4376-75a7-ffe647a9aba0" name="MemberFiltered">
+      <properties>
+        <allow-aggregates>true</allow-aggregates>
+      </properties>
+      <physical>
+        <connection id="iris"></connection>
+        <query>
+          <sql>select &#xA;&#x9;cm.*,&#xA;    CAST(TO_CHAR( cm.Created, &#39;YYYYMM&#39;) as INT) as MonthYearNum,&#xA;    UPPER(TO_CHAR( cm.Created, &#39;MON-YYYY&#39;)) as MonthYear,&#xA;    TO_DATE(cm.Created, &#39;YYYY-MM-DD&#39;) as FullDate,&#xA;    DATEPART(wk, cm.Created)*10000+Year(cm.Created) as WeekYear,&#xA;    Year( cm.Created ) as &#34;Year&#34;&#xA;from Community.Member cm</sql>
+        </query>
+        <immutable>false</immutable>
+        <column>
+          <name>Added</name>
+          <type>Date</type>
+        </column>
+        <column>
+          <name>Created</name>
+          <type>DateTime</type>
+        </column>
+        <column>
+          <name>FirstName</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>FullDate</name>
+          <type>Date</type>
+        </column>
+        <column>
+          <name>Hash</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>ID</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Lang</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>LastName</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Link</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>MonthYear</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>MonthYearNum</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Name</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Uid</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>WeekYear</name>
+          <type>Decimal(22,0)</type>
+        </column>
+        <column>
+          <name>Year</name>
+          <type>Int</type>
+        </column>
+      </physical>
+      <logical></logical>
+    </data-set>
+    <data-set id="7090d495-b3ec-49e8-4355-4a5317a3172c" name="Post">
+      <properties>
+        <allow-aggregates>true</allow-aggregates>
+      </properties>
+      <physical>
+        <connection id="iris"></connection>
+        <query>
+          <sql>select &#xA;&#x9;cp.*,&#xA;    UPPER(TO_CHAR(cp.Created, &#39;MON-YYYY&#39;)) as MonthYear,&#xA;    CAST(TO_CHAR(cp.Created, &#39;YYYYMM&#39;) as INT) as MonthYearNum,&#xA;    Year(cp.Created) as YearPosts,&#xA;    TO_DATE(CAST(cp.Created AS VARCHAR(4000)), &#39;YYYY-MM-DD&#39;) as FullDate,&#xA;    DATEPART(wk, cp.Created)*10000+Year(cp.Created) as WeekYear,&#xA;    CASE WHEN cp.PostType = &#39;Article&#39; then 1 else 0 END as CountArticle,&#xA;    case when cp.PostType = &#39;Question&#39; then 1 else 0 END as CountQuestions,&#xA;    case when cp.PostType = &#39;Announcement&#39; then 1 else 0 END as CountAnnouncement,&#xA;    case when cp.PostType = &#39;Discussion&#39; then 1 else 0 END as CountDiscussion,&#xA;    case when Instr(cp.Tags,&#39;Caché&#39;,1)&gt;0 then 1 else 0 END as CountTagCache,&#xA;    case when Instr(cp.Tags,&#39;InterSystems IRIS,&#39;,1)&gt;0 then 1 else 0 END as CountTagIRIS,&#xA;    case when Instr(cp.Tags,&#39;HealthShare&#39;,1)&gt;0 then 1 else 0 END as CountTagHealthShare,&#xA;    case when Instr(cp.Tags,&#39;Ensemble&#39;,1)&gt;0 then 1 else 0 END as CountTagEnsemble,&#xA;    case when cp.CommentsAmount = 0 then &#39;Unanswered&#39; WHEN cp.CommentsAmount != 0 AND cp.HasCorrectAnswer = 0 then &#39;Answered&#39; else &#39;Accepted&#39; END as CommentsAmountType&#xA;FROM Community.Post as cp&#xA;LEFT JOIN Community.Member cm on cm.Uid = cp.Author&#xA;WHERE cp.deleted = 0 and cp.published = 1 and cp.PostType != &#39;Digest&#39;</sql>
+        </query>
+        <immutable>false</immutable>
+        <column>
+          <name>ID</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>AcceptedAnswerTS</name>
+          <type>DateTime</type>
+        </column>
+        <column>
+          <name>Author</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>AvgVote</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>CommentsAmount</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Created</name>
+          <type>DateTime</type>
+        </column>
+        <column>
+          <name>Deleted</name>
+          <type>Boolean</type>
+        </column>
+        <column>
+          <name>FavsCount</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>HasCorrectAnswer</name>
+          <type>Boolean</type>
+        </column>
+        <column>
+          <name>Hash</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Lang</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Link</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Name</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Nid</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>PostType</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Published</name>
+          <type>Boolean</type>
+        </column>
+        <column>
+          <name>PublishedDate</name>
+          <type>DateTime</type>
+        </column>
+        <column>
+          <name>SubsCount</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Tags</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Text</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Type</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Views</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>VotesAmount</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>MonthYear</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>MonthYearNum</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>YearPosts</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>FullDate</name>
+          <type>Date</type>
+        </column>
+        <column>
+          <name>WeekYear</name>
+          <type>Decimal(22,0)</type>
+        </column>
+        <column>
+          <name>CountArticle</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>CountQuestions</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>CountAnnouncement</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>CountDiscussion</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>CountTagCache</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>CountTagIRIS</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>CountTagHealthShare</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>CountTagEnsemble</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>CommentsAmountType</name>
+          <type>String</type>
+        </column>
+      </physical>
+      <logical>
+        <key-ref id="2fa5263e-e840-48c0-8113-69142b2659a1" unique="false" complete="true">
+          <column>FullDate</column>
+        </key-ref>
+        <key-ref id="da1040fd-6a18-4c52-a9be-247d05d5874f" unique="false" complete="true">
+          <column>YearPosts</column>
+        </key-ref>
+        <key-ref id="5445a048-3bce-42ac-ba34-bf63ed58a425" unique="false" complete="true">
+          <column>ID</column>
+        </key-ref>
+        <key-ref id="fb986474-8e65-417c-8fbb-25df784ded34" unique="false" complete="true">
+          <column>Name</column>
+        </key-ref>
+        <key-ref id="5dc73821-cbd8-4b13-b0c2-07fe17ffb13d" unique="false" complete="true">
+          <column>Link</column>
+        </key-ref>
+        <key-ref id="196d833f-e891-439c-90ec-cec336e7651b" unique="false" complete="true">
+          <column>PostType</column>
+        </key-ref>
+        <key-ref id="cf77c1e1-ce9e-4e97-9aad-c0d79f16916c" unique="false" complete="true">
+          <column>MonthYearNum</column>
+        </key-ref>
+        <key-ref id="894ed635-c94d-46b1-b9e4-1de2d8a67525" unique="false" complete="true">
+          <column>Tags</column>
+        </key-ref>
+        <attribute-ref id="38f61acc-90d8-42f6-7e0b-0c5b811931f4" complete="true">
+          <column>FullDate</column>
+        </attribute-ref>
+        <attribute-ref id="d0714233-18a0-4b7a-4fd4-1bba50065c3c" complete="true">
+          <column>YearPosts</column>
+        </attribute-ref>
+        <attribute-ref id="8d8daa0d-f7f3-462b-6ff3-e266c7713ba9" complete="true">
+          <column>ID</column>
+        </attribute-ref>
+        <attribute-ref id="99f2e15f-4abf-434c-4f46-05fb2d75337b" complete="true">
+          <column>Name</column>
+        </attribute-ref>
+        <attribute-ref id="c8355957-d2d3-4b5a-75c1-5cd82541f388" complete="true">
+          <column>Link</column>
+        </attribute-ref>
+        <attribute-ref id="f484eab6-7b6e-4b75-75c5-4eb1cf264306" complete="true">
+          <column>PostType</column>
+        </attribute-ref>
+        <attribute-ref id="180c0425-d42c-412d-6c00-8c6a1ddc4acd" complete="true">
+          <column>MonthYearNum</column>
+        </attribute-ref>
+        <attribute-ref id="031786a3-e47f-41d0-6439-c553dbc7ba83" complete="true">
+          <column>Tags</column>
+        </attribute-ref>
+      </logical>
+    </data-set>
+    <data-set id="91b5413f-9533-4ddf-5217-58558caca1a6" name="Views">
+      <properties>
+        <allow-aggregates>true</allow-aggregates>
+      </properties>
+      <physical>
+        <connection id="iris"></connection>
+        <query>
+          <sql>select &#xA;&#x9;hv.*,&#xA;    CAST(TO_CHAR(hv.DateOfData, &#39;YYYYMM&#39;) as Int) as MonthYearNum,&#xA;    UPPER(TO_CHAR(hv.DateOfData, &#39;MON-YYYY&#39;)) as MonthYear,&#xA;    DATEPART(wk, hv.DateOfData)*10000+Year(hv.DateOfData) as WeekYear,&#xA;    Year(hv.DateOfData) as &#34;Year&#34;,&#xA;    CASE WHEN Instr(cp.Tags, &#39;Ensemble&#39;, 1) &gt; 0 then hv.Delta else 0 END as EnsembleTag,&#xA;    CASE WHEN Instr(cp.Tags, &#39;Caché&#39;, 1) &gt; 0  then hv.Delta else 0 END as CacheTag,&#xA;    CASE WHEN Instr(cp.Tags, &#39;Atelier&#39;, 1) &gt; 0 then hv.Delta else 0 END as AtelierTag,&#xA;    CASE WHEN Instr(cp.Tags, &#39;HealthShare&#39;, 1) &gt; 0 then hv.Delta else 0 END as HealthShareTag,&#xA;    CASE WHEN Instr(cp.Tags, &#39;iKnow&#39;, 1) &gt; 0 then hv.Delta else 0 END as iKnowTag,&#xA;    CASE WHEN Instr(cp.Tags, &#39;InterSystems IRIS,&#39;, 1) &gt; 0 or cp.Tags = &#39;InterSystems IRIS&#39; then hv.Delta else 0 END as InterSystemsIRISTag,&#xA;    cp.PostType&#xA;from History.Views hv&#xA;LEFT JOIN Community.Post as cp on hv.Post = cp.ID&#xA;WHERE cp.deleted = 0 and cp.published = 1 and cp.PostType != &#39;Digest&#39;</sql>
+        </query>
+        <immutable>false</immutable>
+        <column>
+          <name>ID</name>
+          <type>Long</type>
+        </column>
+        <column>
+          <name>DateOfData</name>
+          <type>Date</type>
+        </column>
+        <column>
+          <name>Delta</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Post</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Views</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>MonthYearNum</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>MonthYear</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Year</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>EnsembleTag</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>CacheTag</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>AtelierTag</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>HealthShareTag</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>iKnowTag</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>InterSystemsIRISTag</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>PostType</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>WeekYear</name>
+          <type>Decimal(22,0)</type>
+        </column>
+      </physical>
+      <logical>
+        <key-ref id="47a450ac-1f14-40fe-9541-94a48dc11762" unique="false" complete="false">
+          <column>Year</column>
+        </key-ref>
+      </logical>
+    </data-set>
+    <data-set id="98b11a08-5c4f-4222-7b4c-867cbe629bb3" name="ViewsPerMember">
+      <properties>
+        <allow-aggregates>true</allow-aggregates>
+      </properties>
+      <physical>
+        <connection id="iris"></connection>
+        <query>
+          <sql>select &#xA;&#x9;hv.*,&#xA;    CAST(TO_CHAR(hv.DateOfData, &#39;YYYYMM&#39;) as Int) as MonthYearNum,&#xA;    UPPER(TO_CHAR(hv.DateOfData, &#39;MON-YYYY&#39;)) as MonthYear,&#xA;    DATEPART(wk, hv.DateOfData)*10000+Year(hv.DateOfData) as WeekYear,&#xA;    Year(hv.DateOfData) as &#34;Year&#34;,&#xA;    CASE WHEN Instr(cp.Tags, &#39;Ensemble&#39;, 1) &gt; 0 then hv.Delta else 0 END as EnsembleTag,&#xA;    CASE WHEN Instr(cp.Tags, &#39;Caché&#39;, 1) &gt; 0  then hv.Delta else 0 END as CacheTag,&#xA;    CASE WHEN Instr(cp.Tags, &#39;Atelier&#39;, 1) &gt; 0 then hv.Delta else 0 END as AtelierTag,&#xA;    CASE WHEN Instr(cp.Tags, &#39;HealthShare&#39;, 1) &gt; 0 then hv.Delta else 0 END as HealthShareTag,&#xA;    CASE WHEN Instr(cp.Tags, &#39;iKnow&#39;, 1) &gt; 0 then hv.Delta else 0 END as iKnowTag,&#xA;    CASE WHEN Instr(cp.Tags, &#39;InterSystems IRIS,&#39;, 1) &gt; 0 or cp.Tags = &#39;InterSystems IRIS&#39; then hv.Delta else 0 END as InterSystemsIRISTag,&#xA;    cp.PostType&#xA;from History.Views hv&#xA;LEFT JOIN Community.Post as cp on hv.Post = cp.ID&#xA;WHERE cp.deleted = 0 and cp.published = 1 and cp.PostType != &#39;Digest&#39;</sql>
+        </query>
+        <immutable>false</immutable>
+        <column>
+          <name>Post</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>ID</name>
+          <type>Long</type>
+        </column>
+        <column>
+          <name>MonthYear</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>MonthYearNum</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>WeekYear</name>
+          <type>Decimal(22,0)</type>
+        </column>
+        <column>
+          <name>Year</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>Lang</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>PostType</name>
+          <type>String</type>
+        </column>
+        <column>
+          <name>Views</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>AtelierTag</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>CacheTag</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>EnsembleTag</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>HealthShareTag</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>InterSystemsIRISTag</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>iKnowTag</name>
+          <type>Int</type>
+        </column>
+        <column>
+          <name>DateOfData</name>
+          <type>Date</type>
+        </column>
+        <column>
+          <name>Delta</name>
+          <type>Int</type>
+        </column>
+      </physical>
+      <logical></logical>
+    </data-set>
+  </data-sets>
+  <calculated-members>
+    <calculated-member id="94f17bca-7995-4d73-592b-49daffc3e434" name="TotalMemberMonth">
+      <properties>
+        <caption>TotalMemberMonth</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>Sum([DateDimensionMember].[DateDimensionMember].CurrentMember.FirstChild : [DateDimensionMember].[DateDimensionMember].CurrentMember,[Measures].[m_ID_distinct])</expression>
+    </calculated-member>
+    <calculated-member id="69946ce7-bd37-4539-540d-9bd122def16c" name="TotalMemberYear">
+      <properties>
+        <caption>TotalMemberYear</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>Sum([DateDimensionMember].[YearMember].CurrentMember.FirstChild : [DateDimensionMember].[YearMember].CurrentMember,[Measures].[m_ID_distinct])&#xA;</expression>
+    </calculated-member>
+    <calculated-member id="ba2e8780-702d-413c-5a4c-f640143c8976" name="MTM_Members_num">
+      <properties>
+        <caption>MTM_Members_num</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>[Measures].[TotalMemberMonth] - ([DateDimensionMember].[DateDimensionMember].CurrentMember.PrevMember,[Measures].[TotalMemberMonth])</expression>
+    </calculated-member>
+    <calculated-member id="80868ef8-5c8a-42cc-5dc4-fe95d13c2b1a" name="MTM_Members_percent">
+      <properties>
+        <caption>MTM_Members_percent</caption>
+        <visible>true</visible>
+        <formatting>
+          <named-format>Percent</named-format>
+        </formatting>
+      </properties>
+      <expression>Divide(([Measures].[TotalMemberMonth] - ([DateDimensionMember].[DateDimensionMember].CurrentMember.PrevMember,[Measures].[TotalMemberMonth])), ([DateDimensionMember].[DateDimensionMember].CurrentMember.PrevMember,[Measures].[TotalMemberMonth]), 0)</expression>
+    </calculated-member>
+    <calculated-member id="eebb29d8-23d1-405e-79f5-ce40e68d710a" name="TotalArticlesMonth">
+      <properties>
+        <caption>TotalArticlesMonth</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>Sum([DateDimensionPost].[DateDimensionPost].CurrentMember.FirstChild : [DateDimensionPost].[DateDimensionPost].CurrentMember,[Measures].[m_CountArticle_sum])</expression>
+    </calculated-member>
+    <calculated-member id="fc75a6e3-7fe1-4cb3-54a5-6e1d381ec45e" name="TotalPostsMonth">
+      <properties>
+        <caption>TotalPostsMonth</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>Sum([DateDimensionPost].[DateDimensionPost].CurrentMember.FirstChild : [DateDimensionPost].[DateDimensionPost].CurrentMember,[Measures].[m_ID_distinct])</expression>
+    </calculated-member>
+    <calculated-member id="13c15d1b-81d9-43fa-416b-ecafcd07b3a5" name="TotalQuestionsMonth">
+      <properties>
+        <caption>TotalQuestionsMonth</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>Sum([DateDimensionPost].[DateDimensionPost].CurrentMember.FirstChild : [DateDimensionPost].[DateDimensionPost].CurrentMember,[Measures].[m_CountQuestions_sum])</expression>
+    </calculated-member>
+    <calculated-member id="a189f03f-5a54-4d14-7390-e83588d44bc7" name="TotalViewsMonth">
+      <properties>
+        <caption>TotalViewsMonth</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>Sum([DataDimensionView].[DataDimensionView].CurrentMember.FirstChild : [DataDimensionView].[DataDimensionView].CurrentMember,[Measures].[m_Delta_sum])</expression>
+    </calculated-member>
+    <calculated-member id="b11cc4e7-cf83-45c1-6381-e1d51ba323cb" name="MTM_ViewsAVG_num">
+      <properties>
+        <caption>MTM_ViewsAVG_num</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>[Measures].[m_Views_avg] - ([DataDimensionView].[DataDimensionView].CurrentMember.PrevMember,[Measures].[m_Views_avg])</expression>
+    </calculated-member>
+    <calculated-member id="5c054811-c72d-46c2-6ea1-6ab680545c83" name="MTM_ViewsAVG_percent">
+      <properties>
+        <caption>MTM_ViewsAVG_percent</caption>
+        <visible>true</visible>
+        <formatting>
+          <named-format>Percent</named-format>
+        </formatting>
+      </properties>
+      <expression>Divide(([Measures].[m_Views_avg] - ([DataDimensionView].[DataDimensionView].CurrentMember.PrevMember,[Measures].[m_Views_avg])), ([DataDimensionView].[DataDimensionView].CurrentMember.PrevMember,[Measures].[m_Views_avg]), 0)</expression>
+    </calculated-member>
+    <calculated-member id="c0f378df-862a-4dcf-4569-7e5e1df6b452" name="YTY_Posts_num">
+      <properties>
+        <caption>YTY_Posts_num</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>[Measures].[m_ID_distinct] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.Lag(12), [Measures].[m_ID_distinct])</expression>
+    </calculated-member>
+    <calculated-member id="254bfcce-9e8f-4a2b-7614-da99dedd88ef" name="YTY_Posts_percent">
+      <properties>
+        <caption>YTY_Posts_percent</caption>
+        <visible>true</visible>
+        <formatting>
+          <named-format>Percent</named-format>
+        </formatting>
+      </properties>
+      <expression>Divide(([Measures].[m_ID_distinct] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.Lag(12), [Measures].[m_ID_distinct])), ([DateDimensionPost].[DateDimensionPost].CurrentMember.Lag(12), [Measures].[m_ID_distinct]), 0)</expression>
+    </calculated-member>
+    <calculated-member id="531ebe37-bb49-4079-5614-60cecdade1a9" name="MTM_Posts_percent">
+      <properties>
+        <caption>MTM_Posts_percent</caption>
+        <visible>true</visible>
+        <formatting>
+          <named-format>Percent</named-format>
+        </formatting>
+      </properties>
+      <expression>Divide(([Measures].[m_ID_distinct] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.PrevMember,[Measures].[m_ID_distinct])), ([DateDimensionPost].[DateDimensionPost].CurrentMember.PrevMember,[Measures].[m_ID_distinct]), 0)</expression>
+    </calculated-member>
+    <calculated-member id="45de02e2-2752-4cbe-7ef7-98076b2b713c" name="MTM_CommentsContribution_percent">
+      <properties>
+        <caption>MTM_CommentsContribution_percent</caption>
+        <visible>true</visible>
+        <formatting>
+          <named-format>Percent</named-format>
+        </formatting>
+      </properties>
+      <expression>Divide(([Measures].[m_CommentsContribution] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.PrevMember,[Measures].[m_CommentsContribution])), ([DateDimensionPost].[DateDimensionPost].CurrentMember.PrevMember,[Measures].[m_CommentsContribution]), 0)</expression>
+    </calculated-member>
+    <calculated-member id="661107c7-f63f-40af-7a03-76758b9131d6" name="YTY_CommentsContribution_num">
+      <properties>
+        <caption>YTY_CommentsContribution_num</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>[Measures].[m_CommentsContribution] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.Lag(12), [Measures].[m_CommentsContribution])</expression>
+    </calculated-member>
+    <calculated-member id="f6386cb6-5baa-4be7-551c-36dd1b4a767f" name="YTY_CommentsContribution_percent">
+      <properties>
+        <caption>YTY_CommentsContribution_percent</caption>
+        <visible>true</visible>
+        <formatting>
+          <named-format>Percent</named-format>
+        </formatting>
+      </properties>
+      <expression>Divide(([Measures].[m_CommentsContribution] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.Lag(12), [Measures].[m_CommentsContribution])), ([DateDimensionPost].[DateDimensionPost].CurrentMember.Lag(12), [Measures].[m_CommentsContribution]), 0)</expression>
+    </calculated-member>
+    <calculated-member id="6ab58852-87fc-424b-65bc-46db9ba70dcd" name="MTM_Posts_num">
+      <properties>
+        <caption>MTM_Posts_num</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>[Measures].[m_ID_distinct] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.PrevMember,[Measures].[m_ID_distinct])</expression>
+    </calculated-member>
+    <calculated-member id="f962388d-9ff5-42ef-694a-42d58bb9d849" name="MTM_CommentsContribution_num">
+      <properties>
+        <caption>MTM_CommentsContribution_num</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>[Measures].[m_CommentsContribution] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.PrevMember,[Measures].[m_CommentsContribution])</expression>
+    </calculated-member>
+    <calculated-member id="a863bcd6-c499-4975-67e4-dd46e2081055" name="MTM_Articles_num">
+      <properties>
+        <caption>MTM_Articles_num</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>[Measures].[m_CountArticle_sum] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.PrevMember,[Measures].[m_CountArticle_sum])</expression>
+    </calculated-member>
+    <calculated-member id="a4e503ba-ab36-46bd-76a7-23d23f278452" name="MTM_Articles_percent">
+      <properties>
+        <caption>MTM_Articles_percent</caption>
+        <visible>true</visible>
+        <formatting>
+          <named-format>Percent</named-format>
+        </formatting>
+      </properties>
+      <expression>Divide( ([Measures].[m_CountArticle_sum] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.PrevMember,[Measures].[m_CountArticle_sum])), ([DateDimensionPost].[DateDimensionPost].CurrentMember.PrevMember,[Measures].[m_CountArticle_sum]), 0)</expression>
+    </calculated-member>
+    <calculated-member id="4fa0a992-8bde-4009-560c-97f119711574" name="MTM_Questions_num">
+      <properties>
+        <caption>MTM_Questions_num</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>[Measures].[m_CountQuestions_sum] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.PrevMember,[Measures].[m_CountQuestions_sum])</expression>
+    </calculated-member>
+    <calculated-member id="dcc54c44-fa82-4086-6ae1-1ab827029327" name="MTM_Questions_percent">
+      <properties>
+        <caption>MTM_Questions_percent</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>Divide(([Measures].[m_CountQuestions_sum] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.PrevMember,[Measures].[m_CountQuestions_sum])), ([DateDimensionPost].[DateDimensionPost].CurrentMember.PrevMember,[Measures].[m_CountQuestions_sum]), 0)</expression>
+    </calculated-member>
+    <calculated-member id="132f751d-2222-4afa-5934-7ea54d3c6fce" name="YTY_Articles_num">
+      <properties>
+        <caption>YTY_Articles_num</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>[Measures].[m_CountArticle_sum] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.Lag(12), [Measures].[m_CountArticle_sum])</expression>
+    </calculated-member>
+    <calculated-member id="74af33be-49f4-45f2-5930-cc957f34487b" name="YTY_Articles_percent">
+      <properties>
+        <caption>YTY_Articles_percent</caption>
+        <visible>true</visible>
+        <formatting>
+          <named-format>Percent</named-format>
+        </formatting>
+      </properties>
+      <expression>Divide(([Measures].[m_CountArticle_sum] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.Lag(12), [Measures].[m_CountArticle_sum])), ([DateDimensionPost].[DateDimensionPost].CurrentMember.Lag(12), [Measures].[m_CountArticle_sum]), 0)</expression>
+    </calculated-member>
+    <calculated-member id="0ff50a07-223b-49d9-6fb5-c19aa9867663" name="YTY_Questions_num">
+      <properties>
+        <caption>YTY_Questions_num</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>[Measures].[m_CountQuestions_sum] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.Lag(12), [Measures].[m_CountQuestions_sum])</expression>
+    </calculated-member>
+    <calculated-member id="286361b1-a364-4edc-40a6-2cdaec220203" name="YTY_Questions_percent">
+      <properties>
+        <caption>YTY_Questions_percent</caption>
+        <visible>true</visible>
+        <formatting>
+          <named-format>Percent</named-format>
+        </formatting>
+      </properties>
+      <expression>Divide(([Measures].[m_CountQuestions_sum] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.PrevMember,[Measures].[m_CountQuestions_sum])), ([DateDimensionPost].[DateDimensionPost].CurrentMember.PrevMember,[Measures].[m_CountQuestions_sum]), 0)</expression>
+    </calculated-member>
+    <calculated-member id="2556b423-f2c4-42c0-5348-607b1efdede1" name="MTM_Delta_num">
+      <properties>
+        <caption>MTM_Delta_num</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>[Measures].[m_Delta_sum] - ([DataDimensionView].[DataDimensionView].CurrentMember.PrevMember,[Measures].[m_Delta_sum])</expression>
+    </calculated-member>
+    <calculated-member id="789da08d-fa6a-41cf-438f-a490c89ed774" name="MTM_Delta_percent">
+      <properties>
+        <caption>MTM_Delta_percent</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>Divide(([Measures].[m_Delta_sum] - ([DataDimensionView].[DataDimensionView].CurrentMember.PrevMember,[Measures].[m_Delta_sum])), ([DataDimensionView].[DataDimensionView].CurrentMember.PrevMember,[Measures].[m_Delta_sum]), 0)</expression>
+    </calculated-member>
+    <calculated-member id="14a7d5e0-39ee-449d-6fae-7e1aaadf5874" name="MTM_Discussion_num">
+      <properties>
+        <caption>MTM_Discussion_num</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>[Measures].[m_CountDiscussion_sum] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.PrevMember,[Measures].[m_CountDiscussion_sum])</expression>
+    </calculated-member>
+    <calculated-member id="db051aff-5d1d-463b-7845-fdc54cfe3eea" name="MTM_Discussion_percent">
+      <properties>
+        <caption>MTM_Discussion_percent</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>Divide( ([Measures].[m_CountDiscussion_sum] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.PrevMember,[Measures].[m_CountDiscussion_sum])), ([DateDimensionPost].[DateDimensionPost].CurrentMember.PrevMember,[Measures].[m_CountDiscussion_sum]), 0)</expression>
+    </calculated-member>
+    <calculated-member id="d27071ce-9c52-485c-6373-5d8f52ed4476" name="MTM_Announcement_num">
+      <properties>
+        <caption>MTM_Announcement_num</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>[Measures].[m_CountAnnouncement_sum] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.PrevMember,[Measures].[m_CountAnnouncement_sum])</expression>
+    </calculated-member>
+    <calculated-member id="89d021d8-8fde-409b-43f8-89ffb264dcbb" name="MTM_Announcements_percent">
+      <properties>
+        <caption>MTM_Announcements_percent</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>Divide( ([Measures].[m_CountAnnouncement_sum] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.PrevMember,[Measures].[m_CountAnnouncement_sum])), ([DateDimensionPost].[DateDimensionPost].CurrentMember.PrevMember,[Measures].[m_CountAnnouncement_sum]), 0)</expression>
+    </calculated-member>
+    <calculated-member id="eaeca101-6144-40f4-643f-2a1f2b49f6dc" name="YTY_Announcement_num">
+      <properties>
+        <caption>YTY_Announcement_num</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>[Measures].[m_CountAnnouncement_sum] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.Lag(12), [Measures].[m_CountAnnouncement_sum])</expression>
+    </calculated-member>
+    <calculated-member id="a2f6f1e8-ab4b-477e-5544-44ba9f584079" name="YTY_Discussion_num">
+      <properties>
+        <caption>YTY_Discussion_num</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>[Measures].[m_CountDiscussion_sum] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.Lag(12), [Measures].[m_CountDiscussion_sum])</expression>
+    </calculated-member>
+    <calculated-member id="34666dff-61be-4187-7ab2-41a5d8020b06" name="YTY_Announcement_percent">
+      <properties>
+        <caption>YTY_Announcement_percent</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>Divide(([Measures].[m_CountAnnouncement_sum] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.Lag(12), [Measures].[m_CountAnnouncement_sum])), ([DateDimensionPost].[DateDimensionPost].CurrentMember.Lag(12), [Measures].[m_CountAnnouncement_sum]), 0)</expression>
+    </calculated-member>
+    <calculated-member id="c60193ac-2105-49b5-6474-c44179e78852" name="YTY_Discussion_percent">
+      <properties>
+        <caption>YTY_Discussion_percent</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>Divide(([Measures].[m_CountDiscussion_sum] - ([DateDimensionPost].[DateDimensionPost].CurrentMember.Lag(12), [Measures].[m_CountDiscussion_sum])), ([DateDimensionPost].[DateDimensionPost].CurrentMember.Lag(12), [Measures].[m_CountDiscussion_sum]), 0)</expression>
+    </calculated-member>
+    <calculated-member id="142dc2e3-1e57-474f-5217-f84907374caa" name="TotalContributorsMonthly">
+      <properties>
+        <caption>TotalContributorsMonthly</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>Sum([DateDimensionContribution].[DateDimensionContribution].CurrentMember.FirstChild:[DateDimensionContribution].[DateDimensionContribution].CurrentMember, [Measures].[NewContributors])</expression>
+    </calculated-member>
+    <calculated-member id="12c3177d-1060-4f2a-4d98-f9adef2fe56d" name="TotalContributorsDaly">
+      <properties>
+        <caption>TotalContributorsDaly</caption>
+        <visible>true</visible>
+      </properties>
+      <expression>Sum([DateDimensionContribution].[FullDateContribution].CurrentMember.FirstChild:[DateDimensionContribution].[FullDateContribution].CurrentMember, [Measures].[NewContributors])</expression>
+    </calculated-member>
+  </calculated-members>
+  <cubes>
+    <cube id="f2e0c1e3-c727-4d9e-4ce3-128b08268ec2" name="Posts">
+      <properties>
+        <caption>Posts</caption>
+        <visible>false</visible>
+      </properties>
+      <attributes>
+        <attribute-key id="c5991e48-f9f8-4b68-992e-456f7e5d44d7">
+          <properties>
+            <visible>true</visible>
+            <columns>1</columns>
+          </properties>
+        </attribute-key>
+        <attribute-key id="fbe65830-b16c-4a69-928c-508a39a018a5">
+          <properties>
+            <visible>true</visible>
+            <columns>1</columns>
+          </properties>
+        </attribute-key>
+        <attribute-key id="22f95ac9-ab67-4008-bf1d-e3a2d4caef4a">
+          <properties>
+            <visible>true</visible>
+            <columns>1</columns>
+          </properties>
+        </attribute-key>
+        <attribute-key id="9c1847ae-bafa-4d5c-a9fa-859b9580ac9a">
+          <properties>
+            <visible>true</visible>
+            <columns>2</columns>
+          </properties>
+        </attribute-key>
+        <attribute-key id="be556721-8ba0-44c4-ad0c-812b4e96ca46">
+          <properties>
+            <visible>true</visible>
+            <columns>1</columns>
+          </properties>
+        </attribute-key>
+        <attribute-key id="8be37bc4-e7ca-4681-aaed-060d6c8f1e7f">
+          <properties>
+            <visible>true</visible>
+            <columns>1</columns>
+          </properties>
+        </attribute-key>
+        <keyed-attribute id="6a0d20fa-4536-4711-9a65-426c7aa587cb" key-ref="c5991e48-f9f8-4b68-992e-456f7e5d44d7" name="MonthYear">
+          <properties>
+            <caption>MonthYear</caption>
+            <visible>true</visible>
+            <type>
+              <enum></enum>
+            </type>
+            <ordering>
+              <sort-key>
+                <key-ref id="fbe65830-b16c-4a69-928c-508a39a018a5"></key-ref>
+              </sort-key>
+            </ordering>
+          </properties>
+        </keyed-attribute>
+        <keyed-attribute id="39db32af-2454-4242-ad7c-eb25bea8867c" key-ref="22f95ac9-ab67-4008-bf1d-e3a2d4caef4a" name="MonthYearNum">
+          <properties>
+            <caption>MonthYearNum</caption>
+            <visible>true</visible>
+            <type>
+              <enum></enum>
+            </type>
+            <ordering>
+              <sort-key>
+                <order>ascending</order>
+                <value></value>
+              </sort-key>
+            </ordering>
+          </properties>
+        </keyed-attribute>
+        <keyed-attribute id="c0cc1de0-8026-4374-ac2a-3ab04e786220" key-ref="9c1847ae-bafa-4d5c-a9fa-859b9580ac9a" name="WeekYear">
+          <properties>
+            <caption>WeekYear</caption>
+            <visible>true</visible>
+            <type>
+              <enum></enum>
+            </type>
+            <ordering>
+              <sort-key>
+                <order>ascending</order>
+                <value></value>
+              </sort-key>
+            </ordering>
+          </properties>
+        </keyed-attribute>
+        <keyed-attribute id="a8cbfeb7-76d7-4614-9b15-67f8cdd03573" key-ref="8be37bc4-e7ca-4681-aaed-060d6c8f1e7f" name="CommentsAmountType">
+          <properties>
+            <caption>CommentsAmountType</caption>
+            <visible>true</visible>
+            <type>
+              <enum></enum>
+            </type>
+            <ordering>
+              <sort-key>
+                <order>ascending</order>
+                <value></value>
+              </sort-key>
+            </ordering>
+          </properties>
+        </keyed-attribute>
+        <attribute id="26b37f12-e110-4727-ac2b-a9eeefc51031" name="m_ID_distinct">
+          <properties>
+            <caption>Posts</caption>
+            <visible>true</visible>
+            <type>
+              <count-distinct>
+                <key-ref id="be556721-8ba0-44c4-ad0c-812b4e96ca46"></key-ref>
+                <approximate>false</approximate>
+              </count-distinct>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="f2ba9039-6c01-48bf-8ffd-68ad87d2819e" name="m_AcceptedAnswerAmount_sum">
+          <properties>
+            <caption>AcceptedAnswerAmount</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="538f3b47-ceed-46cf-b5ae-a4110647780b" name="m_CountAnnouncement_sum">
+          <properties>
+            <caption>Announcements</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="b7bee7ed-9bdd-402c-8dc5-883aa73f00f8" name="m_CountArticle_sum">
+          <properties>
+            <caption>Articles</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="a8f90f99-cf9d-4b93-8009-f94fba309556" name="m_AvgVote_sum">
+          <properties>
+            <caption>AvgVote</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="865d8b55-d9d5-4da2-95e6-07007c46e6bd" name="m_CommentsAmount_sum">
+          <properties>
+            <caption>CommentsAmount</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="58196332-4543-45eb-83ec-9b33d7d62ed4" name="m_CountDiscussion_sum">
+          <properties>
+            <caption>Discussions</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="96e547fc-8e5f-41a9-989e-fd67a8dc92b5" name="m_CountQuestions_sum">
+          <properties>
+            <caption>Questions</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="25594ddf-5fb9-41ce-9c36-e88d744d4589" name="m_CountTagCache_sum">
+          <properties>
+            <caption>TagCache</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="b8f6782f-dd63-42d7-93c7-5cafdcbcc98c" name="m_CountTagEnsemble_sum">
+          <properties>
+            <caption>TagEnsemble</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="e08dff22-0e39-489a-894e-9b1307512326" name="m_CountTagHealthShare_sum">
+          <properties>
+            <caption>TagHealthShare</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="d7cab98d-0ec3-443b-8bfb-530780f65202" name="m_CountTagIRIS_sum">
+          <properties>
+            <caption>TagIRIS</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="8a9aa1a3-1411-438b-aef3-615c219c97d8" name="m_Views_sum">
+          <properties>
+            <caption>Views</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="60a910e5-846d-41a7-8165-9f8aac645c03" name="m_CommentsContribution">
+          <properties>
+            <caption>CommentsContribution</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+      </attributes>
+      <dimensions>
+        <dimension-ref id="1f6af7e3-e68d-4710-4d55-2cb3abdaeaa6"></dimension-ref>
+        <dimension-ref id="902063a5-6f49-45f8-54f9-2653a52dd8c0"></dimension-ref>
+        <dimension id="e7855439-2e5f-4489-acbd-5690d1ae1fae" name="DateDimensionPost">
+          <properties>
+            <visible>true</visible>
+          </properties>
+          <hierarchy id="4bf79431-da2b-4526-846b-dbf5597a2412" name="DateDimensionPost">
+            <properties>
+              <caption>DateDimensionPost</caption>
+              <visible>true</visible>
+              <filter-empty>Yes</filter-empty>
+              <default-member>
+                <all-member></all-member>
+              </default-member>
+            </properties>
+            <level primary-attribute="6a0d20fa-4536-4711-9a65-426c7aa587cb">
+              <properties>
+                <unique-in-parent>false</unique-in-parent>
+                <visible>true</visible>
+              </properties>
+            </level>
+            <level primary-attribute="39db32af-2454-4242-ad7c-eb25bea8867c">
+              <properties>
+                <unique-in-parent>false</unique-in-parent>
+                <visible>true</visible>
+              </properties>
+            </level>
+          </hierarchy>
+          <hierarchy id="8f866318-4fff-4548-bb2f-49dff8e5d1ff" name="FullDatePost">
+            <properties>
+              <caption>FullDatePost</caption>
+              <visible>true</visible>
+              <filter-empty>Yes</filter-empty>
+              <default-member>
+                <all-member></all-member>
+              </default-member>
+            </properties>
+            <level primary-attribute="c0cc1de0-8026-4374-ac2a-3ab04e786220">
+              <properties>
+                <unique-in-parent>false</unique-in-parent>
+                <visible>true</visible>
+              </properties>
+            </level>
+            <level primary-attribute="38f61acc-90d8-42f6-7e0b-0c5b811931f4">
+              <properties>
+                <unique-in-parent>false</unique-in-parent>
+                <visible>true</visible>
+              </properties>
+            </level>
+          </hierarchy>
+          <hierarchy id="1366e3b1-3919-4d20-8b78-3a00431cc32f" name="YearPost">
+            <properties>
+              <caption>YearPost</caption>
+              <visible>true</visible>
+              <filter-empty>Yes</filter-empty>
+              <default-member>
+                <all-member></all-member>
+              </default-member>
+            </properties>
+            <level primary-attribute="d0714233-18a0-4b7a-4fd4-1bba50065c3c">
+              <properties>
+                <unique-in-parent>false</unique-in-parent>
+                <visible>true</visible>
+              </properties>
+            </level>
+          </hierarchy>
+        </dimension>
+        <dimension id="5476fc03-93b4-439c-b6ac-856a79554978" name="CommentsAmountType">
+          <properties>
+            <visible>true</visible>
+          </properties>
+          <hierarchy id="19b75a2f-59b3-4b61-9a36-d44b728c6f0c" name="CommentsAmountType">
+            <properties>
+              <caption>CommentsAmountType</caption>
+              <visible>true</visible>
+              <filter-empty>Yes</filter-empty>
+              <default-member>
+                <all-member></all-member>
+              </default-member>
+            </properties>
+            <level primary-attribute="a8cbfeb7-76d7-4614-9b15-67f8cdd03573">
+              <properties>
+                <unique-in-parent>false</unique-in-parent>
+                <visible>true</visible>
+              </properties>
+            </level>
+          </hierarchy>
+        </dimension>
+      </dimensions>
+      <actions>
+        <properties>
+          <include-default-drill-through>true</include-default-drill-through>
+        </properties>
+      </actions>
+      <data-sets>
+        <data-set-ref id="7090d495-b3ec-49e8-4355-4a5317a3172c">
+          <properties>
+            <allow-aggregates>true</allow-aggregates>
+            <create-hinted-aggregate>false</create-hinted-aggregate>
+          </properties>
+          <logical>
+            <key-ref id="c5991e48-f9f8-4b68-992e-456f7e5d44d7" unique="false" complete="partial">
+              <column>MonthYear</column>
+            </key-ref>
+            <key-ref id="fbe65830-b16c-4a69-928c-508a39a018a5" unique="false" complete="partial">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="22f95ac9-ab67-4008-bf1d-e3a2d4caef4a" unique="false" complete="partial">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="9c1847ae-bafa-4d5c-a9fa-859b9580ac9a" unique="false" complete="true">
+              <column>WeekYear</column>
+              <column>YearPosts</column>
+            </key-ref>
+            <key-ref id="2fa5263e-e840-48c0-8113-69142b2659a1" unique="false" complete="partial">
+              <column>FullDate</column>
+            </key-ref>
+            <key-ref id="be556721-8ba0-44c4-ad0c-812b4e96ca46" unique="false" complete="true">
+              <column>ID</column>
+            </key-ref>
+            <key-ref id="8be37bc4-e7ca-4681-aaed-060d6c8f1e7f" unique="false" complete="true">
+              <column>CommentsAmountType</column>
+            </key-ref>
+            <key-ref id="da1040fd-6a18-4c52-a9be-247d05d5874f" unique="false" complete="partial">
+              <column>YearPosts</column>
+            </key-ref>
+            <key-ref id="da1040fd-6a18-4c52-a9be-247d05d5874f" unique="false" complete="partial">
+              <column>YearPosts</column>
+            </key-ref>
+            <key-ref id="5445a048-3bce-42ac-ba34-bf63ed58a425" unique="false" complete="false">
+              <column>ID</column>
+            </key-ref>
+            <key-ref id="32da45d8-d58a-4838-9397-1db9dc46468f" unique="false" complete="false">
+              <column>Author</column>
+            </key-ref>
+            <attribute-ref id="6a0d20fa-4536-4711-9a65-426c7aa587cb" complete="partial">
+              <column>MonthYear</column>
+            </attribute-ref>
+            <attribute-ref id="39db32af-2454-4242-ad7c-eb25bea8867c" complete="partial">
+              <column>MonthYearNum</column>
+            </attribute-ref>
+            <attribute-ref id="c0cc1de0-8026-4374-ac2a-3ab04e786220" complete="true">
+              <column>WeekYear</column>
+            </attribute-ref>
+            <attribute-ref id="38f61acc-90d8-42f6-7e0b-0c5b811931f4" complete="partial">
+              <column>FullDate</column>
+            </attribute-ref>
+            <attribute-ref id="a8cbfeb7-76d7-4614-9b15-67f8cdd03573" complete="true">
+              <column>CommentsAmountType</column>
+            </attribute-ref>
+            <attribute-ref id="d0714233-18a0-4b7a-4fd4-1bba50065c3c" complete="partial">
+              <column>YearPosts</column>
+            </attribute-ref>
+            <attribute-ref id="538f3b47-ceed-46cf-b5ae-a4110647780b" complete="true">
+              <column>CountAnnouncement</column>
+            </attribute-ref>
+            <attribute-ref id="b7bee7ed-9bdd-402c-8dc5-883aa73f00f8" complete="true">
+              <column>CountArticle</column>
+            </attribute-ref>
+            <attribute-ref id="a8f90f99-cf9d-4b93-8009-f94fba309556" complete="true">
+              <column>AvgVote</column>
+            </attribute-ref>
+            <attribute-ref id="865d8b55-d9d5-4da2-95e6-07007c46e6bd" complete="true">
+              <column>CommentsAmount</column>
+            </attribute-ref>
+            <attribute-ref id="58196332-4543-45eb-83ec-9b33d7d62ed4" complete="true">
+              <column>CountDiscussion</column>
+            </attribute-ref>
+            <attribute-ref id="96e547fc-8e5f-41a9-989e-fd67a8dc92b5" complete="true">
+              <column>CountQuestions</column>
+            </attribute-ref>
+            <attribute-ref id="25594ddf-5fb9-41ce-9c36-e88d744d4589" complete="true">
+              <column>CountTagCache</column>
+            </attribute-ref>
+            <attribute-ref id="b8f6782f-dd63-42d7-93c7-5cafdcbcc98c" complete="true">
+              <column>CountTagEnsemble</column>
+            </attribute-ref>
+            <attribute-ref id="e08dff22-0e39-489a-894e-9b1307512326" complete="true">
+              <column>CountTagHealthShare</column>
+            </attribute-ref>
+            <attribute-ref id="d7cab98d-0ec3-443b-8bfb-530780f65202" complete="true">
+              <column>CountTagIRIS</column>
+            </attribute-ref>
+            <attribute-ref id="8a9aa1a3-1411-438b-aef3-615c219c97d8" complete="true">
+              <column>Views</column>
+            </attribute-ref>
+          </logical>
+        </data-set-ref>
+        <data-set-ref id="b37e5b00-4b29-4147-7902-1db75360cbb8">
+          <properties>
+            <allow-aggregates>true</allow-aggregates>
+            <create-hinted-aggregate>false</create-hinted-aggregate>
+          </properties>
+          <logical>
+            <key-ref id="5445a048-3bce-42ac-ba34-bf63ed58a425" unique="false" complete="false">
+              <column>Post</column>
+            </key-ref>
+            <key-ref id="cf77c1e1-ce9e-4e97-9aad-c0d79f16916c" unique="false" complete="false">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="32da45d8-d58a-4838-9397-1db9dc46468f" unique="false" complete="false">
+              <column>Author</column>
+            </key-ref>
+            <attribute-ref id="60a910e5-846d-41a7-8165-9f8aac645c03" complete="true">
+              <column>Count</column>
+            </attribute-ref>
+          </logical>
+        </data-set-ref>
+        <data-set-ref id="976368f6-8257-473b-706b-c14e3dbaa5ba">
+          <properties>
+            <allow-aggregates>true</allow-aggregates>
+            <create-hinted-aggregate>false</create-hinted-aggregate>
+          </properties>
+          <logical>
+            <key-ref id="2fa5263e-e840-48c0-8113-69142b2659a1" unique="false" complete="partial">
+              <column>FullDate</column>
+            </key-ref>
+            <key-ref id="c5991e48-f9f8-4b68-992e-456f7e5d44d7" unique="false" complete="partial">
+              <column>MonthYear</column>
+            </key-ref>
+            <key-ref id="fbe65830-b16c-4a69-928c-508a39a018a5" unique="false" complete="partial">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="da1040fd-6a18-4c52-a9be-247d05d5874f" unique="false" complete="partial">
+              <column>Year</column>
+            </key-ref>
+            <key-ref id="22f95ac9-ab67-4008-bf1d-e3a2d4caef4a" unique="false" complete="partial">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <attribute-ref id="38f61acc-90d8-42f6-7e0b-0c5b811931f4" complete="partial">
+              <column>FullDate</column>
+            </attribute-ref>
+            <attribute-ref id="6a0d20fa-4536-4711-9a65-426c7aa587cb" complete="partial">
+              <column>MonthYear</column>
+            </attribute-ref>
+            <attribute-ref id="d0714233-18a0-4b7a-4fd4-1bba50065c3c" complete="partial">
+              <column>Year</column>
+            </attribute-ref>
+            <attribute-ref id="39db32af-2454-4242-ad7c-eb25bea8867c" complete="partial">
+              <column>MonthYearNum</column>
+            </attribute-ref>
+          </logical>
+        </data-set-ref>
+        <data-set-ref id="b9a28837-cc17-4e0e-542f-a899940dd68a">
+          <properties>
+            <allow-aggregates>true</allow-aggregates>
+            <create-hinted-aggregate>false</create-hinted-aggregate>
+          </properties>
+          <logical>
+            <key-ref id="22f95ac9-ab67-4008-bf1d-e3a2d4caef4a" unique="false" complete="partial">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="da1040fd-6a18-4c52-a9be-247d05d5874f" unique="false" complete="partial">
+              <column>Year</column>
+            </key-ref>
+            <key-ref id="c5991e48-f9f8-4b68-992e-456f7e5d44d7" unique="false" complete="partial">
+              <column>MonthYear</column>
+            </key-ref>
+            <key-ref id="fbe65830-b16c-4a69-928c-508a39a018a5" unique="false" complete="partial">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="2fa5263e-e840-48c0-8113-69142b2659a1" unique="true" complete="partial">
+              <column>FullDate</column>
+            </key-ref>
+            <attribute-ref id="39db32af-2454-4242-ad7c-eb25bea8867c" complete="partial">
+              <column>MonthYearNum</column>
+            </attribute-ref>
+            <attribute-ref id="d0714233-18a0-4b7a-4fd4-1bba50065c3c" complete="partial">
+              <column>Year</column>
+            </attribute-ref>
+            <attribute-ref id="6a0d20fa-4536-4711-9a65-426c7aa587cb" complete="partial">
+              <column>MonthYear</column>
+            </attribute-ref>
+            <attribute-ref id="38f61acc-90d8-42f6-7e0b-0c5b811931f4" complete="partial">
+              <column>FullDate</column>
+            </attribute-ref>
+          </logical>
+        </data-set-ref>
+      </data-sets>
+      <calculated-members>
+        <calculated-member-ref id="eebb29d8-23d1-405e-79f5-ce40e68d710a"></calculated-member-ref>
+        <calculated-member-ref id="fc75a6e3-7fe1-4cb3-54a5-6e1d381ec45e"></calculated-member-ref>
+        <calculated-member-ref id="13c15d1b-81d9-43fa-416b-ecafcd07b3a5"></calculated-member-ref>
+        <calculated-member-ref id="c0f378df-862a-4dcf-4569-7e5e1df6b452"></calculated-member-ref>
+        <calculated-member-ref id="254bfcce-9e8f-4a2b-7614-da99dedd88ef"></calculated-member-ref>
+        <calculated-member-ref id="531ebe37-bb49-4079-5614-60cecdade1a9"></calculated-member-ref>
+        <calculated-member-ref id="45de02e2-2752-4cbe-7ef7-98076b2b713c"></calculated-member-ref>
+        <calculated-member-ref id="661107c7-f63f-40af-7a03-76758b9131d6"></calculated-member-ref>
+        <calculated-member-ref id="f6386cb6-5baa-4be7-551c-36dd1b4a767f"></calculated-member-ref>
+        <calculated-member-ref id="6ab58852-87fc-424b-65bc-46db9ba70dcd"></calculated-member-ref>
+        <calculated-member-ref id="f962388d-9ff5-42ef-694a-42d58bb9d849"></calculated-member-ref>
+        <calculated-member-ref id="a863bcd6-c499-4975-67e4-dd46e2081055"></calculated-member-ref>
+        <calculated-member-ref id="a4e503ba-ab36-46bd-76a7-23d23f278452"></calculated-member-ref>
+        <calculated-member-ref id="4fa0a992-8bde-4009-560c-97f119711574"></calculated-member-ref>
+        <calculated-member-ref id="dcc54c44-fa82-4086-6ae1-1ab827029327"></calculated-member-ref>
+        <calculated-member-ref id="132f751d-2222-4afa-5934-7ea54d3c6fce"></calculated-member-ref>
+        <calculated-member-ref id="74af33be-49f4-45f2-5930-cc957f34487b"></calculated-member-ref>
+        <calculated-member-ref id="0ff50a07-223b-49d9-6fb5-c19aa9867663"></calculated-member-ref>
+        <calculated-member-ref id="286361b1-a364-4edc-40a6-2cdaec220203"></calculated-member-ref>
+        <calculated-member-ref id="14a7d5e0-39ee-449d-6fae-7e1aaadf5874"></calculated-member-ref>
+        <calculated-member-ref id="db051aff-5d1d-463b-7845-fdc54cfe3eea"></calculated-member-ref>
+        <calculated-member-ref id="d27071ce-9c52-485c-6373-5d8f52ed4476"></calculated-member-ref>
+        <calculated-member-ref id="89d021d8-8fde-409b-43f8-89ffb264dcbb"></calculated-member-ref>
+        <calculated-member-ref id="eaeca101-6144-40f4-643f-2a1f2b49f6dc"></calculated-member-ref>
+        <calculated-member-ref id="a2f6f1e8-ab4b-477e-5544-44ba9f584079"></calculated-member-ref>
+        <calculated-member-ref id="34666dff-61be-4187-7ab2-41a5d8020b06"></calculated-member-ref>
+        <calculated-member-ref id="c60193ac-2105-49b5-6474-c44179e78852"></calculated-member-ref>
+      </calculated-members>
+      <aggregates></aggregates>
+    </cube>
+    <cube id="77b2f1c9-4c8a-4873-45d7-4edc1280a854" name="ContributedMembers">
+      <properties>
+        <caption>ContributedMembers</caption>
+        <visible>true</visible>
+      </properties>
+      <attributes>
+        <attribute-key id="2856a563-c928-4b0b-96bc-538de21e733e">
+          <properties>
+            <visible>true</visible>
+            <columns>1</columns>
+          </properties>
+        </attribute-key>
+        <attribute-key id="ebd50c54-e0b5-4048-89f2-b8c436cb4fb7">
+          <properties>
+            <visible>true</visible>
+            <columns>1</columns>
+          </properties>
+        </attribute-key>
+        <attribute-key id="fb54be56-c1bc-43b6-b3f4-2acee8215c60">
+          <properties>
+            <visible>true</visible>
+            <columns>1</columns>
+          </properties>
+        </attribute-key>
+        <attribute-key id="2d953fdc-c087-44b1-9979-96211b7d3893">
+          <properties>
+            <visible>true</visible>
+            <columns>1</columns>
+          </properties>
+        </attribute-key>
+        <attribute-key id="809362f4-16ad-43f1-9cdc-6c63e11a2f0b">
+          <properties>
+            <visible>true</visible>
+            <columns>1</columns>
+          </properties>
+        </attribute-key>
+        <attribute-key id="6cf52f36-3306-48c7-8907-7ca70e1a9c91">
+          <properties>
+            <visible>true</visible>
+            <columns>1</columns>
+          </properties>
+        </attribute-key>
+        <keyed-attribute id="8f036d33-eb16-4224-81fe-3810b59a4fe8" key-ref="2856a563-c928-4b0b-96bc-538de21e733e" name="MonthYearNum">
+          <properties>
+            <caption>MonthYearNum</caption>
+            <visible>true</visible>
+            <type>
+              <enum></enum>
+            </type>
+            <ordering>
+              <sort-key>
+                <order>ascending</order>
+                <value></value>
+              </sort-key>
+            </ordering>
+          </properties>
+        </keyed-attribute>
+        <keyed-attribute id="db94c0c8-a1a3-4a4d-91f9-995045ae5211" key-ref="ebd50c54-e0b5-4048-89f2-b8c436cb4fb7" name="MonthYear">
+          <properties>
+            <caption>MonthYear</caption>
+            <visible>true</visible>
+            <type>
+              <enum></enum>
+            </type>
+            <ordering>
+              <sort-key>
+                <key-ref id="fb54be56-c1bc-43b6-b3f4-2acee8215c60"></key-ref>
+              </sort-key>
+            </ordering>
+          </properties>
+        </keyed-attribute>
+        <keyed-attribute id="1ff19b26-ea84-4ab3-b8a5-30ef8e896c45" key-ref="2d953fdc-c087-44b1-9979-96211b7d3893" name="Week_Year">
+          <properties>
+            <caption>Week_Year</caption>
+            <visible>true</visible>
+            <type>
+              <enum></enum>
+            </type>
+            <ordering>
+              <sort-key>
+                <order>ascending</order>
+                <value></value>
+              </sort-key>
+            </ordering>
+          </properties>
+        </keyed-attribute>
+        <attribute id="feebc5b7-cf0b-4cfd-94d0-a3ccf1368dbd" name="m_Overall_sum">
+          <properties>
+            <caption>Points</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="290841bb-9b00-4d9c-a121-525fda981efb" name="m_CommentVotes_sum">
+          <properties>
+            <caption>CommentsVotes</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="0acdc72f-b1f3-4d1a-8bd6-7a247914bb58" name="m_Comments_sum">
+          <properties>
+            <caption>Comments</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="eea033c5-fabc-451e-a6ce-7006ade542dc" name="m_CommentsAmount_sum">
+          <properties>
+            <caption>CommentsAmount</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="c9e13332-9db0-47ee-b812-f7d4686b5dab" name="m_Posts_sum">
+          <properties>
+            <caption>Posts</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="7148655c-68d9-4078-9385-7b171c9fd678" name="m_PostVotes_sum">
+          <properties>
+            <caption>PostsVotes</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="37f55d00-8193-4af3-8843-4acbcc6bf6d5" name="m_Views_sum">
+          <properties>
+            <caption>Views</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="d5a9ef09-cdb3-4b57-be45-5806d341ab14" name="m_PostFavs_sum">
+          <properties>
+            <caption>Favorites</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="64e84a89-3789-4822-b2f7-994d9bc41637" name="NewContributors">
+          <properties>
+            <caption>NewContributors</caption>
+            <visible>true</visible>
+            <type>
+              <count-distinct>
+                <key-ref id="809362f4-16ad-43f1-9cdc-6c63e11a2f0b"></key-ref>
+                <approximate>false</approximate>
+              </count-distinct>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="0f20b98b-aa06-473f-a886-c953733a1963" name="m_Member_distinct">
+          <properties>
+            <caption>ContributionMembers</caption>
+            <visible>true</visible>
+            <type>
+              <count-distinct>
+                <key-ref id="6cf52f36-3306-48c7-8907-7ca70e1a9c91"></key-ref>
+                <approximate>false</approximate>
+              </count-distinct>
+            </type>
+          </properties>
+        </attribute>
+      </attributes>
+      <dimensions>
+        <dimension id="defc466d-b789-469a-ac63-5f4e3eb434c7" name="DateDimensionContribution">
+          <properties>
+            <visible>true</visible>
+          </properties>
+          <hierarchy id="da652efb-96b8-4fbf-a4b5-c9db2553ae00" name="DateDimensionContribution">
+            <properties>
+              <caption>DateDimensionContribution</caption>
+              <visible>true</visible>
+              <filter-empty>Yes</filter-empty>
+              <default-member>
+                <all-member></all-member>
+              </default-member>
+            </properties>
+            <level primary-attribute="db94c0c8-a1a3-4a4d-91f9-995045ae5211">
+              <properties>
+                <unique-in-parent>false</unique-in-parent>
+                <visible>true</visible>
+              </properties>
+            </level>
+            <level primary-attribute="8f036d33-eb16-4224-81fe-3810b59a4fe8">
+              <properties>
+                <unique-in-parent>false</unique-in-parent>
+                <visible>true</visible>
+              </properties>
+            </level>
+          </hierarchy>
+          <hierarchy id="3a4b023f-e315-4d05-86d0-e133c7496aba" name="YearContributors">
+            <properties>
+              <caption>YearContributors</caption>
+              <visible>true</visible>
+              <filter-empty>Yes</filter-empty>
+              <default-member>
+                <all-member></all-member>
+              </default-member>
+            </properties>
+            <level primary-attribute="68905df1-0365-46ad-7dd0-1140fcb6ea00">
+              <properties>
+                <unique-in-parent>false</unique-in-parent>
+                <visible>true</visible>
+              </properties>
+            </level>
+          </hierarchy>
+          <hierarchy id="ed849b99-abde-44fa-9c14-917e872ec593" name="FullDateContribution">
+            <properties>
+              <caption>FullDateContribution</caption>
+              <visible>true</visible>
+              <filter-empty>Yes</filter-empty>
+              <default-member>
+                <all-member></all-member>
+              </default-member>
+            </properties>
+            <level primary-attribute="1ff19b26-ea84-4ab3-b8a5-30ef8e896c45">
+              <properties>
+                <unique-in-parent>false</unique-in-parent>
+                <visible>true</visible>
+              </properties>
+            </level>
+            <level primary-attribute="14122cab-f606-4a0d-6f34-98351ea5fafd">
+              <properties>
+                <unique-in-parent>false</unique-in-parent>
+                <visible>true</visible>
+              </properties>
+            </level>
+          </hierarchy>
+        </dimension>
+      </dimensions>
+      <actions>
+        <properties>
+          <include-default-drill-through>true</include-default-drill-through>
+        </properties>
+      </actions>
+      <data-sets>
+        <data-set-ref id="c6f79723-7e11-4563-52b4-05125ae2d65f">
+          <properties>
+            <allow-aggregates>true</allow-aggregates>
+            <create-hinted-aggregate>false</create-hinted-aggregate>
+          </properties>
+          <logical>
+            <key-ref id="2856a563-c928-4b0b-96bc-538de21e733e" unique="false" complete="partial">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="ebd50c54-e0b5-4048-89f2-b8c436cb4fb7" unique="false" complete="partial">
+              <column>MonthYear</column>
+            </key-ref>
+            <key-ref id="118e9f60-fab0-4758-834f-63f7a0c35edf" unique="false" complete="partial">
+              <column>Year</column>
+            </key-ref>
+            <key-ref id="833760f4-2a9d-4cd5-9bf6-676a316b74ed" unique="false" complete="partial">
+              <column>FullDate</column>
+            </key-ref>
+            <key-ref id="5ab04b5e-b842-41ce-a064-9ce24fcd4d64" unique="false" complete="false">
+              <column>Member</column>
+            </key-ref>
+            <key-ref id="32da45d8-d58a-4838-9397-1db9dc46468f" unique="false" complete="false">
+              <column>Member</column>
+            </key-ref>
+            <key-ref id="fb54be56-c1bc-43b6-b3f4-2acee8215c60" unique="false" complete="partial">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="2d953fdc-c087-44b1-9979-96211b7d3893" unique="false" complete="partial">
+              <column>WeekYear</column>
+            </key-ref>
+            <attribute-ref id="feebc5b7-cf0b-4cfd-94d0-a3ccf1368dbd" complete="true">
+              <column>Overall</column>
+            </attribute-ref>
+            <attribute-ref id="8f036d33-eb16-4224-81fe-3810b59a4fe8" complete="partial">
+              <column>MonthYearNum</column>
+            </attribute-ref>
+            <attribute-ref id="db94c0c8-a1a3-4a4d-91f9-995045ae5211" complete="partial">
+              <column>MonthYear</column>
+            </attribute-ref>
+            <attribute-ref id="68905df1-0365-46ad-7dd0-1140fcb6ea00" complete="partial">
+              <column>Year</column>
+            </attribute-ref>
+            <attribute-ref id="14122cab-f606-4a0d-6f34-98351ea5fafd" complete="partial">
+              <column>FullDate</column>
+            </attribute-ref>
+            <attribute-ref id="290841bb-9b00-4d9c-a121-525fda981efb" complete="true">
+              <column>CommentVotes</column>
+            </attribute-ref>
+            <attribute-ref id="0acdc72f-b1f3-4d1a-8bd6-7a247914bb58" complete="true">
+              <column>Comments</column>
+            </attribute-ref>
+            <attribute-ref id="eea033c5-fabc-451e-a6ce-7006ade542dc" complete="true">
+              <column>CommentsAmount</column>
+            </attribute-ref>
+            <attribute-ref id="c9e13332-9db0-47ee-b812-f7d4686b5dab" complete="true">
+              <column>Posts</column>
+            </attribute-ref>
+            <attribute-ref id="7148655c-68d9-4078-9385-7b171c9fd678" complete="true">
+              <column>PostVotes</column>
+            </attribute-ref>
+            <attribute-ref id="37f55d00-8193-4af3-8843-4acbcc6bf6d5" complete="true">
+              <column>Views</column>
+            </attribute-ref>
+            <attribute-ref id="1ff19b26-ea84-4ab3-b8a5-30ef8e896c45" complete="partial">
+              <column>WeekYear</column>
+            </attribute-ref>
+          </logical>
+        </data-set-ref>
+        <data-set-ref id="976368f6-8257-473b-706b-c14e3dbaa5ba">
+          <properties>
+            <allow-aggregates>true</allow-aggregates>
+            <create-hinted-aggregate>false</create-hinted-aggregate>
+          </properties>
+          <logical>
+            <key-ref id="833760f4-2a9d-4cd5-9bf6-676a316b74ed" unique="false" complete="partial">
+              <column>FullDate</column>
+            </key-ref>
+            <key-ref id="2856a563-c928-4b0b-96bc-538de21e733e" unique="false" complete="partial">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="118e9f60-fab0-4758-834f-63f7a0c35edf" unique="false" complete="partial">
+              <column>Year</column>
+            </key-ref>
+            <key-ref id="ebd50c54-e0b5-4048-89f2-b8c436cb4fb7" unique="false" complete="partial">
+              <column>MonthYear</column>
+            </key-ref>
+            <key-ref id="fb54be56-c1bc-43b6-b3f4-2acee8215c60" unique="false" complete="partial">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="2d953fdc-c087-44b1-9979-96211b7d3893" unique="false" complete="partial">
+              <column>WeekYear</column>
+            </key-ref>
+            <attribute-ref id="14122cab-f606-4a0d-6f34-98351ea5fafd" complete="partial">
+              <column>FullDate</column>
+            </attribute-ref>
+            <attribute-ref id="8f036d33-eb16-4224-81fe-3810b59a4fe8" complete="partial">
+              <column>MonthYearNum</column>
+            </attribute-ref>
+            <attribute-ref id="68905df1-0365-46ad-7dd0-1140fcb6ea00" complete="partial">
+              <column>Year</column>
+            </attribute-ref>
+            <attribute-ref id="db94c0c8-a1a3-4a4d-91f9-995045ae5211" complete="partial">
+              <column>MonthYear</column>
+            </attribute-ref>
+            <attribute-ref id="1ff19b26-ea84-4ab3-b8a5-30ef8e896c45" complete="partial">
+              <column>WeekYear</column>
+            </attribute-ref>
+          </logical>
+        </data-set-ref>
+        <data-set-ref id="eb7e3ba2-4102-4f62-63b6-cb728af3e13f">
+          <properties>
+            <allow-aggregates>true</allow-aggregates>
+            <create-hinted-aggregate>false</create-hinted-aggregate>
+          </properties>
+          <logical>
+            <key-ref id="ebd50c54-e0b5-4048-89f2-b8c436cb4fb7" unique="false" complete="partial">
+              <column>MonthYear</column>
+            </key-ref>
+            <key-ref id="fb54be56-c1bc-43b6-b3f4-2acee8215c60" unique="false" complete="partial">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="118e9f60-fab0-4758-834f-63f7a0c35edf" unique="false" complete="partial">
+              <column>Year</column>
+            </key-ref>
+            <key-ref id="118e9f60-fab0-4758-834f-63f7a0c35edf" unique="false" complete="partial">
+              <column>Year</column>
+            </key-ref>
+            <key-ref id="2d953fdc-c087-44b1-9979-96211b7d3893" unique="false" complete="partial">
+              <column>WeekYear</column>
+            </key-ref>
+            <key-ref id="833760f4-2a9d-4cd5-9bf6-676a316b74ed" unique="false" complete="partial">
+              <column>FullDate</column>
+            </key-ref>
+            <key-ref id="2856a563-c928-4b0b-96bc-538de21e733e" unique="false" complete="partial">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="5ab04b5e-b842-41ce-a064-9ce24fcd4d64" unique="false" complete="false">
+              <column>Author</column>
+            </key-ref>
+            <key-ref id="32da45d8-d58a-4838-9397-1db9dc46468f" unique="false" complete="false">
+              <column>Author</column>
+            </key-ref>
+            <key-ref id="6cf52f36-3306-48c7-8907-7ca70e1a9c91" unique="false" complete="true">
+              <column>Author</column>
+            </key-ref>
+            <attribute-ref id="db94c0c8-a1a3-4a4d-91f9-995045ae5211" complete="partial">
+              <column>MonthYear</column>
+            </attribute-ref>
+            <attribute-ref id="68905df1-0365-46ad-7dd0-1140fcb6ea00" complete="partial">
+              <column>Year</column>
+            </attribute-ref>
+            <attribute-ref id="1ff19b26-ea84-4ab3-b8a5-30ef8e896c45" complete="partial">
+              <column>WeekYear</column>
+            </attribute-ref>
+            <attribute-ref id="14122cab-f606-4a0d-6f34-98351ea5fafd" complete="partial">
+              <column>FullDate</column>
+            </attribute-ref>
+            <attribute-ref id="8f036d33-eb16-4224-81fe-3810b59a4fe8" complete="partial">
+              <column>MonthYearNum</column>
+            </attribute-ref>
+          </logical>
+        </data-set-ref>
+        <data-set-ref id="c199a0a4-9132-4c66-6485-6f63310f172e">
+          <properties>
+            <allow-aggregates>true</allow-aggregates>
+            <create-hinted-aggregate>false</create-hinted-aggregate>
+          </properties>
+          <logical>
+            <key-ref id="32da45d8-d58a-4838-9397-1db9dc46468f" unique="false" complete="false">
+              <column>Author</column>
+            </key-ref>
+            <key-ref id="833760f4-2a9d-4cd5-9bf6-676a316b74ed" unique="false" complete="partial">
+              <column>FullDate</column>
+            </key-ref>
+            <key-ref id="ebd50c54-e0b5-4048-89f2-b8c436cb4fb7" unique="false" complete="partial">
+              <column>MonthYear</column>
+            </key-ref>
+            <key-ref id="fb54be56-c1bc-43b6-b3f4-2acee8215c60" unique="false" complete="partial">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="2856a563-c928-4b0b-96bc-538de21e733e" unique="false" complete="partial">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="118e9f60-fab0-4758-834f-63f7a0c35edf" unique="false" complete="partial">
+              <column>Year</column>
+            </key-ref>
+            <key-ref id="2d953fdc-c087-44b1-9979-96211b7d3893" unique="false" complete="partial">
+              <column>WeekYear</column>
+            </key-ref>
+            <key-ref id="809362f4-16ad-43f1-9cdc-6c63e11a2f0b" unique="false" complete="true">
+              <column>Author</column>
+            </key-ref>
+            <key-ref id="5ab04b5e-b842-41ce-a064-9ce24fcd4d64" unique="false" complete="false">
+              <column>Author</column>
+            </key-ref>
+            <attribute-ref id="14122cab-f606-4a0d-6f34-98351ea5fafd" complete="partial">
+              <column>FullDate</column>
+            </attribute-ref>
+            <attribute-ref id="db94c0c8-a1a3-4a4d-91f9-995045ae5211" complete="partial">
+              <column>MonthYear</column>
+            </attribute-ref>
+            <attribute-ref id="8f036d33-eb16-4224-81fe-3810b59a4fe8" complete="partial">
+              <column>MonthYearNum</column>
+            </attribute-ref>
+            <attribute-ref id="68905df1-0365-46ad-7dd0-1140fcb6ea00" complete="partial">
+              <column>Year</column>
+            </attribute-ref>
+            <attribute-ref id="1ff19b26-ea84-4ab3-b8a5-30ef8e896c45" complete="partial">
+              <column>WeekYear</column>
+            </attribute-ref>
+          </logical>
+        </data-set-ref>
+      </data-sets>
+      <calculated-members>
+        <calculated-member-ref id="142dc2e3-1e57-474f-5217-f84907374caa"></calculated-member-ref>
+        <calculated-member-ref id="12c3177d-1060-4f2a-4d98-f9adef2fe56d"></calculated-member-ref>
+      </calculated-members>
+      <aggregates></aggregates>
+    </cube>
+    <cube id="3fcca3ec-e6ff-48eb-4daa-0fddce26e5f3" name="Members">
+      <properties>
+        <caption>Members</caption>
+        <visible>true</visible>
+      </properties>
+      <attributes>
+        <attribute-key id="87ce1d0e-3dd8-4d1f-81ad-11ae0005f739">
+          <properties>
+            <visible>true</visible>
+            <columns>1</columns>
+          </properties>
+        </attribute-key>
+        <attribute-key id="f36475b3-582e-4419-a47c-8af69cea5e67">
+          <properties>
+            <visible>true</visible>
+            <columns>1</columns>
+          </properties>
+        </attribute-key>
+        <attribute-key id="628ba47a-fa97-456f-a529-a8d1f127b647">
+          <properties>
+            <visible>true</visible>
+            <columns>1</columns>
+          </properties>
+        </attribute-key>
+        <attribute-key id="d6a5f876-46b1-440e-8185-6396ac719208">
+          <properties>
+            <visible>true</visible>
+            <columns>1</columns>
+          </properties>
+        </attribute-key>
+        <attribute-key id="860dd56f-dfe4-4b27-8b42-4f4fa20dc729">
+          <properties>
+            <visible>true</visible>
+            <columns>1</columns>
+          </properties>
+        </attribute-key>
+        <attribute-key id="f45696a8-2d0d-451b-8d43-00564cb0f44d">
+          <properties>
+            <visible>true</visible>
+            <columns>1</columns>
+          </properties>
+        </attribute-key>
+        <keyed-attribute id="eb48ac99-8a50-44a0-93ba-e0378c315993" key-ref="87ce1d0e-3dd8-4d1f-81ad-11ae0005f739" name="MonthYear">
+          <properties>
+            <caption>MonthYear</caption>
+            <visible>true</visible>
+            <type>
+              <enum></enum>
+            </type>
+            <ordering>
+              <sort-key>
+                <key-ref id="f36475b3-582e-4419-a47c-8af69cea5e67"></key-ref>
+              </sort-key>
+            </ordering>
+          </properties>
+        </keyed-attribute>
+        <keyed-attribute id="80e4a25c-16ba-4395-928f-e4d831b6093d" key-ref="628ba47a-fa97-456f-a529-a8d1f127b647" name="MonthYearNum">
+          <properties>
+            <caption>MonthYearNum</caption>
+            <visible>true</visible>
+            <type>
+              <enum></enum>
+            </type>
+            <ordering>
+              <sort-key>
+                <order>ascending</order>
+                <value></value>
+              </sort-key>
+            </ordering>
+          </properties>
+        </keyed-attribute>
+        <keyed-attribute id="1531087e-dc07-4d50-809a-eb87d40d9225" key-ref="d6a5f876-46b1-440e-8185-6396ac719208" name="WeekYearMember">
+          <properties>
+            <caption>WeekYearMember</caption>
+            <visible>true</visible>
+            <type>
+              <enum></enum>
+            </type>
+            <ordering>
+              <sort-key>
+                <order>ascending</order>
+                <value></value>
+              </sort-key>
+            </ordering>
+          </properties>
+        </keyed-attribute>
+        <attribute id="6dba9b48-e264-4a97-ad70-c68f4e3cca84" name="m_Member_sum">
+          <properties>
+            <caption>Test</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="5d780ad8-f633-4dae-9020-46639f3028be" name="m_Member_distinct">
+          <properties>
+            <caption>ContributionMembers</caption>
+            <visible>true</visible>
+            <type>
+              <count-distinct>
+                <key-ref id="860dd56f-dfe4-4b27-8b42-4f4fa20dc729"></key-ref>
+                <approximate>false</approximate>
+              </count-distinct>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="6ef817e9-31d7-4a5e-a1ac-6428655944a3" name="m_ID_distinct">
+          <properties>
+            <caption>Members</caption>
+            <visible>true</visible>
+            <type>
+              <count-distinct>
+                <key-ref id="f45696a8-2d0d-451b-8d43-00564cb0f44d"></key-ref>
+                <approximate>false</approximate>
+              </count-distinct>
+            </type>
+          </properties>
+        </attribute>
+      </attributes>
+      <dimensions>
+        <dimension id="e2f2c49a-c2be-4438-a013-6261940113be" name="DateDimensionMember">
+          <properties>
+            <visible>true</visible>
+          </properties>
+          <hierarchy id="84000a38-0918-4b4a-b9c7-38e3dac6e81c" name="DateDimensionMember">
+            <properties>
+              <caption>DateDimensionMember</caption>
+              <visible>true</visible>
+              <filter-empty>Yes</filter-empty>
+              <default-member>
+                <all-member></all-member>
+              </default-member>
+            </properties>
+            <level primary-attribute="eb48ac99-8a50-44a0-93ba-e0378c315993">
+              <properties>
+                <unique-in-parent>false</unique-in-parent>
+                <visible>true</visible>
+              </properties>
+            </level>
+            <level primary-attribute="80e4a25c-16ba-4395-928f-e4d831b6093d">
+              <properties>
+                <unique-in-parent>false</unique-in-parent>
+                <visible>true</visible>
+              </properties>
+            </level>
+          </hierarchy>
+          <hierarchy id="3a540eab-5115-4020-9335-9cbab22fdb65" name="FullDateMember">
+            <properties>
+              <caption>FullDateMember</caption>
+              <visible>true</visible>
+              <filter-empty>Yes</filter-empty>
+              <default-member>
+                <all-member></all-member>
+              </default-member>
+            </properties>
+            <level primary-attribute="1531087e-dc07-4d50-809a-eb87d40d9225">
+              <properties>
+                <unique-in-parent>false</unique-in-parent>
+                <visible>true</visible>
+              </properties>
+            </level>
+            <level primary-attribute="00036edc-179b-4799-5f65-bd37ec46d6c1">
+              <properties>
+                <unique-in-parent>false</unique-in-parent>
+                <visible>true</visible>
+              </properties>
+            </level>
+          </hierarchy>
+          <hierarchy id="e516b5f4-9819-4c32-b6fb-7f9d263feeba" name="YearMember">
+            <properties>
+              <caption>YearMember</caption>
+              <visible>true</visible>
+              <filter-empty>Yes</filter-empty>
+              <default-member>
+                <all-member></all-member>
+              </default-member>
+            </properties>
+            <level primary-attribute="28042dac-be32-47c3-659f-2d391e9fc4e6">
+              <properties>
+                <unique-in-parent>false</unique-in-parent>
+                <visible>true</visible>
+              </properties>
+            </level>
+          </hierarchy>
+        </dimension>
+      </dimensions>
+      <actions>
+        <properties>
+          <include-default-drill-through>true</include-default-drill-through>
+        </properties>
+      </actions>
+      <data-sets>
+        <data-set-ref id="7e7947e6-2ce9-49de-68cf-ab7f72714b7e">
+          <properties>
+            <allow-aggregates>true</allow-aggregates>
+            <create-hinted-aggregate>false</create-hinted-aggregate>
+          </properties>
+          <logical>
+            <key-ref id="87ce1d0e-3dd8-4d1f-81ad-11ae0005f739" unique="false" complete="partial">
+              <column>MonthYear</column>
+            </key-ref>
+            <key-ref id="f36475b3-582e-4419-a47c-8af69cea5e67" unique="false" complete="partial">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="628ba47a-fa97-456f-a529-a8d1f127b647" unique="false" complete="partial">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="0cf6b253-7773-4d8f-ad1e-164bb56579e8" unique="false" complete="partial">
+              <column>FullDate</column>
+            </key-ref>
+            <key-ref id="32da45d8-d58a-4838-9397-1db9dc46468f" unique="false" complete="false">
+              <column>ID</column>
+            </key-ref>
+            <key-ref id="5ab04b5e-b842-41ce-a064-9ce24fcd4d64" unique="false" complete="false">
+              <column>ID</column>
+            </key-ref>
+            <key-ref id="125f02e8-f839-4e71-90e8-41e34e69c608" unique="false" complete="false">
+              <column>Link</column>
+            </key-ref>
+            <key-ref id="631b7ad8-0011-4a08-b471-05913e633563" unique="false" complete="false">
+              <column>Name</column>
+              <column>ID</column>
+            </key-ref>
+            <key-ref id="d6a5f876-46b1-440e-8185-6396ac719208" unique="false" complete="partial">
+              <column>WeekYear</column>
+            </key-ref>
+            <key-ref id="a39adcec-aa98-4b5c-8632-ccf8b9083b12" unique="false" complete="partial">
+              <column>Year</column>
+            </key-ref>
+            <key-ref id="d248f02f-6549-4dcb-8e57-c0855d01bc03" unique="false" complete="false">
+              <column>FullDate</column>
+            </key-ref>
+            <key-ref id="a9178537-4924-4955-bf60-e06df36a40ec" unique="false" complete="false">
+              <column>ID</column>
+            </key-ref>
+            <attribute-ref id="eb48ac99-8a50-44a0-93ba-e0378c315993" complete="partial">
+              <column>MonthYear</column>
+            </attribute-ref>
+            <attribute-ref id="80e4a25c-16ba-4395-928f-e4d831b6093d" complete="partial">
+              <column>MonthYearNum</column>
+            </attribute-ref>
+            <attribute-ref id="00036edc-179b-4799-5f65-bd37ec46d6c1" complete="partial">
+              <column>FullDate</column>
+            </attribute-ref>
+            <attribute-ref id="1531087e-dc07-4d50-809a-eb87d40d9225" complete="partial">
+              <column>WeekYear</column>
+            </attribute-ref>
+            <attribute-ref id="28042dac-be32-47c3-659f-2d391e9fc4e6" complete="partial">
+              <column>Year</column>
+            </attribute-ref>
+          </logical>
+        </data-set-ref>
+        <data-set-ref id="976368f6-8257-473b-706b-c14e3dbaa5ba">
+          <properties>
+            <allow-aggregates>true</allow-aggregates>
+            <create-hinted-aggregate>false</create-hinted-aggregate>
+          </properties>
+          <logical>
+            <key-ref id="0cf6b253-7773-4d8f-ad1e-164bb56579e8" unique="false" complete="partial">
+              <column>FullDate</column>
+            </key-ref>
+            <key-ref id="628ba47a-fa97-456f-a529-a8d1f127b647" unique="false" complete="partial">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="87ce1d0e-3dd8-4d1f-81ad-11ae0005f739" unique="false" complete="partial">
+              <column>MonthYear</column>
+            </key-ref>
+            <key-ref id="f36475b3-582e-4419-a47c-8af69cea5e67" unique="false" complete="partial">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="d6a5f876-46b1-440e-8185-6396ac719208" unique="false" complete="partial">
+              <column>WeekYear</column>
+            </key-ref>
+            <key-ref id="a39adcec-aa98-4b5c-8632-ccf8b9083b12" unique="false" complete="partial">
+              <column>Year</column>
+            </key-ref>
+            <key-ref id="d248f02f-6549-4dcb-8e57-c0855d01bc03" unique="false" complete="false">
+              <column>FullDate</column>
+            </key-ref>
+            <attribute-ref id="00036edc-179b-4799-5f65-bd37ec46d6c1" complete="partial">
+              <column>FullDate</column>
+            </attribute-ref>
+            <attribute-ref id="80e4a25c-16ba-4395-928f-e4d831b6093d" complete="partial">
+              <column>MonthYearNum</column>
+            </attribute-ref>
+            <attribute-ref id="eb48ac99-8a50-44a0-93ba-e0378c315993" complete="partial">
+              <column>MonthYear</column>
+            </attribute-ref>
+            <attribute-ref id="1531087e-dc07-4d50-809a-eb87d40d9225" complete="partial">
+              <column>WeekYear</column>
+            </attribute-ref>
+            <attribute-ref id="28042dac-be32-47c3-659f-2d391e9fc4e6" complete="partial">
+              <column>Year</column>
+            </attribute-ref>
+          </logical>
+        </data-set-ref>
+        <data-set-ref id="8e1557c7-eccb-4eff-699d-1b4b8e8b44da">
+          <properties>
+            <allow-aggregates>true</allow-aggregates>
+            <create-hinted-aggregate>false</create-hinted-aggregate>
+          </properties>
+          <logical>
+            <key-ref id="87ce1d0e-3dd8-4d1f-81ad-11ae0005f739" unique="false" complete="partial">
+              <column>MonthYear</column>
+            </key-ref>
+            <key-ref id="f36475b3-582e-4419-a47c-8af69cea5e67" unique="false" complete="partial">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="d6a5f876-46b1-440e-8185-6396ac719208" unique="false" complete="partial">
+              <column>WeekYear</column>
+            </key-ref>
+            <key-ref id="a39adcec-aa98-4b5c-8632-ccf8b9083b12" unique="false" complete="partial">
+              <column>Year</column>
+            </key-ref>
+            <key-ref id="0cf6b253-7773-4d8f-ad1e-164bb56579e8" unique="false" complete="partial">
+              <column>FullDate</column>
+            </key-ref>
+            <key-ref id="628ba47a-fa97-456f-a529-a8d1f127b647" unique="false" complete="partial">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="860dd56f-dfe4-4b27-8b42-4f4fa20dc729" unique="false" complete="true">
+              <column>Author</column>
+            </key-ref>
+            <attribute-ref id="eb48ac99-8a50-44a0-93ba-e0378c315993" complete="partial">
+              <column>MonthYear</column>
+            </attribute-ref>
+            <attribute-ref id="1531087e-dc07-4d50-809a-eb87d40d9225" complete="partial">
+              <column>WeekYear</column>
+            </attribute-ref>
+            <attribute-ref id="28042dac-be32-47c3-659f-2d391e9fc4e6" complete="partial">
+              <column>Year</column>
+            </attribute-ref>
+            <attribute-ref id="00036edc-179b-4799-5f65-bd37ec46d6c1" complete="partial">
+              <column>FullDate</column>
+            </attribute-ref>
+            <attribute-ref id="80e4a25c-16ba-4395-928f-e4d831b6093d" complete="partial">
+              <column>MonthYearNum</column>
+            </attribute-ref>
+          </logical>
+        </data-set-ref>
+        <data-set-ref id="f1717549-b228-4376-75a7-ffe647a9aba0">
+          <properties>
+            <allow-aggregates>true</allow-aggregates>
+            <create-hinted-aggregate>false</create-hinted-aggregate>
+          </properties>
+          <logical>
+            <key-ref id="631b7ad8-0011-4a08-b471-05913e633563" unique="false" complete="false">
+              <column>Name</column>
+              <column>ID</column>
+            </key-ref>
+            <key-ref id="5ab04b5e-b842-41ce-a064-9ce24fcd4d64" unique="false" complete="false">
+              <column>ID</column>
+            </key-ref>
+            <key-ref id="32da45d8-d58a-4838-9397-1db9dc46468f" unique="false" complete="false">
+              <column>ID</column>
+            </key-ref>
+            <key-ref id="125f02e8-f839-4e71-90e8-41e34e69c608" unique="false" complete="false">
+              <column>Link</column>
+            </key-ref>
+            <key-ref id="a39adcec-aa98-4b5c-8632-ccf8b9083b12" unique="false" complete="partial">
+              <column>Year</column>
+            </key-ref>
+            <key-ref id="628ba47a-fa97-456f-a529-a8d1f127b647" unique="false" complete="partial">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="0cf6b253-7773-4d8f-ad1e-164bb56579e8" unique="false" complete="partial">
+              <column>FullDate</column>
+            </key-ref>
+            <key-ref id="d248f02f-6549-4dcb-8e57-c0855d01bc03" unique="false" complete="false">
+              <column>FullDate</column>
+            </key-ref>
+            <key-ref id="87ce1d0e-3dd8-4d1f-81ad-11ae0005f739" unique="false" complete="partial">
+              <column>MonthYear</column>
+            </key-ref>
+            <key-ref id="f36475b3-582e-4419-a47c-8af69cea5e67" unique="false" complete="partial">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="d6a5f876-46b1-440e-8185-6396ac719208" unique="false" complete="partial">
+              <column>WeekYear</column>
+            </key-ref>
+            <key-ref id="f45696a8-2d0d-451b-8d43-00564cb0f44d" unique="false" complete="true">
+              <column>ID</column>
+            </key-ref>
+            <attribute-ref id="28042dac-be32-47c3-659f-2d391e9fc4e6" complete="partial">
+              <column>Year</column>
+            </attribute-ref>
+            <attribute-ref id="80e4a25c-16ba-4395-928f-e4d831b6093d" complete="partial">
+              <column>MonthYearNum</column>
+            </attribute-ref>
+            <attribute-ref id="00036edc-179b-4799-5f65-bd37ec46d6c1" complete="partial">
+              <column>FullDate</column>
+            </attribute-ref>
+            <attribute-ref id="eb48ac99-8a50-44a0-93ba-e0378c315993" complete="partial">
+              <column>MonthYear</column>
+            </attribute-ref>
+            <attribute-ref id="1531087e-dc07-4d50-809a-eb87d40d9225" complete="partial">
+              <column>WeekYear</column>
+            </attribute-ref>
+          </logical>
+        </data-set-ref>
+      </data-sets>
+      <calculated-members>
+        <calculated-member-ref id="94f17bca-7995-4d73-592b-49daffc3e434"></calculated-member-ref>
+        <calculated-member-ref id="69946ce7-bd37-4539-540d-9bd122def16c"></calculated-member-ref>
+        <calculated-member-ref id="ba2e8780-702d-413c-5a4c-f640143c8976"></calculated-member-ref>
+        <calculated-member-ref id="80868ef8-5c8a-42cc-5dc4-fe95d13c2b1a"></calculated-member-ref>
+      </calculated-members>
+      <aggregates></aggregates>
+    </cube>
+    <cube id="5eae1db9-70a6-45af-5746-97743067527b" name="Views">
+      <properties>
+        <caption>Views</caption>
+        <visible>true</visible>
+      </properties>
+      <attributes>
+        <attribute id="7c619adb-7c24-4260-aeb9-38b6bf52c313" name="m_Views_avg">
+          <properties>
+            <caption>ViewsAVG</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>AVG</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="5713625b-8979-442a-899f-ca4b3e875616" name="m_Delta_sum">
+          <properties>
+            <caption>ViewsH(old table)</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="f22722c0-2074-48a3-aedb-898ae1cc0d39" name="m_CacheTag_sum">
+          <properties>
+            <caption> Cache/Delta</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="75b17d64-1ddb-4d1c-bd26-89541aa2180f" name="m_EnsembleTag_sum">
+          <properties>
+            <caption>Ensemble/Delta</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="e7088737-8abe-4818-925c-ccef43f2918a" name="m_HealthShareTag_sum">
+          <properties>
+            <caption>HealthShare/Delta</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+        <attribute id="e28ab144-01d9-462d-96d2-0129a0c2d3ca" name="m_InterSystemsIRISTag_sum">
+          <properties>
+            <caption>IRIS/Delta</caption>
+            <visible>true</visible>
+            <type>
+              <measure>
+                <default-aggregation>SUM</default-aggregation>
+              </measure>
+            </type>
+          </properties>
+        </attribute>
+      </attributes>
+      <dimensions></dimensions>
+      <actions>
+        <properties>
+          <include-default-drill-through>true</include-default-drill-through>
+        </properties>
+      </actions>
+      <data-sets>
+        <data-set-ref id="91b5413f-9533-4ddf-5217-58558caca1a6">
+          <properties>
+            <allow-aggregates>true</allow-aggregates>
+            <create-hinted-aggregate>false</create-hinted-aggregate>
+          </properties>
+          <logical>
+            <key-ref id="5445a048-3bce-42ac-ba34-bf63ed58a425" unique="false" complete="false">
+              <column>Post</column>
+            </key-ref>
+            <key-ref id="47a450ac-1f14-40fe-9541-94a48dc11762" unique="false" complete="false">
+              <column>Year</column>
+            </key-ref>
+            <key-ref id="e12977fb-6c45-4461-9c3e-18b5b329397b" unique="false" complete="false">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="4a54526c-c975-4efa-b427-3df70fbd6593" unique="false" complete="false">
+              <column>MonthYear</column>
+            </key-ref>
+            <key-ref id="43ebb33d-5814-406a-ba0b-218091519897" unique="false" complete="false">
+              <column>DateOfData</column>
+            </key-ref>
+            <key-ref id="a414208b-a77e-4af1-8ab2-c70be7055d76" unique="false" complete="false">
+              <column>WeekYear</column>
+            </key-ref>
+            <attribute-ref id="7c619adb-7c24-4260-aeb9-38b6bf52c313" complete="true">
+              <column>Views</column>
+            </attribute-ref>
+            <attribute-ref id="5713625b-8979-442a-899f-ca4b3e875616" complete="true">
+              <column>Views</column>
+            </attribute-ref>
+          </logical>
+        </data-set-ref>
+        <data-set-ref id="e96355fd-0166-44e1-679a-67c8574f0e48">
+          <properties>
+            <allow-aggregates>true</allow-aggregates>
+            <create-hinted-aggregate>false</create-hinted-aggregate>
+          </properties>
+          <logical>
+            <key-ref id="43ebb33d-5814-406a-ba0b-218091519897" unique="false" complete="false">
+              <column>FullDate</column>
+            </key-ref>
+            <key-ref id="4a54526c-c975-4efa-b427-3df70fbd6593" unique="false" complete="false">
+              <column>MonthYear</column>
+            </key-ref>
+            <key-ref id="e12977fb-6c45-4461-9c3e-18b5b329397b" unique="false" complete="false">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="47a450ac-1f14-40fe-9541-94a48dc11762" unique="false" complete="false">
+              <column>Year</column>
+            </key-ref>
+            <key-ref id="a414208b-a77e-4af1-8ab2-c70be7055d76" unique="false" complete="false">
+              <column>WeekYear</column>
+            </key-ref>
+          </logical>
+        </data-set-ref>
+        <data-set-ref id="98b11a08-5c4f-4222-7b4c-867cbe629bb3">
+          <properties>
+            <allow-aggregates>true</allow-aggregates>
+            <create-hinted-aggregate>false</create-hinted-aggregate>
+          </properties>
+          <logical>
+            <key-ref id="4a54526c-c975-4efa-b427-3df70fbd6593" unique="false" complete="false">
+              <column>MonthYear</column>
+            </key-ref>
+            <key-ref id="e12977fb-6c45-4461-9c3e-18b5b329397b" unique="false" complete="false">
+              <column>MonthYearNum</column>
+            </key-ref>
+            <key-ref id="47a450ac-1f14-40fe-9541-94a48dc11762" unique="false" complete="false">
+              <column>Year</column>
+            </key-ref>
+            <key-ref id="a414208b-a77e-4af1-8ab2-c70be7055d76" unique="false" complete="false">
+              <column>WeekYear</column>
+            </key-ref>
+            <key-ref id="5445a048-3bce-42ac-ba34-bf63ed58a425" unique="false" complete="false">
+              <column>Post</column>
+            </key-ref>
+            <key-ref id="43ebb33d-5814-406a-ba0b-218091519897" unique="false" complete="false">
+              <column>DateOfData</column>
+            </key-ref>
+            <attribute-ref id="f22722c0-2074-48a3-aedb-898ae1cc0d39" complete="true">
+              <column>CacheTag</column>
+            </attribute-ref>
+            <attribute-ref id="75b17d64-1ddb-4d1c-bd26-89541aa2180f" complete="true">
+              <column>EnsembleTag</column>
+            </attribute-ref>
+            <attribute-ref id="e7088737-8abe-4818-925c-ccef43f2918a" complete="true">
+              <column>HealthShareTag</column>
+            </attribute-ref>
+            <attribute-ref id="e28ab144-01d9-462d-96d2-0129a0c2d3ca" complete="true">
+              <column>InterSystemsIRISTag</column>
+            </attribute-ref>
+          </logical>
+        </data-set-ref>
+      </data-sets>
+      <calculated-members>
+        <calculated-member-ref id="a189f03f-5a54-4d14-7390-e83588d44bc7"></calculated-member-ref>
+        <calculated-member-ref id="b11cc4e7-cf83-45c1-6381-e1d51ba323cb"></calculated-member-ref>
+        <calculated-member-ref id="5c054811-c72d-46c2-6ea1-6ab680545c83"></calculated-member-ref>
+        <calculated-member-ref id="2556b423-f2c4-42c0-5348-607b1efdede1"></calculated-member-ref>
+        <calculated-member-ref id="789da08d-fa6a-41cf-438f-a490c89ed774"></calculated-member-ref>
+      </calculated-members>
+      <aggregates></aggregates>
+    </cube>
+  </cubes>
+</schema>
