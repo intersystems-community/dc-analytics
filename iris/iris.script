@@ -5,16 +5,10 @@
     set sc = ##class(App.Installer).setup()
     set ViewsLoad = "False"
     DO DISABLE^%NOJRN
- 
-    zn "%SYS"
-    Do ##class(Security.Users).UnExpireUserPasswords("*")
-    set webName = "/mdx2json" 
-    set webProperties("AutheEnabled") = 64 
-    set webProperties("MatchRoles")=":%DB_DCANALYTICS" 
-    set sc = ##class(Security.Applications).Modify(webName, .webProperties)
 
     zn "DCANALYTICS"
     do $SYSTEM.OBJ.Load("/opt/dcanalytics/src/inc/Community.inc", "ck")
+    do $SYSTEM.OBJ.LoadDir("/opt/dcanalytics/src/utils", "ck")
     do $System.OBJ.LoadDir("/opt/dcanalytics/src/","ck",,1)
     zpm "install dsw" 
     zpm "install isc-dev" 
@@ -22,5 +16,13 @@
     do ##class(dev.code).workdir("/irisdev/app/src")
     do EnableDeepSee^%SYS.cspServer("/csp/dcanalytics/") 
     do ##class(Community.Utils).setup("/opt/dcanalytics/globals.xml",100000, ViewsLoad)
+
+    zn "%SYS"
+    Do ##class(Security.Users).UnExpireUserPasswords("*")
+    set webName = "/mdx2json" 
+    set webProperties("AutheEnabled") = 64 
+    set webProperties("MatchRoles")=":%DB_DCANALYTICS"
+    do ##class(Security.Users).AddRoles("UnknownUser", "%ALL")
+    set sc = ##class(Security.Applications).Modify(webName, .webProperties)
 
     halt
