@@ -29,6 +29,8 @@ Property Hash As %String;
 
 Property Lang As %String;
 
+Property Deleted As %Boolean;
+
 Relationship Posts As Community.Post [ Cardinality = many, Inverse = Author ];
 
 Relationship Comments As Community.Comment [ Cardinality = many, Inverse = Author ];
@@ -73,6 +75,9 @@ Storage Default
 </Value>
 <Value name="12">
 <Value>Lang</Value>
+</Value>
+<Value name="13">
+<Value>Deleted</Value>
 </Value>
 </Data>
 <DataLocation>^Community.Public.MemberD</DataLocation>
