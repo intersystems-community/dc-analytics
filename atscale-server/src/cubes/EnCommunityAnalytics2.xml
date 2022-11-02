@@ -858,7 +858,7 @@
       <physical>
         <connection id="iris"></connection>
         <query>
-          <sql>select &#xA;&#x9;cm.*,&#xA;    CAST(TO_CHAR( cm.Created, &#39;YYYYMM&#39;) as INT) as MonthYearNum,&#xA;    UPPER(TO_CHAR( cm.Created, &#39;MON-YYYY&#39;)) as MonthYear,&#xA;    TO_DATE(cm.Created, &#39;YYYY-MM-DD&#39;) as FullDate,&#xA;    Year( cm.Created ) as &#34;Year&#34;,&#xA;    DATEPART(week, cm.Created) as WeekYear&#xA;from Community.Member cm</sql>
+          <sql>select &#xA;&#x9;cm.*,&#xA;    CAST(TO_CHAR( cm.Created, &#39;YYYYMM&#39;) as INT) as MonthYearNum,&#xA;    UPPER(TO_CHAR( cm.Created, &#39;MON-YYYY&#39;)) as MonthYear,&#xA;    TO_DATE(cm.Created, &#39;YYYY-MM-DD&#39;) as FullDate,&#xA;    Year( cm.Created ) as &#34;Year&#34;,&#xA;    DATEPART(week, cm.Created) as WeekYear&#xA;from Community.Member cm&#xA;where cm.deleted = 0&#xA;where cm.deleted = 0</sql>
         </query>
         <immutable>false</immutable>
         <column>
