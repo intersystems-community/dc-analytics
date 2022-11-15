@@ -40,8 +40,6 @@ spec:
         args:
         - --check-caps
         - "false"
-        - --after
-        - iris session iris -U DCANALYTICS '##class(%DeepSee.Utils).%BuildCube("VIEWSHISTORY")' > /proc/1/fd/1
         lifecycle:
           postStart:
             exec:

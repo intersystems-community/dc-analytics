@@ -5,7 +5,7 @@ Class BI.Member Extends %DeepSee.CubeDefinition [ DependsOn = Community.Member, 
 /// Cube definition from Architect.
 XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
 {
-<cube xmlns="http://www.intersystems.com/deepsee" name="Member" displayName="Member" disabled="false" abstract="false" sourceClass="Community.Member" namedFactNums="true" countMeasureName="%COUNT" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false" enableSqlRestrict="false">
+<cube xmlns="http://www.intersystems.com/deepsee" name="Member" displayName="Member" disabled="false" abstract="false" sourceClass="Community.Member" buildRestriction="Deleted=0" namedFactNums="true" countMeasureName="%COUNT" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false" enableSqlRestrict="false">
   <dimension name="Link" disabled="false" hasAll="false" allCaption="All Link" allDisplayName="Link" type="data" hidden="false" showHierarchies="default">
     <hierarchy name="H1" disabled="false" hidden="false">
       <level name="Link" disabled="false" sourceProperty="Link" list="false" useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="2">
@@ -134,4 +134,3 @@ ClassMethod GetViewsOfAuthor(authorId) As %Integer
 Parameter DOMAIN;
 
 }
-

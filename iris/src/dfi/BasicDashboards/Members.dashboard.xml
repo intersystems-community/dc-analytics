@@ -9,13 +9,20 @@
     <control name="" action="applyFilter" target="*" targetProperty="[DateDimension].[H1].[Year]" location="dashboard" type="auto" controlClass="" label="Year" title="" value="&amp;[NOW]" text="NOW" readOnly="false" valueList="" displayList="" activeWhen="">
       <valueRequired>false</valueRequired>
     </control>
+    <control name="" action="showListing" target="" targetProperty="" location="widget" type="auto" controlClass="" label="" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="itemSelected">
+      <valueRequired>false</valueRequired>
+    </control>
     <property name="legendPos">none</property>
   </widget>
-  <widget name="Widget2" type="pivot" subtype="lineChartMarkers" subtypeClass="lineChart" title="New Members" dataSource="Members/MembersMonthly.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="6" homeColL="6" colSpanL="4" rowSpanL="4" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="#F0F0F0" opacity="1" theme="" dataColorList="">
-  </widget>
   <widget name="Best Contributors" type="pivot" subtype="barChartStacked" subtypeClass="barChart" title="Best Contributors" dataSource="Members/BestContributors.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="6" homeColL="0" colSpanL="6" rowSpanL="4" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="#F0F0F0" opacity="1" theme="" dataColorList="">
+    <control name="" action="showListing" target="" targetProperty="" location="widget" type="auto" controlClass="" label="" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="itemSelected">
+      <valueRequired>false</valueRequired>
+    </control>
   </widget>
-  <widget name="New Members Monthly By Lang" type="pivot" subtype="columnChartStacked" subtypeClass="barChart" title="New Members By Lang" dataSource="Members/NewMembersMonthlyByLang.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="0" homeColL="6" colSpanL="4" rowSpanL="6" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="#F0F0F0" opacity="1" theme="" dataColorList="">
+  <widget name="New Members Monthly By Lang" type="pivot" subtype="columnChartStacked" subtypeClass="barChart" title="New Members by Language" dataSource="Members/NewMembersMonthlyByLang.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="0" homeColL="6" colSpanL="4" rowSpanL="6" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="#F0F0F0" opacity="1" theme="" dataColorList="">
+    <control name="" action="showListing" target="" targetProperty="" location="widget" type="auto" controlClass="" label="" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="itemSelected">
+      <valueRequired>false</valueRequired>
+    </control>
   </widget>
   <widget name="Total EN Members" type="meter" subtype="textMeter" subtypeClass="" title="Total EN Members" dataSource="Members/TotalEnMembers.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="0" homeColL="0" colSpanL="1" rowSpanL="2" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="#F0F0F0" opacity="1" theme="" dataColorList="">
   </widget>
