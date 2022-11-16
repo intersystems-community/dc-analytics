@@ -56,11 +56,6 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
     <hierarchy name="H1" disabled="false" hidden="false">
       <level name="GroupName" disabled="false" sourceExpression="%cube.GetGroupName(%source.%ID,&quot;Name&quot;)" list="true" listDelimiter="," useDisplayValue="true" useAsFilter="true" hidden="false">
       </level>
-      <level name="PostName" disabled="false" sourceProperty="%ID" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
-        <property name="Name" disabled="false" sourceProperty="Name" hidden="false" isName="true" isDescription="false" isReference="false" useDisplayValue="false">
-          <additionalDescription>undefined</additionalDescription>
-        </property>
-      </level>
     </hierarchy>
   </dimension>
   <dimension name="DateDimension" disabled="false" hasAll="false" allCaption="All Created1" allDisplayName="Created1" sourceProperty="Created" type="time" calendar="gregorian" iKnowType="entity" hidden="false" showHierarchies="default">
@@ -258,8 +253,6 @@ ClassMethod GetDaysNumber(date, id)
 		quit "[Language].[H1].[Language].[en]"
 	}
 }*/
-
 Parameter DOMAIN;
 
 }
-
