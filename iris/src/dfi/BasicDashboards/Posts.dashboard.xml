@@ -36,5 +36,7 @@
       <valueRequired>false</valueRequired>
     </control>
   </widget>
+  <widget name="Total Comments" type="pivot" subtype="lineChartMarkers" subtypeClass="lineChart" title="Total Comments" dataSource="Posts/TotalCommentsMonth.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="0" homeColL="0" colSpanL="4" rowSpanL="4" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="#F0F0F0" opacity="1" theme="" dataColorList="">
+  </widget>
 </dashboard>
 </Document></Export>
