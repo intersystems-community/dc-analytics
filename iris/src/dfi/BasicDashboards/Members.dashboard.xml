@@ -6,7 +6,7 @@
     <control name="" action="applyFilter" target="*" targetProperty="[DateDimension].[H1].[MonthYear]" location="dashboard" type="auto" controlClass="" label="MonthYear" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
       <valueRequired>false</valueRequired>
     </control>
-    <control name="" action="applyFilter" target="*" targetProperty="[DateDimension].[H1].[Year]" location="dashboard" type="auto" controlClass="" label="Year" title="" value="&amp;[NOW]" text="NOW" readOnly="false" valueList="" displayList="" activeWhen="">
+    <control name="" action="applyFilter" target="*" targetProperty="[DateDimension].[H1].[Year]" location="dashboard" type="auto" controlClass="" label="Year" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
       <valueRequired>false</valueRequired>
     </control>
     <control name="" action="showListing" target="" targetProperty="" location="widget" type="auto" controlClass="" label="" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="itemSelected">
