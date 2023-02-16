@@ -43,6 +43,14 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
       </level>
     </hierarchy>
   </dimension>
+  <dimension name="AuthorName" disabled="false" hasAll="false" allCaption="All AuthorName" allDisplayName="AuthorName" type="data" hidden="false" showHierarchies="default">
+    <hierarchy name="H1" disabled="false" hidden="false">
+      <level name="AuthorName" displayName="AuthorName" disabled="false" sourceProperty="%ID" list="false" useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="10">
+        <property name="AuthorName" displayName="AuthorName" disabled="false" sourceProperty="Name" hidden="false" isName="false" isDescription="false" isReference="false" useDisplayValue="false">
+        </property>
+      </level>
+    </hierarchy>
+  </dimension>
   <measure name="MembersAmountBeforeDate" disabled="true" sourceExpression="%cube.GetMembersAmountBeforeDate(%source.Created)" aggregate="MAX" type="integer" hidden="false" searchable="false">
   </measure>
   <measure name="Views" disabled="true" sourceExpression="%cube.GetViewsOfAuthor(%source.%ID)" aggregate="SUM" type="number" hidden="false" searchable="false">
