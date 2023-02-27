@@ -8,6 +8,8 @@
   </columnAxisOptions>
   <rowLevel spec="[DateDimension].[H1].[MonthYear].Members" key="" value="" text="Month Year" headEnabled="false" headCount="" filterEnabled="false" filterExpression="" orderEnabled="false" orderExpression="" orderDirection="BDESC" aggEnabled="false" aggFunction="" aggFunctionParm="" levelCaption="" levelFormat="" levelSummary="" levelType="" drillLevel="0" advanced="false" levelStyle="" levelHeaderStyle="" suppress8020="false" drilldownSpec="" enabled="true">
   </rowLevel>
+  <filter spec="[PostType].[H1].[PostType].Members" key="%NOT {&amp;[&lt;null&gt;],&amp;[Digest]}" value="" text="NOT&amp;#160;Unknown+ Digest" headEnabled="false" headCount="" filterEnabled="false" filterExpression="" orderEnabled="false" orderExpression="" orderDirection="BDESC" aggEnabled="false" aggFunction="" aggFunctionParm="" levelCaption="" levelFormat="" levelSummary="" levelType="" drillLevel="0" advanced="false" levelStyle="" levelHeaderStyle="" suppress8020="false" drilldownSpec="" enabled="true">
+  </filter>
   <sqlRestriction></sqlRestriction>
   <measure spec="[Measures].[Posts]" key="" value="" text="Posts" headEnabled="false" headCount="" filterEnabled="false" filterExpression="" orderEnabled="false" orderExpression="" orderDirection="BDESC" aggEnabled="false" aggFunction="" aggFunctionParm="" levelCaption="" levelFormat="#,###" levelSummary="" levelType="" drillLevel="0" advanced="false" levelStyle="" levelHeaderStyle="" suppress8020="false" drilldownSpec="" enabled="true">
   </measure>
