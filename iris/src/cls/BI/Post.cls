@@ -7,7 +7,7 @@ Class BI.Post Extends %DeepSee.CubeDefinition [ DependsOn = Community.Post, Proc
 /// Cube definition from Architect.
 XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
 {
-<cube xmlns="http://www.intersystems.com/deepsee" name="Post" displayName="Post" disabled="false" abstract="false" sourceClass="Community.Post" buildRestriction="Published=1 AND Deleted=0" countMeasureName="PostCount" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false">
+<cube xmlns="http://www.intersystems.com/deepsee" name="Post" displayName="Post" disabled="false" abstract="false" sourceClass="Community.Post" buildRestriction="Published=1 AND Deleted=0 AND PostType != 'Digest'" countMeasureName="PostCount" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false">
   <dimension name="Name" disabled="false" hasAll="false" allCaption="All Name" allDisplayName="Name" type="data" hidden="false" showHierarchies="default">
     <hierarchy name="H1" disabled="false" hidden="false">
       <level name="Name" disabled="false" sourceProperty="%ID" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
