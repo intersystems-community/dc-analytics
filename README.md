@@ -5,7 +5,7 @@
 InterSystems Developer Community analytics.
 Project made with InterSystems IRIS BI (DeepSee), Power BI and Logi Report Designer to visualize and analyze members, articles, questions, answers, views and other pieces of content and activity on [InterSystems Developer Community](community.intersystems.com). This project contains pre-configured IRIS and Atscale  deployment in Docker containers and project files for BI systems . This project also deployed online and you can check it here:
 
-### See Live DC analytics
+### See Live DC analytics 
 
 [PowerBI Interactive Dashboard with connection to the Adaptive Analytics Instance](https://app.powerbi.com/view?r=eyJrIjoiZDNhZDAxMTAtZDUyNy00YTRlLTkxZmQtODBlMzZmZGU3ZTkxIiwidCI6IjRlMzI1ZjgzLWE4YWYtNGY2Yy05ODY3LTBkYTA4YmU1MGZjMCIsImMiOjEwfQ%3D%3D&pageName=ReportSection&language=en-us)
 
