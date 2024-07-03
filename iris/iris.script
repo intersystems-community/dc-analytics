@@ -3,7 +3,7 @@
 
     do $SYSTEM.OBJ.Load("/opt/dcanalytics/Installer.cls", "ck")
     set sc = ##class(App.Installer).setup()
-    set ViewsLoad = "False"
+    set ViewsLoad = "True"
     DO DISABLE^%NOJRN
 
     zn "DCANALYTICS"
