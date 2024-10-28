@@ -26,20 +26,20 @@ env:
 jobs:
   gcloud-setup-and-build-and-publish-to-GCR:
     name: Setup gcloud utility, Build DC-ANALYTICS image and Publish it to Container Registry
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Google Authentication
-      uses: google-github-actions/auth@v0.8.0
+      uses: google-github-actions/auth@v2.1.6
       with:
         credentials_json: ${{ secrets.SERVICE_ACCOUNT_KEY }}
 
     - name: Setup gcloud cli
-      uses: google-github-actions/setup-gcloud@v0.6.0
+      uses: google-github-actions/setup-gcloud@v2.1.1
       with:
-        version: '391.0.0'
+        version: '496.0.0'
 
     - name: Configure docker to use the gcloud as a credential helper
       run: |
@@ -98,10 +98,10 @@ jobs:
     needs:
     - gcloud-setup-and-build-and-publish-to-GCR
     # - gke-provisioner
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Replace placeholders with values in statefulset template
       working-directory: ./k8s/
@@ -112,14 +112,14 @@ jobs:
         cat statefulset.yaml
 
     - name: Google Authentication
-      uses: google-github-actions/auth@v0.8.0
+      uses: google-github-actions/auth@v2.1.6
       with:
         credentials_json: ${{ secrets.SERVICE_ACCOUNT_KEY }}
 
     - name: Setup gcloud cli
-      uses: google-github-actions/setup-gcloud@v0.6.0
+      uses: google-github-actions/setup-gcloud@v2.1.1
       with:
-        version: '391.0.0'
+        version: '496.0.0'
 
     - name: Apply Kubernetes manifests
       working-directory: ./k8s/
