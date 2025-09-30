@@ -121,6 +121,7 @@ ClassMethod GetStartDate(added) As %Boolean
 
 ClassMethod GetViewsOfAuthor(authorId) As %Integer
 {
+	// comment to start job
 	set result = 0
 	set sql = "Select Sum(Views) As Views From Community.Post Where Author = ?"
 	set rs = ##class(%SQL.Statement).%ExecDirect(,sql,authorId)
